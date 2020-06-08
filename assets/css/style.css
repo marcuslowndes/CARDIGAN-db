@@ -1,0 +1,82 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Avenir-LT-W01_35-Light1475496", Helvetica, Arial !important;
+	/*color: #200f1e;*/
+	background-color: white;
+	font-size: 120% !important;
+}
+
+@font-face {
+  font-family: "Lulo-Clean-W01-One-Bold";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0163ac22-50a7-406e-aa64-c62ee6fbf3d7.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/aee74cb3-c913-4b54-9722-6001c92325f2.woff2") format("woff2"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/80de9d5d-ab5f-40ce-911b-104e51e93d7c.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/1b46b05b-cfdd-4d82-8c2f-5c6cfba1fe60.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/be340f0b-a2d4-41df-acb1-4dc124330a88.svg#be340f0b-a2d4-41df-acb1-4dc124330a88") format("svg");
+}
+@font-face {
+  font-family: "Avenir-LT-W01_35-Light1475496";
+  src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/b0268c31-e450-4159-bfea-e0d20e2b5c0c.svg#b0268c31-e450-4159-bfea-e0d20e2b5c0c") format("svg");
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lulo-Clean-W01-One-Bold", Helvetica, Arial !important;
+}
+
+::selection {
+	/* color: rgb(255, 255, 255); */
+	background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.form-custom {
+	margin-left: auto;
+	margin-right: auto;
+	width: 494px;
+}
+
+.container-results {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1300px ;
+}
+
+.form-login {
+	margin-left: auto;
+	margin-right: auto;
+	width: 444px;
+}
+
+.btn-clinical-gait{
+	font-size: 130% !important;
+	width:20rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+@media only screen and (max-width: 930px) {
+	.container-results {
+		max-width: 100% !important;
+		min-width: unset !important;
+		margin:unset !important;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.h2, h2{
+		font-size:1.5rem;
+	}
+
+	.form-custom {
+		margin-left: inherit;
+		margin-right: inherit;
+		width: inherit;
+	}
+
+	.form-login {
+		margin-left: inherit;
+		margin-right: inherit;
+		width: inherit;
+	}
+
+}
