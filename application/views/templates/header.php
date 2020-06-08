@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<nav class='navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top' id="navbar">
 		<style media="screen">
 		</style>
-		<a class='navbar-brand' style='font-family:"Lulo-Clean-W01-One-Bold"' href='<?php /*echo base_url();*/ ?>index'>CARDIGAN</a>
+		<a class='navbar-brand' style='font-family:"Lulo-Clean-W01-One-Bold"; letter-spacing: 0.3rem;' href='<?php /*echo base_url();*/ ?>index'>CARDIGAN</a>
 
 		<div class="navbar-collapse collapse show" id="navbar-main" style="">
 			<ul class='navbar-nav mr-auto' id='navbar-container'>

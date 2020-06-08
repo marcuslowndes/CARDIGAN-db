@@ -7,10 +7,13 @@ class Database extends CI_Controller {
 
         // ensure user is logged in and is verified
         if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('user_failed', 'Only a verified user may access the database.');
+            $this->session->set_flashdata('user_failed', 'Only a verified'
+				. ' user may access the database.');
             redirect('login');
         } else if($this->session->userdata('user_type') == 'Unverified'){
-            $this->session->set_flashdata('user_warning', 'Only a verified user may access the database. Please contact an admin to request to be verified.');
+            $this->session->set_flashdata('user_warning', 'Only a verified'
+				. ' user may access the database. Please contact an admin to '
+				. 'request to be verified.');
             redirect('welcome');
         }
 
@@ -104,10 +107,13 @@ class Database extends CI_Controller {
 
         // ensure user is logged in and is verified
         if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('user_failed', 'Only a verified user may access the database.');
+            $this->session->set_flashdata('user_failed', 'Only a verified user'
+				. ' may access the database.');
             redirect('login');
         } else if($this->session->userdata('user_type') == 'Unverified'){
-            $this->session->set_flashdata('user_warning', 'Only a verified user may access the database. Please contact an admin to request to be verified.');
+            $this->session->set_flashdata('user_warning', 'Only a verified user'
+				. ' may access the database. Please contact an admin to request'
+				. ' to be verified.');
             redirect('welcome');
         }
 
