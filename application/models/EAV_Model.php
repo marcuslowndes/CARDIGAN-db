@@ -87,6 +87,18 @@ class EAV_Model extends CI_Model{
 	}
 
 
+	// returns all the results in the format:
+		//  <idValue> => array(
+		// 		'Patient' => array(
+		// 			'idPatient' => <idPatient>
+		//			'Name'		=> ...
+		//			...
+		// 		)
+		//		'Attribute'  => array(...)
+		// 		'Visitation' => array(...)
+		// 		'Value' 	 => array(...)
+		//  <idValue> => array(...)
+		//  ... (every returned value)
 	public function get_results($entity_id){
 		$this->db->select('*');
 		$this->db->from('value');

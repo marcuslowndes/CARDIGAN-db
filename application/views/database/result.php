@@ -5,12 +5,16 @@
 <table class="table table-hover">
 	<thead>
 		<tr class="table-primary">
-            <th>Description</th>
+            <th>Description/Question</th>
             <th>Patient ID</th>
             <?php foreach($visits as $visit) {
-                if($visit['Preconsultation'] == 1) $visit_type = ' (Pre)';
-                else $visit_type =  '';
-                echo '<th scope="col"> Visit ' . $visit['idVisitation'] . $visit_type . '</th>';
+				$visit_type =  '';
+                if($visit['Preconsultation'] == 1)
+					$visit_type = ' <small>'// style="background:rgba(0,0,0,0.2)">'
+						. '(Preconsultation)</small>';
+                echo '<th scope="col"> Visit ' . $visit['idVisitation']
+						. $visit_type . '<br>' . $visit['Date_Start']
+						. ' –<br>' . $visit['Date_End'] . '</th>';
             } ?>
 		</tr>
 	</thead>
@@ -23,7 +27,8 @@
 			if($i % 2 === 0)
 				$table_colour = 'table-secondary';
 			else
-				$table_colour = 'table-light';  ?>
+				$table_colour = 'table-light';
+			?>
 
             <tr class="<?= $table_colour ?>"  id="<?= $results['Attribute']['idAttribute'] ?>">
             	<td scope="row"> <?= $results['Attribute']['Name'] ?> <?= $results['Attribute']['Units'] ?> </td>
@@ -37,8 +42,8 @@
 					foreach($results['Values'] as $result)
 						foreach($result as $result_visit => $value)
 							if ($visit['idVisitation'] == $result_visit) {
+								// PROBLEM: ALL ATTRIBUTES HAVE THE SAME NAME (NOT ALWAYS CORRECT)
 								if ($results['Attribute']['Value_Type'] == 'BOOL' ){
-									// PROBLEM: ALL ATTRIBUTES HAVE THE SAME NAME (NOT ALWAYS CORRECT)
 									if ($value['Value'] == 1)
                                         echo 'Yes'.'<br>';
 									else if ($value['Value'] == 0)
@@ -48,6 +53,7 @@
 								} else
 									echo $value['Value'].'<br>';
 							}
+
 					echo '</td>';
 				}
 				?>

@@ -33,7 +33,7 @@ class Database extends CI_Controller {
             $data['selected_entity'] = 'None';
 
 
-        //
+        // set userdata based upon selected form data
         if(isset($type) && $type != NULL){
             $this->session->set_userdata(array(
                 'chosen_datatype'   => $type,
@@ -63,6 +63,8 @@ class Database extends CI_Controller {
             redirect('database');
         }
 
+
+		//load views, depending on how the form is filled
         $this->load->view('templates/header', $data);
         $this->load->view('database/index.html', $data);
         $this->load->view('database/gap.html');
@@ -118,7 +120,7 @@ class Database extends CI_Controller {
         }
 
 
-        //
+        // get search result data
         $selected_entity_ID = $this->session->userdata('selected_entity_ID');
         $selected_entity	= $this->session->userdata('selected_entity');
 		$results			= $this->eav_model->get_results($selected_entity_ID);
@@ -129,8 +131,16 @@ class Database extends CI_Controller {
         );
 
 
+		// reformat results for the view
+		// preformatted_results gives a new results array in the format:
+			//  <idPatient> => array(
+			//		<idValue> => array(...)
+			//		<idValue>...
+			//		... (each result for that patient)
+			//  )
+			//  <idPatient> => array(...)
+			//  ... (every patient)
         $preformatted_results = array();
-
 		foreach($patients as $patient){
 			$preformatted_results[$patient['Patient_ID']] = array();
 
@@ -139,16 +149,26 @@ class Database extends CI_Controller {
 					array_push($preformatted_results[$patient['Patient_ID']], $result);
 		}
 
+		// formatted_results gives a new results array in the format:
+			//  <idPatient> => array(
+			// 		'Values' => array(
+			//			<idVisitation 1...8> => array(
+			//				... (all result values)
+			//			)
+			// 		)
+			//		'Attribute' => array(...)
+			// 	)
+			//  <idPatient> => array(...)
+			//  ... (every patient)
 		$formatted_results = array();
-
 		foreach($preformatted_results as $patient => $results){
 			$formatted_results[$patient]['Values'] = array();
 
 			foreach($results as $result){
 				$formatted_results[$patient]['Attribute'] = $result['Attribute'];
-				$visit1 = $result['Visitation']['idVisitation'];
+				$visit = $result['Visitation']['idVisitation'];
 				array_push($formatted_results[$patient]['Values'], array(
-					$visit1 => $result['Value']
+					$visit => $result['Value']
 				));
 			}
 		}
@@ -156,6 +176,7 @@ class Database extends CI_Controller {
 		$data['all_results'] = $formatted_results;
 
 
+		//load views
         $this->load->view('templates/header', $data);
         $this->load->view('database/result', $data);
         $this->load->view('templates/footer.html');
