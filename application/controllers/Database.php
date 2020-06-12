@@ -70,14 +70,14 @@ class Database extends CI_Controller {
         $this->load->view('database/gap.html');
 
         if ($data['selected_type'] != '' && $data['subtypes'] != '')
-            $this->load->view('database/select_subtype', $data);
+            $this->load->view('database/select_category', $data);
         else
             $this->load->view('database/gap.html');
 
         $this->load->view('database/gap.html');
 
         if ($data['selected_subtype_ID'] != '' && $data['entities'] != '')
-            $this->load->view('database/select_entity', $data);
+            $this->load->view('database/select_subcategory', $data);
         else
             $this->load->view('database/gap.html');
 
@@ -132,7 +132,7 @@ class Database extends CI_Controller {
 
 
 		// reformat results for the view
-		// preformatted_results gives a new results array in the format:
+		// preformatted_results gives a new results array arranged as:
 			//  <idPatient> => array(
 			//		<idValue> => array(...)
 			//		<idValue>...
@@ -149,11 +149,11 @@ class Database extends CI_Controller {
 					array_push($preformatted_results[$patient['Patient_ID']], $result);
 		}
 
-		// formatted_results gives a new results array in the format:
+		// formatted_results gives a new results array arranged as:
 			//  <idPatient> => array(
 			// 		'Values' => array(
 			//			<idVisitation 1...8> => array(
-			//				... (all result values)
+			//				... (all result values for that visit)
 			//			)
 			// 		)
 			//		'Attribute' => array(...)
