@@ -20,6 +20,18 @@ class EAV_Model extends CI_Model{
 	}
 
 
+    //get each distinct attribute for specified entity
+	public function get_attributes_from_entity($entityID){
+		$this->db->distinct();
+		$this->db->select('Name, attribute.idAttribute');
+		$this->db->from('attribute');
+		$this->db->join('value', 'attribute.idAttribute = value.idAttribute');
+		$this->db->where(array('value.idEntity' => $entityID));
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+
     //get single entity / all entities
 	public function get_entity($data_type_id = FALSE){
 		//if no variable is passed in, return whole table
@@ -27,7 +39,7 @@ class EAV_Model extends CI_Model{
 			$query = $this->db->get('entity');
 			return $query->result_array();
 		}
-		//else return row for specific email
+		//else return row for specific data type ID
 		$this->db->select('*');
 		$this->db->where(array('idDataType' => $data_type_id));
 		$query = $this->db->get('entity');
@@ -87,7 +99,7 @@ class EAV_Model extends CI_Model{
 	}
 
 
-	// returns all the results in the format:
+	// returns all the results in an array arranged as:
 		//  <idValue> => array(
 		// 		'Patient' => array(
 		// 			'idPatient' => <idPatient>
@@ -99,11 +111,11 @@ class EAV_Model extends CI_Model{
 		// 		'Value' 	 => array(...)
 		//  <idValue> => array(...)
 		//  ... (every returned value)
-	public function get_results($entity_id){
+	public function get_results($attribute_id){
 		$this->db->select('*');
 		$this->db->from('value');
-		$this->db->join('entity', 'entity.idEntity = value.idEntity');
-		$this->db->where(array('entity.idEntity' => $entity_id));
+		$this->db->join('attribute', 'attribute.idAttribute = value.idAttribute');
+		$this->db->where(array('attribute.idAttribute' => $attribute_id));
 		$query  = $this->db->get();
 		$values = $query->result_array();
 		$result = array();

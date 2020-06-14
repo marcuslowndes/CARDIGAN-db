@@ -5,16 +5,16 @@
 <table class="table table-hover">
 	<thead>
 		<tr class="table-primary">
-            <th>Description/Question</th>
-            <th>Patient ID</th>
+            <th>Description/Question <br> <br> </th>
+            <th>Patient ID <br> <br> </th>
             <?php foreach($visits as $visit) {
 				$visit_type =  '';
                 if($visit['Preconsultation'] == 1)
-					$visit_type = ' <small>'// style="background:rgba(0,0,0,0.2)">'
+					$visit_type = ' <small class="small-Preconsultation">'
 						. '(Preconsultation)</small>';
                 echo '<th scope="col"> Visit ' . $visit['idVisitation']
-						. $visit_type . '<br>' . $visit['Date_Start']
-						. ' –<br>' . $visit['Date_End'] . '</th>';
+					. $visit_type . '<br> <small>' . $visit['Date_Start']
+					. ' – ' . $visit['Date_End'] . '</small></th>';
             } ?>
 		</tr>
 	</thead>

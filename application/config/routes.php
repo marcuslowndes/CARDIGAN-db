@@ -65,6 +65,7 @@ $route['database_result'] = 'database/result';
 $route['database/(:any)'] = 'database/index/$1';
 $route['database/(:any)/(:any)'] = 'database/index/$1/$2';
 $route['database/(:any)/(:any)/(:any)'] = 'database/index/$1/$2/$3';
+$route['database/(:any)/(:any)/(:any)/(:any)'] = 'database/index/$1/$2/$3/$4';
 
 $route['about'] = 'welcome/about';
 $route['contact'] = 'welcome/contact';

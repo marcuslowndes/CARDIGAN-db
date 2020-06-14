@@ -48,7 +48,7 @@ body {
 	width: 444px;
 }
 
-.btn-clinical-gait{
+.btn-clinical-gait {
 	font-size: 130% !important;
 	width:20rem;
 	margin-left: auto;
@@ -56,17 +56,38 @@ body {
 }
 
 
+.small-Preconsultation {
+	font-size: 70%;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 4px;
+	padding-top: 1px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+}
 
-@media only screen and (max-width: 930px) {
+.nav-bg{
+	height:calc(44.8px + 16px);
+	width:100%
+}
+
+
+@media only screen and (max-width: 991px) {
 	.container-results {
 		max-width: 100% !important;
 		min-width: unset !important;
 		margin:unset !important;
 	}
-
+	.nav-bg{
+		height:calc(308.8px + 16px);
+	}
+	.fixed-top{
+		position: absolute !important;
+	}
 }
 
 @media only screen and (max-width: 600px) {
+
 
 	.h2, h2{
 		font-size:1.5rem;
