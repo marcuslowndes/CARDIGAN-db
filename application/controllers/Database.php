@@ -91,7 +91,7 @@ class Database extends CI_Controller {
 		//load views, depending on how the form is filled
         $this->load->view('templates/header', $data);
         $this->load->view('database/index.html', $data);
-        $this->load->view('database/gap.html');
+        // $this->load->view('database/gap.html');
 
 		// first, if the data type is selected, allow selection of category
         if ($data['selected_type'] != '' && $data['subtypes'] != '')
@@ -99,7 +99,7 @@ class Database extends CI_Controller {
         else
             $this->load->view('database/gap.html');
 
-        $this->load->view('database/gap.html');
+        // $this->load->view('database/gap.html');
 
 		// then allow selection of subcategory
         if ($data['selected_subtype_ID'] != '' && $data['entities'] != '')
@@ -107,7 +107,7 @@ class Database extends CI_Controller {
         else
             $this->load->view('database/gap.html');
 
-        $this->load->view('database/gap.html');
+        // $this->load->view('database/gap.html');
 
 		// then selection of data from subcategory
         if ($data['selected_entity_ID'] != '' && $data['attributes'] != '')
@@ -115,9 +115,9 @@ class Database extends CI_Controller {
         else
             $this->load->view('database/gap.html');
 
-        $this->load->view('database/gap.html');
+        // $this->load->view('database/gap.html');
         $this->load->view('database/selected.html');
-        $this->load->view('database/gap.html');
+        // $this->load->view('database/gap.html');
         $this->load->view('database/close.html');
         $this->load->view('templates/footer.html');
 	}
