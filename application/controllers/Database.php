@@ -89,6 +89,14 @@ class Database extends CI_Controller {
             $this->session->set_userdata(array(
                 'selected_type'			=> $type,
                 'subtypes'				=> $this->eav_model->get_data_types($type),
+				'selected_subtype_ID'	=> '',
+	            'selected_subtype'		=> '',
+	            'entities'				=> '',
+	            'selected_entity_ID'	=> '',
+	            'selected_entity'		=> '',
+				'attributes'			=> '',
+	            'selected_attribute_ID'	=> '',
+	            'selected_attribute'	=> ''
             ));
 			if ($type == 'Clinical')
 				$this->session->set_userdata(array(
@@ -111,7 +119,12 @@ class Database extends CI_Controller {
                 $this->session->set_userdata(array(
                     'selected_subtype_ID'	=> $subtypeID,
                     'selected_subtype'		=> $subtype_name,
-                    'entities'				=> $this->eav_model->get_entity($subtypeID)
+                    'entities'				=> $this->eav_model->get_entity($subtypeID),
+		            'selected_entity_ID'	=> '',
+		            'selected_entity'		=> '',
+					'attributes'			=> '',
+		            'selected_attribute_ID'	=> '',
+		            'selected_attribute'	=> ''
                 ));
 
 
@@ -126,7 +139,9 @@ class Database extends CI_Controller {
                         'selected_entity_ID' 	=> $entityID,
                         'selected_entity'	 	=> $entity_name,
 	                    'attributes'		 	=> $this->eav_model
-												->get_attributes_from_entity($entityID),
+													->get_attributes_from_entity($entityID),
+			            'selected_attribute_ID'	=> '',
+			            'selected_attribute'	=> ''
                     ));
 
 					if (sizeof($this->session->userdata('attributes')) > 1){
