@@ -7,7 +7,7 @@ class Users extends CI_Controller{
         // check user is logged in
         if($this->session->userdata('logged_in')){
             redirect('welcome');
-        } 
+        }
 
         $data['title'] = 'Register A New Account';
 
@@ -27,7 +27,7 @@ class Users extends CI_Controller{
                 $salt = base64_encode(random_bytes(16));
 
                 $enc_password = hash('sha512', $salt . $this->input->post('password'));
-        		
+
     			$this->user_model->register($enc_password, $salt);
 
     			$this->session->set_flashdata('user_success', 'Success! You are now registered as an <b>Unverified User</b> and can log in, but you <b>must be verified</b> to gain acces to the database. <br> To do this, <b>email an admin or a member of the CARDIGAN Team.</b>');
@@ -53,7 +53,7 @@ class Users extends CI_Controller{
         }
     }
 
-    
+
     public function login(){
         // check user is logged in
         if($this->session->userdata('logged_in')){// === TRUE){
@@ -73,7 +73,7 @@ class Users extends CI_Controller{
         } else {
             // log in user
             $email = $this->input->post('email');
-            
+
             if(!$this->user_model->check_email_not_exists($email)){
                 $user = $this->user_model->get_user($email);
 
@@ -126,7 +126,13 @@ class Users extends CI_Controller{
             'selected_subtype'      => '',
             'entities'              => '',
             'selected_entity_ID'    => '',
-            'selected_entity'       => ''
+            'selected_entity'       => '',
+			'attributes'			=> '',
+            'selected_attribute_ID'	=> '',
+            'selected_attribute'	=> '',
+			'selection_descriptor'	=> '',
+			'clinical_btn_style'	=> '',
+			'gait_btn_style'		=> ''
         ));
     }
 
@@ -142,7 +148,7 @@ class Users extends CI_Controller{
     }
 
 
-    //allow admins to view all users and verify new ones/give admin priviliges 
+    //allow admins to view all users and verify new ones/give admin priviliges
     public function users_list($user_id = NULL, $user_type = NULL){
         // ensure user is logged in and is an admin
         if(!$this->session->userdata('logged_in')){
@@ -207,7 +213,7 @@ class Users extends CI_Controller{
                 $new_salt = base64_encode(random_bytes(16));
 
                 $enc_new_password = hash('sha512', $new_salt . $newPW);
-                
+
                 $this->user_model->set_user_password($user['ID'], $enc_new_password, $new_salt);
 
                 $this->session->set_flashdata('user_success', 'Success! You have changed your password.');

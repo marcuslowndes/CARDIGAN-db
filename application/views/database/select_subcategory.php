@@ -3,13 +3,13 @@
         <div class="dropdown">
             <button type="button" class="btn btn-primary dropdown-toggle"
                     data-toggle="dropdown" style="width:50%">
-                Select <?= $selected_subtype ?>
-                <?= $selected_type ?> Data Subcategory
+                Select <?= $selected_subtype['name'] ?>
+                <?= $selected_type ?> data subcategory
             </button>
             <div class="dropdown-menu">
             <?php   foreach($entities as $entity) : ?>
-                <a class="dropdown-item" href="database/Clinical/<?=
-                        $selected_subtype_ID ?>/<?= $entity['idEntity'] ?>">
+                <a class="dropdown-item" href="database/<?= $selected_type
+                        ?>/<?= $selected_subtype['id'] ?>/<?= $entity['idEntity'] ?>">
                     <?= $entity['Name'] ?>
                 </a>
             <?php endforeach; ?>
