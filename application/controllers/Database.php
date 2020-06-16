@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Database extends CI_Controller {
 
-	public function index($type = NULL, $typeID = NULL, $entityID = NULL, $attributeID = NULL) {
+	public function index($type = NULL, $typeID = NULL,
+	 					  $entityID = NULL, $attributeID = NULL) {
 
         // ensure user is logged in and is verified
         if(!$this->session->userdata('logged_in')){
@@ -18,49 +19,35 @@ class Database extends CI_Controller {
             redirect('welcome');
         }
 
-		if ($this->session->userdata('selected_subtype') === NULL
-			|| $this->session->userdata('selected_entity') === NULL
-			|| $this->session->userdata('selected_attribute') === NULL
-			|| $this->session->userdata('btn_style') === NULL ){
-			$this->session->set_userdata(array(
-				'selected_subtype'	 => array('name'=>'', 'id'=>''),
-				'selected_entity'	 => array('name'=>'', 'id'=>''),
-				'selected_attribute' => array('name'=>'', 'id'=>''),
-				'btn_style'			 => array('clinical'=>'', 'gait'=>'', 'search'=>'')
-			));
-		}
 
         // get current form data
         $data = array(
             'title'					=> 'Choose Clinical or Gait Data',
             'selected_type'			=> $this->session->userdata('selected_type'),
             'subtypes'				=> $this->session->userdata('subtypes'),
-			'selected_subtype' 		=> array(
-										'name'	=> $this->session->userdata('selected_subtype')['name'],
-										'id'	=> $this->session->userdata('selected_subtype')['id']
-									),
+            'selected_subtype_ID'	=> $this->session->userdata('selected_subtype_ID'),
+            'selected_subtype'		=> $this->session->userdata('selected_subtype'),
             'entities'				=> $this->session->userdata('entities'),
-			'selected_entity' 		=> array(
-										'name'	=> $this->session->userdata('selected_entity')['name'],
-										'id'	=> $this->session->userdata('selected_entity')['id']
-									),
+            'selected_entity_ID'	=> $this->session->userdata('selected_entity_ID'),
+            'selected_entity'		=> $this->session->userdata('selected_entity'),
 			'attributes'			=> $this->session->userdata('attributes'),
-			'selected_attribute' 	=> array(
-										'name'	=> $this->session->userdata('selected_attribute')['name'],
-										'id'	=> $this->session->userdata('selected_attribute')['id']
-									),
-			'btn_style' 			=> array(
-										'clinical'	=> $this->session->userdata('btn_style')['clinical'],
-										'gait'		=> $this->session->userdata('btn_style')['gait'],
-										'search'	=> $this->session->userdata('btn_style')['search']
-									),
+            'selected_attribute_ID'	=> $this->session->userdata('selected_attribute_ID'),
+            'selected_attribute'	=> $this->session->userdata('selected_attribute'),
+			'selection_descriptor'	=> $this->session->userdata('selection_descriptor'),
+			'clinical_btn_style'	=> $this->session->userdata('clinical_btn_style'),
+			'gait_btn_style'		=> $this->session->userdata('gait_btn_style'),
+			'search_btn_style'		=> $this->session->userdata('search_btn_style'),
 			'search_btn_enable'		=> $this->session->userdata('search_btn_enable')
         );
         if ($data['selection_descriptor'] == '')
             $data['selection_descriptor'] = 'None';
-		foreach ($data['btn_style'] as $style)
-			if ($style == '')
-				$style = 'secondary';
+		if ($data['clinical_btn_style'] == '')
+			$data['clinical_btn_style'] = 'secondary';
+		if ($data['gait_btn_style'] == '')
+			$data['gait_btn_style'] = 'secondary';
+		if ($data['search_btn_style'] == '')
+			$data['search_btn_style'] = 'secondary';
+
 
         // update form data
         $this->update_form($data, $type, $typeID, $entityID, $attributeID);
@@ -77,7 +64,7 @@ class Database extends CI_Controller {
             $this->load->view('database/gap.html');
 
 		// then allow selection of subcategory
-        if ($data['selected_subtype']['name'] != '' && $data['entities'] != '')
+        if ($data['selected_subtype_ID'] != '' && $data['entities'] != '')
             $this->load->view('database/select_subcategory', $data);
         else
             $this->load->view('database/gap.html');
@@ -85,7 +72,7 @@ class Database extends CI_Controller {
 		$this->load->view('database/selected.html');
 
 		// then selection of data from subcategory
-        if ($data['selected_entity']['id'] != '' && $data['attributes'] != ''
+        if ($data['selected_entity_ID'] != '' && $data['attributes'] != ''
 				&& sizeof($data['attributes']) != 1)
         	$this->load->view('database/select_subcategory_data', $data);
         else
@@ -97,7 +84,8 @@ class Database extends CI_Controller {
 
 
 	/* Updates and refreshes the form */
-	public function update_form($data, $type = NULL, $typeID = NULL, $entityID = NULL, $attributeID = NULL){
+	public function update_form($data, $type = NULL, $typeID = NULL,
+								$entityID = NULL, $attributeID = NULL){
 
 		// if a data type is selected, enable selection of subtype/"category"
 		if(isset($type) && $type != NULL){
@@ -105,13 +93,16 @@ class Database extends CI_Controller {
                 'selected_type'			=> $type,
                 'subtypes'				=> $this->eav_model->get_data_types($type),
             ));
-			if ($type == 'Clinical') {
-				$this->session->userdata('btn_style')['clinical'] = 'primary';
-				$this->session->userdata('btn_style')['gait']	  = 'secondary';
-			} else {
-				$this->session->userdata('btn_style')['clinical'] = 'secondary';
-				$this->session->userdata('btn_style')['gait']	  = 'primary';
-			}
+			if ($type == 'Clinical')
+				$this->session->set_userdata(array(
+					'clinical_btn_style' => 'primary',
+					'gait_btn_style'	 => 'secondary'
+				));
+			else
+				$this->session->set_userdata(array(
+					'clinical_btn_style' => 'secondary',
+					'gait_btn_style' 	 => 'primary'
+				));
 
 
 			// if subtype/"category" is selected,
@@ -121,9 +112,9 @@ class Database extends CI_Controller {
                     if ($subtype['idData_Type'] == $typeID)
                         $subtype_name = $subtype['Subtype'];
                 $this->session->set_userdata(array(
-					'selected_subtype'	=> array('name' => $subtype_name,
-												 'id'	=> $typeID),
-                    'entities'			=> $this->eav_model->get_entity($typeID)
+                    'selected_subtype_ID'	=> $typeID,
+                    'selected_subtype'		=> $subtype_name,
+                    'entities'				=> $this->eav_model->get_entity($typeID)
                 ));
 
 
@@ -135,10 +126,11 @@ class Database extends CI_Controller {
                         if ($entity['idEntity'] == $entityID)
                             $entity_name = $entity['Name'];
                     $this->session->set_userdata(array(
-                        'selected_entity'	 	=> array('name' => $entity_name,
-														 'id'	=> $entityID),
+                        'selected_entity_ID' 	=> $entityID,
+                        'selected_entity'	 	=> $entity_name,
 						'selection_descriptor'	=> $entity_name . ' Data',
-	                    'attributes'		 	=> $this->eav_model->get_attributes_from_entity($entityID),
+	                    'attributes'		 	=> $this->eav_model
+												->get_attributes_from_entity($entityID),
                     ));
 
 					if (sizeof($this->session->userdata('attributes')) > 1){
@@ -147,22 +139,23 @@ class Database extends CI_Controller {
 		                        if ($attribute['idAttribute'] == $attributeID)
 		                            $attr_name = $attribute['Name'];
 		                    $this->session->set_userdata(array(
-		                        'selected_attribute'	=> array('name' => $attr_name,
-																 'id'	=> $attributeID),
+		                        'selected_attribute_ID'	=> $attributeID,
+		                        'selected_attribute'	=> $attr_name,
+								'search_btn_style'		=> 'primary',
 								'search_btn_enable'		=> 'href="database_result"',
-								'selection_descriptor'	=> $entity_name . ' Data – ' . $attr_name
+								'selection_descriptor'	=> $entity_name
+										. ' Data – ' . $attr_name
 		                    ));
-							$this->session->userdata('btn_style')['search'] = 'primary';
 		                }
 					} else {
 						$attr = current($this->session->userdata('attributes'));
 						$this->session->set_userdata(array(
-							'selected_attribute'	=> array('name' => $attr['Name'],
-															 'id'	=> $attr['idAttribute']),
+							'selected_attribute_ID'	=> $attr['idAttribute'],
+							'selected_attribute'	=> $attr['Name'],
+							'search_btn_style'		=> 'primary',
 							'search_btn_enable'		=> 'href="database_result"',
-							'selection_descriptor'	=> $attr['Name']
+							'selection_descriptor'	=> $attr['Name'] . ' Data'
 						));
-						$this->session->userdata('btn_style')['search'] = 'primary';
 					}
                 }
             }
@@ -175,17 +168,19 @@ class Database extends CI_Controller {
 	public function reset_form(){
         $this->session->set_userdata(array(
             'selected_type'			=> '',
-            'subtypes'				=> '',
-            'selected_subtype'		=> array('name' => '', 'id' => ''),
-			'entities'				=> '',
-			'selected_entity'		=> array('name' => '', 'id' => ''),
+            'subtypes'              => '',
+            'selected_subtype_ID'   => '',
+            'selected_subtype'      => '',
+            'entities'              => '',
+            'selected_entity_ID'    => '',
+            'selected_entity'       => '',
 			'attributes'			=> '',
-			'selected_attribute'	=> array('name' => '', 'id' => ''),
+            'selected_attribute_ID'	=> '',
             'selected_attribute'	=> '',
 			'selection_descriptor'	=> '',
-			'btn_style'				=> array(
-				'clinical' => '', 'gait' => '', 'search' => ''
-			),
+			'clinical_btn_style'	=> '',
+			'gait_btn_style'		=> '',
+			'search_btn_style'		=> '',
 			'search_btn_enable'		=> ''
         ));
 
@@ -206,8 +201,8 @@ class Database extends CI_Controller {
 				. ' may access the database. Please contact an admin to request'
 				. ' to be verified.');
             redirect('welcome');
-        } else if ($this->session->userdata('selected_attribute')['name'] == ''
-					|| $this->session->userdata('selected_attribute') == NULL){
+        } else if ($this->session->userdata('selected_attribute') == ''
+				|| $this->session->userdata('selected_attribute') == NULL){
             $this->session->set_flashdata('user_warning', 'A valid data item must'
 				. ' be selected to return a result.');
             redirect('database');
@@ -215,10 +210,10 @@ class Database extends CI_Controller {
 
 
         // get search result data
-        $selected_attribute_ID	= $this->session->userdata('selected_attribute')['id'];
-        $selected_attribute		= $this->session->userdata('selected_attribute')['name'];
-		$results				= $this->eav_model->get_results($selected_attribute_ID);
-        $patients				= $this->eav_model->get_patient();
+        $selected_attribute_ID = $this->session->userdata('selected_attribute_ID');
+        $selected_attribute	= $this->session->userdata('selected_attribute');
+		$results			= $this->eav_model->get_results($selected_attribute_ID);
+        $patients			= $this->eav_model->get_patient();
         $data = array(
             'title'		=> 'Search Result: ' . $selected_attribute,
             'visits'	=> $this->eav_model->get_visitation()
