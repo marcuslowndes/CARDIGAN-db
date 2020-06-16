@@ -8,7 +8,7 @@
             <div class="dropdown-menu">
             <?php   foreach($attributes as $id => $attribute) : ?>
                 <a class="dropdown-item" href="database/<?= $selected_type
-                        ?>/<?= $selected_subtype ?>/<?= $selected_entity_ID
+                        ?>/<?= $selected_subtype_ID ?>/<?= $selected_entity_ID
                         ?>/<?= $attribute['idAttribute'] ?>">
                     <?= $attribute['Name'] ?>
                 </a>

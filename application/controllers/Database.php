@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Database extends CI_Controller {
 
-	public function index($type = NULL, $typeID = NULL,
+	public function index($type = NULL, $subtypeID = NULL,
 	 					  $entityID = NULL, $attributeID = NULL) {
 
         // ensure user is logged in and is verified
@@ -33,14 +33,11 @@ class Database extends CI_Controller {
 			'attributes'			=> $this->session->userdata('attributes'),
             'selected_attribute_ID'	=> $this->session->userdata('selected_attribute_ID'),
             'selected_attribute'	=> $this->session->userdata('selected_attribute'),
-			'selection_descriptor'	=> $this->session->userdata('selection_descriptor'),
 			'clinical_btn_style'	=> $this->session->userdata('clinical_btn_style'),
 			'gait_btn_style'		=> $this->session->userdata('gait_btn_style'),
 			'search_btn_style'		=> $this->session->userdata('search_btn_style'),
 			'search_btn_enable'		=> $this->session->userdata('search_btn_enable')
         );
-        if ($data['selection_descriptor'] == '')
-            $data['selection_descriptor'] = 'None';
 		if ($data['clinical_btn_style'] == '')
 			$data['clinical_btn_style'] = 'secondary';
 		if ($data['gait_btn_style'] == '')
@@ -50,7 +47,7 @@ class Database extends CI_Controller {
 
 
         // update form data
-        $this->update_form($data, $type, $typeID, $entityID, $attributeID);
+        $this->update_form($data, $type, $subtypeID, $entityID, $attributeID);
 
 
 		//load views, depending on how the form is filled:
@@ -69,7 +66,7 @@ class Database extends CI_Controller {
         else
             $this->load->view('database/gap.html');
 
-		$this->load->view('database/selected.html');
+		$this->load->view('database/selected', $data);
 
 		// then selection of data from subcategory
         if ($data['selected_entity_ID'] != '' && $data['attributes'] != ''
@@ -84,7 +81,7 @@ class Database extends CI_Controller {
 
 
 	/* Updates and refreshes the form */
-	public function update_form($data, $type = NULL, $typeID = NULL,
+	public function update_form($data, $type = NULL, $subtypeID = NULL,
 								$entityID = NULL, $attributeID = NULL){
 
 		// if a data type is selected, enable selection of subtype/"category"
@@ -107,14 +104,14 @@ class Database extends CI_Controller {
 
 			// if subtype/"category" is selected,
 			// enable selection of entity/"subcategory"
-            if(isset($typeID) && $typeID != NULL){
+            if(isset($subtypeID) && $subtypeID != NULL){
                 foreach ($data['subtypes'] as $subtype)
-                    if ($subtype['idData_Type'] == $typeID)
+                    if ($subtype['idData_Type'] == $subtypeID)
                         $subtype_name = $subtype['Subtype'];
                 $this->session->set_userdata(array(
-                    'selected_subtype_ID'	=> $typeID,
+                    'selected_subtype_ID'	=> $subtypeID,
                     'selected_subtype'		=> $subtype_name,
-                    'entities'				=> $this->eav_model->get_entity($typeID)
+                    'entities'				=> $this->eav_model->get_entity($subtypeID)
                 ));
 
 
@@ -128,7 +125,6 @@ class Database extends CI_Controller {
                     $this->session->set_userdata(array(
                         'selected_entity_ID' 	=> $entityID,
                         'selected_entity'	 	=> $entity_name,
-						'selection_descriptor'	=> $entity_name . ' Data',
 	                    'attributes'		 	=> $this->eav_model
 												->get_attributes_from_entity($entityID),
                     ));
@@ -142,9 +138,7 @@ class Database extends CI_Controller {
 		                        'selected_attribute_ID'	=> $attributeID,
 		                        'selected_attribute'	=> $attr_name,
 								'search_btn_style'		=> 'primary',
-								'search_btn_enable'		=> 'href="database_result"',
-								'selection_descriptor'	=> $entity_name
-										. ' Data – ' . $attr_name
+								'search_btn_enable'		=> 'href="database_result"'
 		                    ));
 		                }
 					} else {
@@ -153,8 +147,7 @@ class Database extends CI_Controller {
 							'selected_attribute_ID'	=> $attr['idAttribute'],
 							'selected_attribute'	=> $attr['Name'],
 							'search_btn_style'		=> 'primary',
-							'search_btn_enable'		=> 'href="database_result"',
-							'selection_descriptor'	=> $attr['Name'] . ' Data'
+							'search_btn_enable'		=> 'href="database_result"'
 						));
 					}
                 }
@@ -177,7 +170,6 @@ class Database extends CI_Controller {
 			'attributes'			=> '',
             'selected_attribute_ID'	=> '',
             'selected_attribute'	=> '',
-			'selection_descriptor'	=> '',
 			'clinical_btn_style'	=> '',
 			'gait_btn_style'		=> '',
 			'search_btn_style'		=> '',

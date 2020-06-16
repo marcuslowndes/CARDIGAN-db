@@ -120,7 +120,7 @@ class Users extends CI_Controller{
             'user_type'             => '',
             'user_email'            => '',
             'logged_in'             => FALSE,
-            'chosen_datatype'       => '',
+            'selected_type'         => '',
             'subtypes'              => '',
             'selected_subtype_ID'   => '',
             'selected_subtype'      => '',
@@ -130,9 +130,10 @@ class Users extends CI_Controller{
 			'attributes'			=> '',
             'selected_attribute_ID'	=> '',
             'selected_attribute'	=> '',
-			'selection_descriptor'	=> '',
 			'clinical_btn_style'	=> '',
-			'gait_btn_style'		=> ''
+			'gait_btn_style'		=> '',
+			'search_btn_style'		=> '',
+			'search_btn_enable'		=> ''
         ));
     }
 
