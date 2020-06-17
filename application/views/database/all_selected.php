@@ -1,5 +1,5 @@
-<div class="col text-center">
-<div style="height: 100%; overflow: scroll; overflow-x: hidden;">
+<div class="col">
+<div style="height: 530px; overflow: scroll; overflow-x: hidden;">
 <style media="screen">
     .table td, .table th {
         padding: 0.5rem;
