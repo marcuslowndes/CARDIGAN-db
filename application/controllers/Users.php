@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Users extends CI_Controller{
 
     public function register(){
@@ -91,6 +92,7 @@ class Users extends CI_Controller{
                         'user_type'     => $user['User_Type'],
                         'user_email'    => $user['Email'],
                         'logged_in'     => TRUE,
+            			'all_selected'	=> array()
                     ));
 
                     //message
@@ -133,7 +135,9 @@ class Users extends CI_Controller{
 			'clinical_btn_style'	=> '',
 			'gait_btn_style'		=> '',
 			'search_btn_style'		=> '',
-			'search_btn_enable'		=> ''
+            'search_btn_enable'		=> '',
+            'add_btn_enable'		=> '',
+			'all_selected'			=> array()
         ));
     }
 
