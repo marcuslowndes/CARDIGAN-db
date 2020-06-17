@@ -1,5 +1,5 @@
 <br>
-<!-- <h2 class="text-center"> <?= $title ?> </h2> -->
+<h2 class="text-center"> Results </h2>
 <br>
 <div  style="margin:10px;">
 <table class="table table-hover">
@@ -23,8 +23,8 @@
         $i = 0;
         foreach($all_results as $patient => $attributes) :
 		$i++;
-		foreach ($attributes as $attribute => $results) :
-		if (isset($results['Attribute']['Name'])) :
+		foreach ($attributes as $attribute => $results_per_attr) :
+		if (isset($results_per_attr['Attribute']['Name'])) :
 			if($i % 2 === 0)
 				$table_colour = 'table-light';
 			else
@@ -32,8 +32,8 @@
 			?>
 
             <tr class="<?= $table_colour ?>"  id="<?= $attribute ?>">
-            	<td scope="row"> <?= $results['Attribute']['Name']
-					?> <?= $results['Attribute']['Units'] ?> </td>
+            	<td scope="row"> <?= $results_per_attr['Attribute']['Name']
+					?> <?= $results_per_attr['Attribute']['Units'] ?> </td>
 
                 <td scope="row"> <?= $patient ?> </td>
 
@@ -41,18 +41,19 @@
 				foreach($visits as $visit) {
 					echo '<td scope="row">';
 
-					foreach($results['Values'] as $visitID => $value)
-						if ($visit['idVisitation'] == $visitID) {
-							if ($results['Attribute']['Value_Type'] == 'BOOL') {
-								if ($value == 1)
-                                    echo 'Yes <br>';
-								else if ($value == 0)
-                                    echo 'No <br>';
-								else
-								   echo $value . ' <br>';
-							} else
-								echo $value . ' <br>';
-						}
+					foreach($results_per_attr['Values'] as $visitID => $results)
+						foreach ($results as $value)
+							if ($visit['idVisitation'] == $visitID) {
+								if ($results_per_attr['Attribute']['Value_Type'] == 'BOOL') {
+									if ($value == 1)
+	                                    echo 'Yes <br>';
+									else if ($value == 0)
+	                                    echo 'No <br>';
+									else
+									   echo $value . ' <br>';
+								} else
+									echo $value . ' <br>';
+							}
 
 					echo '</td>';
 				}

@@ -136,7 +136,6 @@ class Users extends CI_Controller{
 			'gait_btn_style'		=> '',
 			'search_btn_style'		=> '',
             'search_btn_enable'		=> '',
-            'add_btn_enable'		=> '',
 			'all_selected'			=> array()
         ));
     }

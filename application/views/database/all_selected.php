@@ -1,6 +1,5 @@
-<div class="row">
-<div style="width: 70%;/*height:calc(43px * 6);*/ overflow: scroll;
-    overflow-x: hidden; font-size:90%; margin-left: auto; margin-right: auto">
+<div class="col text-center">
+<div style="height: 100%; overflow: scroll; overflow-x: hidden;">
 <style media="screen">
     .table td, .table th {
         padding: 0.5rem;
@@ -46,13 +45,9 @@
 
     <?php endif; endforeach; ?>
     <tr class="table-primary">
-        <td> <br> </td>
-        <td> <br> </td>
-        <td> <br> </td>
-        <td> <br> </td>
-        <td>
-    		<a class="btn  btn-<?= $add_btn_style ?>" <?= $add_btn_enable ?>> + </a>
-        </td>
+        <?php for ($i=0; $i<5 ; $i++) {
+            echo '<td> <br> </td>';
+        }?>
     </tr>
 	</tbody>
 </table>

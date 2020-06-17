@@ -38,14 +38,11 @@ class Database extends CI_Controller {
 			'clinical_btn_style'	=> $this->session->userdata('clinical_btn_style'),
 			'gait_btn_style'		=> $this->session->userdata('gait_btn_style'),
 			'search_btn_style'		=> $this->session->userdata('search_btn_style'),
-			'search_btn_enable'		=> $this->session->userdata('search_btn_enable'),
-			'add_btn_style'			=> $this->session->userdata('add_btn_style'),
-			'add_btn_enable'		=> $this->session->userdata('add_btn_enable'),
+			'search_btn_enable'		=> $this->session->userdata('search_btn_enable')
         );
 		$data = $this->disable_btn_style($data, 'clinical');
 		$data = $this->disable_btn_style($data, 'gait');
 		$data = $this->disable_btn_style($data, 'search');
-		$data = $this->disable_btn_style($data, 'add');
 
 
         // update form data
@@ -75,8 +72,8 @@ class Database extends CI_Controller {
 				&& count($data['attributes']) > 1)
         	$this->load->view('database/select_subcategory_data', $data);
 
-		$this->load->view('database/all_selected', $data);
         $this->load->view('database/close.html');
+		$this->load->view('database/all_selected', $data);
         $this->load->view('templates/footer.html');
 	}
 
@@ -104,9 +101,7 @@ class Database extends CI_Controller {
 	            'selected_entity'		=> '',
 				'attributes'			=> '',
 	            'selected_attribute_ID'	=> '',
-	            'selected_attribute'	=> '',
-				'add_btn_enable'		=> '',
-				'add_btn_style'			=> ''
+	            'selected_attribute'	=> ''
             ));
 			if ($type == 'Clinical')
 				$this->session->set_userdata(array(
@@ -134,9 +129,7 @@ class Database extends CI_Controller {
 		            'selected_entity'		=> '',
 					'attributes'			=> '',
 		            'selected_attribute_ID'	=> '',
-		            'selected_attribute'	=> '',
-					'add_btn_enable'		=> '',
-					'add_btn_style'			=> ''
+		            'selected_attribute'	=> ''
                 ));
 
 
@@ -153,9 +146,7 @@ class Database extends CI_Controller {
 	                    'attributes'		 	=> $this->eav_model
 												->get_attributes_from_entity($entityID),
 			            'selected_attribute_ID'	=> '',
-			            'selected_attribute'	=> '',
-						'add_btn_enable'		=> '',
-						'add_btn_style'			=> ''
+			            'selected_attribute'	=> ''
                     ));
 
 					if (count($this->session->userdata('attributes')) > 1){
@@ -167,10 +158,9 @@ class Database extends CI_Controller {
 		                        'selected_attribute_ID'	=> $attributeID,
 		                        'selected_attribute'	=> $attr_name,
 								'search_btn_style'		=> 'primary',
-								'search_btn_enable'		=> 'href="database_result"',
-								'add_btn_style'			=> 'primary',
-								'add_btn_enable'		=> 'href="database/add"'
+								'search_btn_enable'		=> 'href="database_result"'
 		                    ));
+							$this->add_to_selected();
 		                }
 					} elseif (count($this->session->userdata('attributes')) == 1) {
 						$attr = current($this->session->userdata('attributes'));
@@ -178,18 +168,15 @@ class Database extends CI_Controller {
 							'selected_attribute_ID'	=> $attr['idAttribute'],
 							'selected_attribute'	=> $attr['Name'],
 							'search_btn_style'		=> 'primary',
-							'search_btn_enable'		=> 'href="database_result"',
-							'add_btn_style'			=> 'primary',
-							'add_btn_enable'		=> 'href="database/add"'
+							'search_btn_enable'		=> 'href="database_result"'
 						));
+						$this->add_to_selected();
 					} else {
 						$this->session->set_userdata(array(
 							'selected_attribute_ID'	=> '',
 							'selected_attribute'	=> '',
 							'search_btn_style'		=> '',
-							'search_btn_enable'		=> '',
-							'add_btn_style'			=> '',
-							'add_btn_enable'		=> ''
+							'search_btn_enable'		=> ''
 						));
 					}
                 }
@@ -218,8 +205,6 @@ class Database extends CI_Controller {
 		));
 
 		$this->session->set_userdata(array('all_selected' => $all_selected));
-
-		redirect('database');
 	}
 
 
@@ -256,7 +241,6 @@ class Database extends CI_Controller {
 			'gait_btn_style'		=> '',
 			'search_btn_style'		=> '',
 			'search_btn_enable'		=> '',
-			'add_btn_enable'		=> '',
 			'all_selected'			=> array()
         ));
 
@@ -303,14 +287,16 @@ class Database extends CI_Controller {
 			$preformatted_results[$patient['Patient_ID']] = array();
 
 			foreach ($all_results as $results)
-				foreach($results as $result)
-					if ($preformatted_results[$patient['Patient_ID']]
-							[$result['Attribute']['idAttribute']] == NULL)
+				foreach($results as $result){
+					if (!isset($preformatted_results[$patient['Patient_ID']]
+							[$result['Attribute']['idAttribute']]))
 						$preformatted_results[$patient['Patient_ID']]
 							[$result['Attribute']['idAttribute']] = array();
+
 					if ($patient['idPatient'] == $result['Patient']['idPatient'])
 						array_push($preformatted_results[$patient['Patient_ID']]
 							[$result['Attribute']['idAttribute']], $result);
+				}
 		}
 
 		// formatted_results gives a new results array arranged as:
@@ -318,38 +304,26 @@ class Database extends CI_Controller {
 			//		<idAttribute> => array(
 			//			'Attribute' => array(...)
 			//	 		'Values' => array(
-			//				<idVisitation> => <result value>
+			//				<idVisitation> => array(...results)
 			//				... (for every visit 1 - 8)
 			//	 		)
 			//		) ... (for every selected attribute)
 			// 	) ... (for every patient)
 		$formatted_results = array();
-		foreach($preformatted_results as $patient => $results)
-			foreach ($results as $attribute => $result) {
-				// echo $result;
-				foreach ($result as $key => $value) {
-					echo $key. ' ' . $value . '<br>';
+		foreach($preformatted_results as $patient => $results_per_attr)
+			foreach ($results_per_attr as $attribute => $results) {
+				foreach ($results as $result) {
+
+					$formatted_results[$patient][$attribute]['Attribute'] = $result['Attribute'];
+					if (!isset($formatted_results[$patient][$attribute]['Values']
+							[$result['Visitation']['idVisitation']]))
+						$formatted_results[$patient][$attribute]['Values']
+							[$result['Visitation']['idVisitation']] = array();
+
+					array_push($formatted_results[$patient][$attribute]['Values']
+						[$result['Visitation']['idVisitation']], $result['Value']['Value']);
 				}
-				die();
-				$formatted_results[$patient][$attribute]['Attribute'] = $result['Attribute'];
-				$formatted_results[$patient][$attribute]['Values']
-					[$result['Visitation']['idVisitation']] = array();
-				array_push($formatted_results[$patient][$attribute]['Values']
-					[$result['Visitation']['idVisitation']], $result['Value']['Value']);
 			}
-		die();
-		// foreach($formatted_results as $patient => $results) {
-		// 	echo $patient . '<br>' . '<br>';
-		// 	foreach ($results as $attribute => $result) {
-		// 		echo 'Attr: ' . $attribute . '<br>--------<br>';
-		// 		foreach ($result['Values'] as $visitID => $val){
-		// 			echo 'Visit: ' . $visitID . ' -- ' . $val . '<br>';
-		// 		}
-		// 		echo '<br>';
-		// 	}
-		// 	echo '<br>';
-		// }
-		// die();
 
 		$data['all_results'] = $formatted_results;
 		$data['visits'] = $this->eav_model->get_visitation();
