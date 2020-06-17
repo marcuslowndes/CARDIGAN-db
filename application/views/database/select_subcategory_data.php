@@ -2,7 +2,7 @@
     <div class="col text-center">
         <div class="dropdown">
             <button type="button" class="btn btn-primary dropdown-toggle"
-                    data-toggle="dropdown" style="width:50%">
+                    data-toggle="dropdown" style="width:25rem">
                 Select data item from subcategory
             </button>
             <div class="dropdown-menu">

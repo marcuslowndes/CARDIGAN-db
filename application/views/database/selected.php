@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col" style="max-width:50% !important; color: white;
+    <div class="col" style="max-width:26rem !important; color: white;
 				background-color: rgba(0, 0, 0, 0.4);
 				border-radius: 1rem; padding: 1rem 1.5rem;
 				margin-left: auto; margin-right: auto;">
