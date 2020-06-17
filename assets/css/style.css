@@ -71,6 +71,10 @@ body {
 	width:100%
 }
 
+.dropdown-menu.show {
+	z-index:10000 !important;
+}
+
 
 @media only screen and (max-width: 991px) {
 	.container-results {

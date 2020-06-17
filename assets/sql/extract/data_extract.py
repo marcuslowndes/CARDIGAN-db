@@ -173,8 +173,8 @@ def extractData(fileName, types, visit):
 
 
 
-#visitNum = 1
-currentValueId = 2103
+# #visitNum = 1
+currentValueId = 10237
 for num in range(1, 4): extractData(
 	'PAIDOS Visit ' + str(num) + '.csv',
 	d.clinicalDataTypes, num + 1
@@ -184,3 +184,5 @@ for num in range(5, 7): extractData(
 	'PAIDOS Visit ' + str(num) + '.csv',
 	d.clinicalDataTypes, num + 1
 )
+
+
