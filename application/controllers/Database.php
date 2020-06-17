@@ -157,7 +157,7 @@ class Database extends CI_Controller {
 		                    $this->session->set_userdata(array(
 		                        'selected_attribute_ID'	=> $attributeID,
 		                        'selected_attribute'	=> $attr_name,
-								'search_btn_style'		=> 'primary',
+								'search_btn_style'		=> 'success',
 								'search_btn_enable'		=> 'href="database_result"'
 		                    ));
 							$this->add_to_selected();
@@ -167,7 +167,7 @@ class Database extends CI_Controller {
 						$this->session->set_userdata(array(
 							'selected_attribute_ID'	=> $attr['idAttribute'],
 							'selected_attribute'	=> $attr['Name'],
-							'search_btn_style'		=> 'primary',
+							'search_btn_style'		=> 'success',
 							'search_btn_enable'		=> 'href="database_result"'
 						));
 						$this->add_to_selected();

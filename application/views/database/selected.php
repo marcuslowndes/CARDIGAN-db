@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col" style="max-width:26rem !important; color: white;
-				background-color: rgba(0, 0, 0, 0.4);
+				background-color: rgba(0, 0, 0, 0.5);
 				border-radius: 1rem; padding: 1rem 1.5rem;
 				margin-left: auto; margin-right: auto;">
-			Search: <?php
+			Selection: <?php
 				if ($selected_type != '')
 					echo $selected_type . ' Data';
 				else
