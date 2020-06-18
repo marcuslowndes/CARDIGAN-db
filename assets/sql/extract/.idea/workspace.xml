@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2f7fac4-cddf-4b9f-94e7-3355af255a26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/marcu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_extract_tests.py" afterDir="false" />
+    <list default="true" id="e2f7fac4-cddf-4b9f-94e7-3355af255a26" name="Default Changelist" comment="comments and formatting of python script">
+      <change afterPath="$PROJECT_DIR$/db_convert_clinical.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_convert_gait.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cardigan_data_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/cardigan_data_types.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_extract_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_extract_tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="extract" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -24,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Marcus Lowndes &lt;marcuslowndes@yahoo.co.uk&gt;arcus" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1Z5SLNS8wZlwz6vybAbxfsrhWyK" />
@@ -38,6 +45,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.EditorConfig" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\CARDIGAN\assets\sql\extract" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.data_extract_tests">
     <configuration name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -122,41 +134,73 @@
       <option name="presentableId" value="Default" />
       <updated>1584127404672</updated>
     </task>
+    <task id="LOCAL-00001" summary="comments and formatting">
+      <created>1592449287440</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592449287440</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="comments and formatting of python script" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments and formatting of python script" />
   </component>
   <component name="WindowStateProjectService">
     <state x="11" y="133" width="816" height="729" key="#Intentions" timestamp="1584128430508">
       <screen x="0" y="0" width="1676" height="943" />
     </state>
     <state x="11" y="133" width="816" height="729" key="#Intentions/0.0.1676.943@0.0.1676.943" timestamp="1584128430508" />
-    <state x="93" y="100" width="652" height="750" key="DiffContextDialog" timestamp="1584161116167">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state x="103" y="53" width="1055" height="974" key="CommitChangelistDialog2" timestamp="1592450402502">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="103" y="53" width="1055" height="974" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592450402502" />
+    <state x="155" y="117" width="1352" height="859" key="DiffContextDialog" timestamp="1592450445903">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="93" y="100" width="652" height="750" key="DiffContextDialog/0.0.1676.943@0.0.1676.943" timestamp="1584161116167" />
+    <state x="155" y="117" width="1352" height="859" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592450445903" />
     <state x="199" y="230" key="FileChooserDialogImpl" timestamp="1584292976812">
       <screen x="0" y="0" width="1676" height="943" />
     </state>
     <state x="199" y="230" key="FileChooserDialogImpl/0.0.1676.943@0.0.1676.943" timestamp="1584292976812" />
-    <state width="564" height="998" key="GridCell.Tab.0.bottom" timestamp="1592446091851">
+    <state x="795" y="440" key="GitRewordDialog" timestamp="1592449438226">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="795" y="440" key="GitRewordDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592449438226" />
+    <state width="611" height="998" key="GridCell.Tab.0.bottom" timestamp="1592452074558">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.bottom/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state width="564" height="998" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
-    <state width="564" height="998" key="GridCell.Tab.0.center" timestamp="1592446091851">
+    <state width="611" height="998" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592452074558" />
+    <state width="611" height="998" key="GridCell.Tab.0.center" timestamp="1592452074556">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.center/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state width="564" height="998" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
-    <state width="564" height="998" key="GridCell.Tab.0.left" timestamp="1592446091850">
+    <state width="611" height="998" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592452074556" />
+    <state width="611" height="998" key="GridCell.Tab.0.left" timestamp="1592452074555">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.left/0.0.1676.943@0.0.1676.943" timestamp="1584330767408" />
-    <state width="564" height="998" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091850" />
-    <state width="564" height="998" key="GridCell.Tab.0.right" timestamp="1592446091851">
+    <state width="611" height="998" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592452074555" />
+    <state width="611" height="998" key="GridCell.Tab.0.right" timestamp="1592452074557">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.right/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state width="564" height="998" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
+    <state width="611" height="998" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592452074557" />
     <state x="414" y="164" width="1183" height="868" key="SettingsEditor" timestamp="1592448687669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

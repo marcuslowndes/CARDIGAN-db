@@ -6,7 +6,6 @@ csv files that can be imported directly into the database.
 
 import csv
 from datetime import datetime
-import cardigan_data_types as d
 
 
 # noinspection PyUnusedLocal
@@ -107,12 +106,12 @@ def reformatValueFromType(dataType, value, attr):
     return value
 
 
-def writeCSV(fileName, dataType, value, isActualValue):
+def writeCSV(fileName, dataType, value, actualValue):
     with open('week' + str(value[3]) + '\\' + fileName
               + '.csv', mode='a', newline='') as output:
         writer = csv.writer(output, delimiter=',', quotechar='"')
 
-        if not isActualValue:
+        if not actualValue:
             print(dataType, value[0], value[1], value[2], value[3], value[4])
             writer.writerow([value[0], value[1], value[2], value[3], value[4]])
         else:
@@ -155,16 +154,14 @@ def writeCSVFiles(dataType, data, valueId, visit):
 
 def getPatients(patientIDs):
     """Get all the patient IDs from allPatients.csv that correspond to the
-    patients in this data set.
+    patient IDs that are passed in.
     :param patientIDs: An array containing the IDs for this data set
-    :type patientIDs: bytearray
-    :returns: A dictionary containing the numerical database IDs for each
-        patients ID string, and each patient ID string, for each patient
-        in the target data set
-    :rtype: dict
+    :type patientIDs: List(str)
+    :returns: A list of arrays, with each patients corresponding ID str
+        and their database index ID
+    :rtype: List(str)
     """
     allPatientsPre = readCSVFile('allPatients.csv')
-    print(allPatientsPre)
     allPatientsDict = {}
     j = 0
     for idStr in allPatientsPre['Patient_ID']:
@@ -180,7 +177,7 @@ def getPatients(patientIDs):
 
 
 def extractData(fileName, types):
-    """Converts the data in a file into
+    """Converts the data in a csv file into a dictionary
     For each column, find the attribute(s)/Id(s)
     then for each attr, go through each patient
     then for each data element, find and add that patient's data value
@@ -205,33 +202,7 @@ def extractData(fileName, types):
                                 dataDict[attribute[2]].append(
                                     [patient[1], attribute[3],  # idPatient, idEntity,
                                      attribute[0], dataValue]   # idAttribute, value
-                                );
+                                )
                             j += 1
                         i += 1
     return dataDict
-
-
-currentValueId = 10237
-
-for num in range(1, 4):
-    dataDict = extractData(
-        'PAIDOS Visit ' + str(num) + '.csv',
-        d.clinicalDataTypes,
-    )
-    for key in dataDict:
-        currentValueId = writeCSVFiles(
-            key, dataDict[key], currentValueId, num + 1
-        )
-
-# SKIP 4, UNTRANSLATED
-
-for num in range(5, 7):
-    dataDict = extractData(
-        'PAIDOS Visit ' + str(num) + '.csv',
-        d.clinicalDataTypes
-    )
-    for key in dataDict:
-        currentValueId = writeCSVFiles(
-            key, dataDict[key], currentValueId, num + 1
-        )
-

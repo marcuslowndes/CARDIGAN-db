@@ -1,9 +1,10 @@
-"""
-clinicalDataTypes
+"""This script provides a description for each attribute/entity
+ relationship, and the corresponding IDs and data types
 
 Column Name :
-    idAttibute, Attribute Name, DataType, idEntity
+    [[idAttribute, Attribute Name, DataType, idEntity]]
 """
+
 clinicalDataTypes = {
     """Timestamp""":
         [[51, "Visitation Timestamp", "TIMESTAMP", 10]],
