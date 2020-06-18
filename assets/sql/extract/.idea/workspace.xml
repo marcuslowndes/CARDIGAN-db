@@ -2,38 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f7fac4-cddf-4b9f-94e7-3355af255a26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/marcu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_extract_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cardigan_data_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/cardigan_data_types.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/.idea/extract_gait6min.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Book1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit1_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit1_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit1_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit2_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit2_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit2_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit3_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit3_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit3_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit4_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit4_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit4_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit5_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit5_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit5_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit6_6Min_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit6_6Min_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit6_6Min_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit7_Beginning.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit7_End.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/Visit7_Middle.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/cardigan_data_types.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extract_gait6min/data_extract.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -61,9 +37,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.EditorConfig" />
   </component>
-  <component name="RunManager" selected="Python.data_extract">
+  <component name="RunManager" selected="Python.data_extract_tests">
     <configuration name="data_extract" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="extract" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +53,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_extract.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_extract_tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="extract" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_extract_tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_extract_tests" />
         <item itemvalue="Python.data_extract" />
         <item itemvalue="Python.dateconvert" />
       </list>
@@ -139,30 +137,36 @@
       <screen x="0" y="0" width="1676" height="943" />
     </state>
     <state x="199" y="230" key="FileChooserDialogImpl/0.0.1676.943@0.0.1676.943" timestamp="1584292976812" />
-    <state width="836" height="262" key="GridCell.Tab.0.bottom" timestamp="1584330767409">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state width="564" height="998" key="GridCell.Tab.0.bottom" timestamp="1592446091851">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.bottom/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state width="836" height="262" key="GridCell.Tab.0.center" timestamp="1584330767409">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state width="564" height="998" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
+    <state width="564" height="998" key="GridCell.Tab.0.center" timestamp="1592446091851">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.center/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state width="836" height="262" key="GridCell.Tab.0.left" timestamp="1584330767408">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state width="564" height="998" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
+    <state width="564" height="998" key="GridCell.Tab.0.left" timestamp="1592446091850">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.left/0.0.1676.943@0.0.1676.943" timestamp="1584330767408" />
-    <state width="836" height="262" key="GridCell.Tab.0.right" timestamp="1584330767409">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state width="564" height="998" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091850" />
+    <state width="564" height="998" key="GridCell.Tab.0.right" timestamp="1592446091851">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="836" height="262" key="GridCell.Tab.0.right/0.0.1676.943@0.0.1676.943" timestamp="1584330767409" />
-    <state x="344" y="102" key="SettingsEditor" timestamp="1584305559669">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state width="564" height="998" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592446091851" />
+    <state x="414" y="164" width="1183" height="868" key="SettingsEditor" timestamp="1592448687669">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="344" y="102" key="SettingsEditor/0.0.1676.943@0.0.1676.943" timestamp="1584305559669" />
-    <state x="126" y="295" key="com.intellij.ide.util.TipDialog" timestamp="1584286797608">
-      <screen x="0" y="0" width="1676" height="943" />
+    <state x="414" y="164" width="1183" height="868" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1592448687669" />
+    <state x="144" y="338" key="com.intellij.ide.util.TipDialog" timestamp="1592437927669">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="126" y="295" key="com.intellij.ide.util.TipDialog/0.0.1676.943@0.0.1676.943" timestamp="1584286797608" />
+    <state x="144" y="338" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592437927669" />
     <state x="180" y="321" width="704" height="564" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1584293260139">
       <screen x="0" y="0" width="1676" height="943" />
     </state>

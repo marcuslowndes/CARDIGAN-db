@@ -1,19 +1,34 @@
+"""CARDIGAN Data Extract Script
+
+This script rearranges raw CARDIGAN data from csv files into
+csv files that can be imported directly into the database.
+"""
+
 import csv
 from datetime import datetime
 import cardigan_data_types as d
 
 
+# noinspection PyUnusedLocal
 def convertTsToSQL(ts, a):
     uts = datetime.strptime(ts, "%d/%m/%Y %H:%M")
     return datetime.strftime(uts, "%Y-%m-%d %H:%M:%S")
 
 
+# noinspection PyUnusedLocal
 def convertDateToSQL(date, a):
     uts = datetime.strptime(date, "%d/%m/%Y")
     return datetime.strftime(uts, "%Y-%m-%d")
 
 
 def readCSVFile(filename):
+    """Reads a CSV file and represents the data as a dictionary
+    :param filename: The name of the csv file, used for the open() function
+    :type filename: str
+    :returns: a dictionary, where each key represents a column title and
+        each value represents an array of values of the corresponding column
+    :rtype: dict
+    """
     allData = {}
 
     with open(filename) as csvDataFile:
@@ -32,9 +47,16 @@ def readCSVFile(filename):
 
 
 def formatBoolean(dataStr, attr):
-    if dataStr in ['Yes', 'YES', 'Si', 'SÍ', 'yes']: return 1
-    elif dataStr in ['No', 'NO', 'no']: return 0
+    """If the datum is represented by "yes/no", then convert
+     to a boolean representation, except for attributes 64 and 67,
+     where it must be manipulated.
+    """
+    if dataStr in ['Yes', 'YES', 'Si', 'SÍ', 'yes']:
+        return 1
+    elif dataStr in ['No', 'NO', 'no']:
+        return 0
     else:
+        # these attributes are an exception to the rule
         if attr == 67:
             varcharList = dataStr.split(' ')
             varcharList = [
@@ -47,14 +69,17 @@ def formatBoolean(dataStr, attr):
         return dataStr
 
 
-def formatInteger(dataStr, attr):
+# noinspection PyUnusedLocal
+def formatInteger(dataStr, a):
     if dataStr in ['Never', 'Strongly disagree', 'Strongly Disagree']:
         return 0
     elif dataStr in ['One day', 'Disagree', 'I']:
         return 1
-    elif dataStr in ['Both days', 'Two days', 'Slightly disagree', 'Slightly Disagree', 'II']:
+    elif dataStr in ['Both days', 'Two days', 'Slightly disagree',
+                     'Slightly Disagree', 'II']:
         return 2
-    elif dataStr in ['Three days', 'Neither agree nor disagree', 'III', 'Neutral']:
+    elif dataStr in ['Three days', 'Neither agree nor disagree',
+                     'III', 'Neutral']:
         return 3
     elif dataStr in ['Four days', 'Slightly agree', 'Slightly Agree', 'IV']:
         return 4
@@ -66,7 +91,10 @@ def formatInteger(dataStr, attr):
         return dataStr
 
 
-def reformatValueFromType(type, value, attr):
+def reformatValueFromType(dataType, value, attr):
+    """A switch statement to reformat values into their
+     respective data types.
+    """
     formatsPerType = {
         'DATE':         convertDateToSQL,
         'TIMESTAMP':    convertTsToSQL,
@@ -74,13 +102,14 @@ def reformatValueFromType(type, value, attr):
         'INT':          formatInteger
     }
     for f in formatsPerType:
-        if type == f:
+        if dataType == f:
             return formatsPerType[f](value, attr)
     return value
 
 
 def writeCSV(fileName, dataType, value, isActualValue):
-    with open('week' + str(num) + '\\' + fileName + '.csv', mode='a', newline='') as output:
+    with open('week' + str(value[3]) + '\\' + fileName
+              + '.csv', mode='a', newline='') as output:
         writer = csv.writer(output, delimiter=',', quotechar='"')
 
         if not isActualValue:
@@ -93,7 +122,9 @@ def writeCSV(fileName, dataType, value, isActualValue):
 
 def writeCSVFiles(dataType, data, valueId, visit):
     for item in data:
-        idPatient = item[0]; idEntity = item[1]; idAttribute = item[2]
+        idPatient = item[0]
+        idEntity = item[1]
+        idAttribute = item[2]
 
         if item[3] not in ['NA','N/A','-','--','']:
             print('\nraw: ' + item[3])
@@ -123,7 +154,17 @@ def writeCSVFiles(dataType, data, valueId, visit):
 
 
 def getPatients(patientIDs):
+    """Get all the patient IDs from allPatients.csv that correspond to the
+    patients in this data set.
+    :param patientIDs: An array containing the IDs for this data set
+    :type patientIDs: bytearray
+    :returns: A dictionary containing the numerical database IDs for each
+        patients ID string, and each patient ID string, for each patient
+        in the target data set
+    :rtype: dict
+    """
     allPatientsPre = readCSVFile('allPatients.csv')
+    print(allPatientsPre)
     allPatientsDict = {}
     j = 0
     for idStr in allPatientsPre['Patient_ID']:
@@ -138,12 +179,12 @@ def getPatients(patientIDs):
     return relevantPatients
 
 
-
-""" For each column, find the attribute(s)/Id(s)
-then for each attr, go through each patient
-then for each data element, find and add that patient's data value
-APPEND: [idPatient, idEntity, idAttribute, value] """
-def extractData(fileName, types, visit):
+def extractData(fileName, types):
+    """Converts the data in a file into
+    For each column, find the attribute(s)/Id(s)
+    then for each attr, go through each patient
+    then for each data element, find and add that patient's data value
+    """
     preDataDict = readCSVFile(fileName)
     patients = getPatients(preDataDict['CARDIGAN ID'])
     del preDataDict['CARDIGAN ID']
@@ -160,29 +201,37 @@ def extractData(fileName, types, visit):
                     for patient in patients:
                         j = 0
                         for dataValue in preDataDict[dataColName]:
-                            if i == j: dataDict[attribute[2]].append(
-                                [patient[1], attribute[3], attribute[0], dataValue]
-                            );
+                            if i == j:
+                                dataDict[attribute[2]].append(
+                                    [patient[1], attribute[3],  # idPatient, idEntity,
+                                     attribute[0], dataValue]   # idAttribute, value
+                                );
                             j += 1
                         i += 1
-
-    global currentValueId
-    for key in dataDict: currentValueId = writeCSVFiles(
-        key, dataDict[key], currentValueId, visit
-    )
+    return dataDict
 
 
-
-# #visitNum = 1
 currentValueId = 10237
-for num in range(1, 4): extractData(
-	'PAIDOS Visit ' + str(num) + '.csv',
-	d.clinicalDataTypes, num + 1
-)
-# SKIP 4, UTRANSLATED
-for num in range(5, 7): extractData(
-	'PAIDOS Visit ' + str(num) + '.csv',
-	d.clinicalDataTypes, num + 1
-)
 
+for num in range(1, 4):
+    dataDict = extractData(
+        'PAIDOS Visit ' + str(num) + '.csv',
+        d.clinicalDataTypes,
+    )
+    for key in dataDict:
+        currentValueId = writeCSVFiles(
+            key, dataDict[key], currentValueId, num + 1
+        )
+
+# SKIP 4, UNTRANSLATED
+
+for num in range(5, 7):
+    dataDict = extractData(
+        'PAIDOS Visit ' + str(num) + '.csv',
+        d.clinicalDataTypes
+    )
+    for key in dataDict:
+        currentValueId = writeCSVFiles(
+            key, dataDict[key], currentValueId, num + 1
+        )
 

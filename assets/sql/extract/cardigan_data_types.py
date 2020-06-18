@@ -118,3 +118,9 @@ clinicalDataTypes = {
     """Freq. Consumption of Coke or Sugary Beverages""":
         [[107, "Freq. Consumption of Coke or Sugary Beverages", "VARCHAR", 65]]
 }
+
+
+gaitDataTypes = {
+    """Timestamp""":
+        [[51, "Visitation Timestamp", "TIMESTAMP", 10]],
+}
