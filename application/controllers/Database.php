@@ -261,8 +261,8 @@ class Database extends CI_Controller {
 				. ' may access the database. Please contact an admin to request'
 				. ' to be verified.');
             redirect('welcome');
-        } else if ($this->session->userdata('selected_attribute') == ''
-				|| $this->session->userdata('selected_attribute') == NULL){
+        } else if (count($this->session->userdata('all_selected')) == 0
+				|| $this->session->userdata('all_selected') == NULL){
             $this->session->set_flashdata('user_warning', 'A valid data item must'
 				. ' be selected to return a result.');
             redirect('database');

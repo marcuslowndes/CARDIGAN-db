@@ -1,0 +1,3175 @@
+,3133,130/87
+,3134,108/63
+,3135,110/60
+,3136,113/78
+,3137,110/80
+,3138,100/80
+,3139,110/80
+,3140,135/91
+,3141,145/90
+,3142,120/86
+,3143,125/80
+,3144,110/70
+,3145,110/80
+,3146,100/80
+,3147,110/70
+,3148,169/112
+,3149,110/70
+,3150,138/82
+,3151,100/70
+,3152,98/81
+,3153,90/60
+,3154,154/113
+,3155,130/85
+,3156,120/90
+,3157,110/80
+,3158,135/100
+,3159,155/108
+,3160,108/82
+,3161,120/90
+,3162,101/79
+,3163,120/90
+,3164,125/90
+,3165,120/85
+,3166,110/80
+,3167,110/70
+,3168,100/60
+,3169,110/85
+,3170,174/95
+,3171,96/77
+,3172,110/70
+,3173,111/80
+,3174,112/62
+,3175,98/72
+,3176,94
+,3177,104
+,3178,75
+,3179,92
+,3180,86
+,3181,69
+,3182,100
+,3183,71
+,3184,78
+,3185,68
+,3186,94
+,3187,72
+,3188,85
+,3189,90
+,3190,82
+,3191,65
+,3192,89
+,3193,95
+,3194,66
+,3195,72
+,3196,72
+,3197,86
+,3198,81
+,3199,112
+,3200,96
+,3201,83
+,3202,87
+,3203,78
+,3204,89
+,3205,86
+,3206,92
+,3207,71
+,3208,109
+,3209,91
+,3210,76
+,3211,59
+,3212,76
+,3213,83
+,3214,71
+,3215,93
+,3216,107
+,3217,93
+,3218,116
+,3219,1 year
+,3220,3 years
+,3221,2 years
+,3222,1 year
+,3223,15 days
+,3224,Right
+,3225,Right
+,3226,Right
+,3227,Right
+,3228,Left
+,3229,Right
+,3230,Right
+,3231,Right
+,3232,Right
+,3233,Right
+,3234,Right
+,3235,Right
+,3236,Right
+,3237,Right
+,3238,Right
+,3239,Right
+,3240,Right
+,3241,Left
+,3242,Right
+,3243,Right
+,3244,Right
+,3245,Left
+,3246,Right
+,3247,Right
+,3248,Right
+,3249,Right
+,3250,Right
+,3251,Right
+,3252,Right
+,3253,Right
+,3254,Right
+,3255,Right
+,3256,Right
+,3257,Right
+,3258,Right
+,3259,Left
+,3260,Right
+,3261,Right
+,3262,Right
+,3263,Right
+,3264,Right
+,3265,Right
+,3266,Right
+,3267,Left
+,3268,Right
+,3269,Right
+,3270,Right
+,3271,Right
+,3272,Right
+,3273,Right
+,3274,Right
+,3275,Right
+,3276,Right
+,3277,130/87
+,3278,108/63
+,3279,110/60
+,3280,113/78
+,3281,110/80
+,3282,100/80
+,3283,110/80
+,3284,135/91
+,3285,145/90
+,3286,120/86
+,3287,125/80
+,3288,110/60
+,3289,110/80
+,3290,100/80
+,3291,110/70
+,3292,169/112
+,3293,110/70
+,3294,138/82
+,3295,100/70
+,3296,98/81
+,3297,90/60
+,3298,154/113
+,3299,130/85
+,3300,120/90
+,3301,110/80
+,3302,135/100
+,3303,155/108
+,3304,108/82
+,3305,120/90
+,3306,101/79
+,3307,120/90
+,3308,125/90
+,3309,120/85
+,3310,110/80
+,3311,110/70
+,3312,100/60
+,3313,110/85
+,3314,174/95
+,3315,96/77
+,3316,110/70
+,3317,111/80
+,3318,112/62
+,3319,98/72
+,3320,130/87
+,3321,108/63
+,3322,110/60
+,3323,113/78
+,3324,110/80
+,3325,100/80
+,3326,110/80
+,3327,135/91
+,3328,145/90
+,3329,120/86
+,3330,125/80
+,3331,110/60
+,3332,110/80
+,3333,100/80
+,3334,110/70
+,3335,169/112
+,3336,110/70
+,3337,138/82
+,3338,100/70
+,3339,98/81
+,3340,90/60
+,3341,154/113
+,3342,130/85
+,3343,120/90
+,3344,110/80
+,3345,135/100
+,3346,155/108
+,3347,108/82
+,3348,120/90
+,3349,101/79
+,3350,120/90
+,3351,125/90
+,3352,120/85
+,3353,110/80
+,3354,110/70
+,3355,100/60
+,3356,110/85
+,3357,174/95
+,3358,96/77
+,3359,110/70
+,3360,111/80
+,3361,112/62
+,3362,98/72
+,3363,130/90
+,3364,176/111
+,3365,149/87
+,3366,130/60
+,3367,115/97
+,3368,153/93
+,3369,177/114
+,3370,153/100
+,3371,155/89
+,3372,168/94
+,3373,161/85
+,3374,200/117
+,3375,166/95
+,3376,130/70
+,3377,176/109
+,3378,120/70
+,3379,152/99
+,3380,158/98
+,3381,100/60
+,3382,153/102
+,3383,90/73
+,3384,125/77
+,3385,108/77
+,3386,129/69
+,3387,140/80
+,3388,135/75
+,3389,166/117
+,3390,165/70
+,3391,141/93
+,3392,130/90
+,3393,127/83
+,3394,145/80
+,3395,127/77
+,3396,95/60
+,3397,115/50
+,3398,110/90
+,3399,123/82
+,3400,110/80
+,3401,170/95
+,3402,130/85
+,3403,150.9
+,3404,144/92
+,3405,96/75
+,3406,130/85
+,3407,130/90
+,3408,176/111
+,3409,149/87
+,3410,130/60
+,3411,115/97
+,3412,153/93
+,3413,177/114
+,3414,153/100
+,3415,155/89
+,3416,168/94
+,3417,161/85
+,3418,200/117
+,3419,166/95
+,3420,130/70
+,3421,176/109
+,3422,120/70
+,3423,152/99
+,3424,158/98
+,3425,100/60
+,3426,153/102
+,3427,90/73
+,3428,125/77
+,3429,108/77
+,3430,129/69
+,3431,140/80
+,3432,135/75
+,3433,166/117
+,3434,165/70
+,3435,141/93
+,3436,130/90
+,3437,127/83
+,3438,145/80
+,3439,127/77
+,3440,95/60
+,3441,115/50
+,3442,110/90
+,3443,123/82
+,3444,110/80
+,3445,170/95
+,3446,130/85
+,3447,150.9
+,3448,144/92
+,3449,96/75
+,3450,130/85
+,3451,"Every day, more than once"
+,3452,"Once a day, every day"
+,3453,"Once a day, every day"
+,3454,"Once a day, every day"
+,3455,"Every day, more than once"
+,3456,"Every day, more than once"
+,3457,"Every day, more than once"
+,3458,"Once a day, every day"
+,3459,"Once a day, every day"
+,3460,5 - 6 days of the week
+,3461,"Once a day, every day"
+,3462,2 - 4 days of the week
+,3463,Never
+,3464,"Every day, more than once"
+,3465,"Every day, more than once"
+,3466,2 - 4 days of the week
+,3467,"Once a day, every day"
+,3468,"Once a day, every day"
+,3469,"Every day, more than once"
+,3470,"Every day, more than once"
+,3471,"Every day, more than once"
+,3472,"Every day, more than once"
+,3473,"Every day, more than once"
+,3474,"Once a day, every day"
+,3475,5 - 6 days of the week
+,3476,5 - 6 days of the week
+,3477,"Every day, more than once"
+,3478,"Every day, more than once"
+,3479,"Every day, more than once"
+,3480,"Every day, more than once"
+,3481,"Every day, more than once"
+,3482,"Once a day, every day"
+,3483,5 - 6 days of the week
+,3484,"Once a day, every day"
+,3485,"Once a day, every day"
+,3486,"Once a day, every day"
+,3487,"Once a day, every day"
+,3488,"Once a day, every day"
+,3489,2 - 4 days of the week
+,3490,"Once a day, every day"
+,3491,"Every day, more than once"
+,3492,"Every day, more than once"
+,3493,Once a week
+,3494,2 - 4 days of the week
+,3495,"Every day, more than once"
+,3496,2 - 4 days of the week
+,3497,2 - 4 days of the week
+,3498,"Every day, more than once"
+,3499,"Every day, more than once"
+,3500,"Every day, more than once"
+,3501,"Every day, more than once"
+,3502,Once a week
+,3503,Never
+,3504,"Every day, more than once"
+,3505,5 - 6 days of the week
+,3506,"Once a day, every day"
+,3507,"Once a day, every day"
+,3508,2 - 4 days of the week
+,3509,"Every day, more than once"
+,3510,"Every day, more than once"
+,3511,"Once a day, every day"
+,3512,"Once a day, every day"
+,3513,2 - 4 days of the week
+,3514,"Once a day, every day"
+,3515,2 - 4 days of the week
+,3516,Never
+,3517,"Every day, more than once"
+,3518,"Every day, more than once"
+,3519,2 - 4 days of the week
+,3520,2 - 4 days of the week
+,3521,"Once a day, every day"
+,3522,"Once a day, every day"
+,3523,"Every day, more than once"
+,3524,"Every day, more than once"
+,3525,"Every day, more than once"
+,3526,2 - 4 days of the week
+,3527,"Once a day, every day"
+,3528,5 - 6 days of the week
+,3529,2 - 4 days of the week
+,3530,"Once a day, every day"
+,3531,"Every day, more than once"
+,3532,"Every day, more than once"
+,3533,"Every day, more than once"
+,3534,"Once a day, every day"
+,3535,"Once a day, every day"
+,3536,"Every day, more than once"
+,3537,5 - 6 days of the week
+,3538,"Once a day, every day"
+,3539,"Once a day, every day"
+,3540,"Every day, more than once"
+,3541,5 - 6 days of the week
+,3542,"Once a day, every day"
+,3543,5 - 6 days of the week
+,3544,"Every day, more than once"
+,3545,"Once a day, every day"
+,3546,"Once a day, every day"
+,3547,2 - 4 days of the week
+,3548,5 - 6 days of the week
+,3549,2 - 4 days of the week
+,3550,2 - 4 days of the week
+,3551,"Every day, more than once"
+,3552,"Every day, more than once"
+,3553,"Every day, more than once"
+,3554,"Every day, more than once"
+,3555,Once a week
+,3556,"Every day, more than once"
+,3557,Less than Once a week
+,3558,Never
+,3559,2 - 4 days of the week
+,3560,2 - 4 days of the week
+,3561,5 - 6 days of the week
+,3562,Never
+,3563,2 - 4 days of the week
+,3564,5 - 6 days of the week
+,3565,Once a week
+,3566,Less than Once a week
+,3567,2 - 4 days of the week
+,3568,Less than Once a week
+,3569,2 - 4 days of the week
+,3570,"Once a day, every day"
+,3571,Once a week
+,3572,Once a week
+,3573,Once a week
+,3574,Once a week
+,3575,2 - 4 days of the week
+,3576,2 - 4 days of the week
+,3577,"Every day, more than once"
+,3578,2 - 4 days of the week
+,3579,Less than Once a week
+,3580,Once a week
+,3581,Once a week
+,3582,Once a week
+,3583,Never
+,3584,Once a week
+,3585,Never
+,3586,2 - 4 days of the week
+,3587,Less than Once a week
+,3588,Once a week
+,3589,2 - 4 days of the week
+,3590,Less than Once a week
+,3591,2 - 4 days of the week
+,3592,"Every day, more than once"
+,3593,Never
+,3594,2 - 4 days of the week
+,3595,2 - 4 days of the week
+,3596,Less than Once a week
+,3597,Once a week
+,3598,Less than Once a week
+,3599,2 - 4 days of the week
+,3600,Never
+,3601,Never
+,3602,Once a week
+,3603,Once a week
+,3604,Less than Once a week
+,3605,Once a week
+,3606,Less than Once a week
+,3607,Once a week
+,3608,Once a week
+,3609,Never
+,3610,Never
+,3611,Never
+,3612,2 - 4 days of the week
+,3613,"Once a day, every day"
+,3614,5 - 6 days of the week
+,3615,2 - 4 days of the week
+,3616,2 - 4 days of the week
+,3617,5 - 6 days of the week
+,3618,2 - 4 days of the week
+,3619,5 - 6 days of the week
+,3620,"Once a day, every day"
+,3621,Less than Once a week
+,3622,"Every day, more than once"
+,3623,2 - 4 days of the week
+,3624,Never
+,3625,5 - 6 days of the week
+,3626,"Once a day, every day"
+,3627,Once a week
+,3628,Less than Once a week
+,3629,2 - 4 days of the week
+,3630,Once a week
+,3631,Once a week
+,3632,Once a week
+,3633,Once a week
+,3634,Less than Once a week
+,3635,Once a week
+,3636,"Once a day, every day"
+,3637,Once a week
+,3638,Less than Once a week
+,3639,2 - 4 days of the week
+,3640,"Once a day, every day"
+,3641,Less than Once a week
+,3642,2 - 4 days of the week
+,3643,Never
+,3644,"Once a day, every day"
+,3645,"Once a day, every day"
+,3646,"Once a day, every day"
+,3647,Never
+,3648,Once a week
+,3649,Once a week
+,3650,Once a week
+,3651,2 - 4 days of the week
+,3652,"Once a day, every day"
+,3653,Once a week
+,3654,Less than Once a week
+,3655,Once a week
+,3656,2 - 4 days of the week
+,3657,Less than Once a week
+,3658,2 - 4 days of the week
+,3659,Once a week
+,3660,Less than Once a week
+,3661,"Every day, more than once"
+,3662,Never
+,4292,Descent of the femur
+,4295,sequel of a humeral fracture
+,4298,knee injury
+,4303,luxation of clavicle
+,4305,ACL injury
+,4320,Injured knee and pain in hip
+,4331,sprained shoulder
+,4334,Spinal contracture
+,4344,hemartrosis
+,4347,Dance
+,4349,Zumba
+,4351,Football
+,4353,PhysEd
+,4354,Dance
+,4356,Football
+,4360,Gym
+,4362,Football
+,4366,Football
+,4368,Football
+,4371,Football
+,4373,Football
+,4374,running
+,4377,Football
+,4379,Football
+,4381,Dance
+,4383,Football
+,4385,Swimming
+,4387,PhysEd
+,4389,Walking
+,4391,Physical
+,4392,Therapy
+,4395,PhysEd
+,4396,Dance
+,4398,Handball
+,4400,Kickboxing
+,4402,PhysEd
+,4404,PhysEd
+,4406,Cycling
+,4408,Cycling
+,4411,Cycling
+,4413,Football
+,4415,Dance
+,4417,Running
+,4419,Basketball
+,4422,Boxing
+,4423,Running
+,4426,Football
+,4429,Dance
+,4430,Baseball
+,4432,Football
+,4434,Zumba
+,4437,Swimming
+,4439,Gymnastics
+,4441,PhysEd
+,4443,PhysEd
+,5407,98/64
+,5408,153/117
+,5409,108/76
+,5410,107/86
+,5411,126/85
+,5412,106/74
+,5413,150/84
+,5414,156/85
+,5415,116/74
+,5416,142/111
+,5417,116/90
+,5418,143/105
+,5419,131/83
+,5420,129/91
+,5421,148/96
+,5422,123/83
+,5423,138/96
+,5424,131/75
+,5425,108/73
+,5426,110/75
+,5427,101/59
+,5428,107/70
+,5429,103/67
+,5430,107/89
+,5431,131/112
+,5432,99/61
+,5433,97/49
+,5434,102/59
+,5435,102/61
+,5436,92/52
+,5437,115/53
+,5438,125/113
+,5439,102/71
+,5440,124/76
+,5441,120/81
+,5442,108/72
+,5443,123/71
+,5444,112/75
+,5445,104/70
+,5446,108/62
+,5447,111/77
+,5448,111/78
+,5449,95/60
+,5450,99/71
+,5451,84/69
+,5452,94/72
+,5453,107/76
+,5454,111/80
+,5455,95
+,5456,92
+,5457,81
+,5458,93
+,5459,102
+,5460,96
+,5461,80
+,5462,109
+,5463,81
+,5464,81
+,5465,80
+,5466,81
+,5467,105
+,5468,74
+,5469,68
+,5470,67
+,5471,80
+,5472,70
+,5473,80
+,5474,68
+,5475,93
+,5476,74
+,5477,117
+,5478,85
+,5479,92
+,5480,80
+,5481,81
+,5482,60
+,5483,87
+,5484,76
+,5485,88
+,5486,67
+,5487,85
+,5488,82
+,5489,84
+,5490,87
+,5491,76
+,5492,85
+,5493,98
+,5494,62
+,5495,88
+,5496,97
+,5497,83
+,5498,83
+,5499,98
+,5500,52
+,5501,64
+,5502,107
+,5503,Right
+,5504,Right
+,5505,Right
+,5506,Left
+,5507,Right
+,5508,Right
+,5509,Right
+,5510,Right
+,5511,Right
+,5512,Right
+,5513,Right
+,5514,Right
+,5515,Right
+,5516,Right
+,5517,Right
+,5518,Right
+,5519,Left
+,5520,Right
+,5521,Right
+,5522,Right
+,5523,Left
+,5524,Right
+,5525,Right
+,5526,Right
+,5527,Right
+,5528,Right
+,5529,Right
+,5530,Right
+,5531,Right
+,5532,Right
+,5533,Right
+,5534,Right
+,5535,Right
+,5536,Right
+,5537,Right
+,5538,Right
+,5539,Right
+,5540,Right
+,5541,Right
+,5542,Right
+,5543,Right
+,5544,Left
+,5545,Right
+,5546,Right
+,5547,Right
+,5548,Right
+,5549,Right
+,5550,Right
+,5551,98/64
+,5552,153/117 
+,5553,108/76
+,5554,107/86
+,5555,126/85
+,5556,106/74
+,5557,150/84 
+,5558,156/85
+,5559,116/74 
+,5560,142/111
+,5561,116/90
+,5562,143/105
+,5563,131/83 
+,5564,129/91 
+,5565,148/96
+,5566,123/83
+,5567,139/91
+,5568,131/75 
+,5569,108/73
+,5570,110/75
+,5571,101/59
+,5572,107/70
+,5573,103/67
+,5574,107/89
+,5575,131/112
+,5576,99/61
+,5577,97/49
+,5578,102/59 
+,5579,102/61
+,5580,94/67
+,5581,116/53
+,5582,125/113
+,5583,126/78
+,5584,124/76
+,5585,120/81
+,5586,108/72
+,5587,101/70
+,5588,127/53
+,5589,128/79
+,5590,108/62
+,5591,123/76
+,5592,101/78
+,5593,93/60
+,5594,110/80
+,5595,120/80
+,5596,94/72
+,5597,126/79
+,5598,111/80
+,5599,98/64
+,5600,153/117 
+,5601,108/76
+,5602,107/86
+,5603,126/85
+,5604,106/74
+,5605,150/84 
+,5606,156/85
+,5607,116/74 
+,5608,142/111
+,5609,116/90
+,5610,143/105
+,5611,131/83 
+,5612,129/91 
+,5613,148/96
+,5614,123/83
+,5615,139/91
+,5616,131/75 
+,5617,108/73
+,5618,110/75
+,5619,101/59
+,5620,107/70
+,5621,103/67
+,5622,107/89
+,5623,131/112
+,5624,99/61
+,5625,97/49
+,5626,102/59 
+,5627,102/61
+,5628,94/67
+,5629,116/53
+,5630,125/113
+,5631,126/78
+,5632,124/76
+,5633,120/81
+,5634,108/72
+,5635,101/70
+,5636,127/53
+,5637,128/79
+,5638,108/62
+,5639,123/76
+,5640,101/78
+,5641,93/60
+,5642,110/80
+,5643,120/80
+,5644,94/72
+,5645,126/79
+,5646,111/80
+,5647,120
+,5648,120
+,5649,106
+,5650,132
+,5651,120
+,5652,120
+,5653,140
+,5654,113
+,5655,99
+,5656,115
+,5657,108
+,5658,125
+,5659,116
+,5660,93
+,5661,125
+,5662,111
+,5663,96
+,5664,110
+,5665,106
+,5666,128
+,5667,120
+,5668,104
+,5669,95
+,5670,127
+,5671,111 pm
+,5672,102
+,5673,70
+,5674,115
+,5675,125
+,5676,100
+,5677,118
+,5678,102
+,5679,131
+,5680,137
+,5681,117
+,5682,90
+,5683,120
+,5684,122
+,5685,79
+,5686,104
+,5687,105
+,5688,74
+,5689,104
+,5690,134
+,5691,81
+,5692,92
+,5693,110/70
+,5694,110/80
+,5695,122/74
+,5696,120/80
+,5697,136/78
+,5698,110/70
+,5699,130/80 
+,5700,155/88
+,5701,130/90
+,5702,150/103
+,5703,120/90
+,5704,130/90 
+,5705,130/90
+,5706,154/114
+,5707,140/100
+,5708,130/70
+,5709,130/90
+,5710,132/80
+,5711,105/79
+,5712,109/79
+,5713,123/83
+,5714,122/79
+,5715,129/76
+,5716,107/74
+,5717,120/70
+,5718,129/77
+,5719,112/70
+,5720,102/82
+,5721,142/73
+,5722,102/67
+,5723,126/82
+,5724,130/80
+,5725,130/80
+,5726,140/80
+,5727,120/90
+,5728,130/60
+,5729,120/80
+,5730,130/90
+,5731,130/80
+,5732,115/77
+,5733,102/73
+,5734,120/90
+,5735,120/70
+,5736,130/80
+,5737,140/90 
+,5738,123/80
+,5739,130/90
+,5740,110/70
+,5741,110/80
+,5742,122/74
+,5743,120/80
+,5744,136/78
+,5745,110/70
+,5746,130/80 
+,5747,155/88
+,5748,130/90
+,5749,150/103
+,5750,120/90
+,5751,130/90 
+,5752,130/90
+,5753,154/114
+,5754,140/100
+,5755,130/70
+,5756,130/90
+,5757,132/80
+,5758,105/79
+,5759,109/79
+,5760,123/83
+,5761,122/79
+,5762,129/76
+,5763,107/74
+,5764,120/70
+,5765,129/77
+,5766,112/70
+,5767,102/82
+,5768,142/73
+,5769,102/67
+,5770,126/82
+,5771,130/80
+,5772,130/80
+,5773,140/80
+,5774,120/90
+,5775,130/60
+,5776,120/80
+,5777,130/90
+,5778,130/80
+,5779,115/77
+,5780,102/73
+,5781,120/90
+,5782,120/70
+,5783,130/80
+,5784,140/90 
+,5785,123/80
+,5786,130/90
+,5787,"Every day, more than once"
+,5788,"Once a day, every day"
+,5789,5 - 6 days of the week
+,5790,"Every day, more than once"
+,5791,"Every day, more than once"
+,5792,5 - 6 days of the week
+,5793,5 - 6 days of the week
+,5794,5 - 6 days of the week
+,5795,2 - 4 days of the week
+,5796,2 - 4 days of the week
+,5797,2 - 4 days of the week
+,5798,Never
+,5799,2 - 4 days of the week
+,5800,5 - 6 days of the week
+,5801,2 - 4 days of the week
+,5802,5 - 6 days of the week
+,5803,5 - 6 days of the week
+,5804,"Once a day, every day"
+,5805,2 - 4 days of the week
+,5806,5 - 6 days of the week
+,5807,"Every day, more than once"
+,5808,"Every day, more than once"
+,5809,"Once a day, every day"
+,5810,5 - 6 days of the week
+,5811,"Every day, more than once"
+,5812,"Every day, more than once"
+,5813,"Every day, more than once"
+,5814,"Every day, more than once"
+,5815,"Every day, more than once"
+,5816,5 - 6 days of the week
+,5817,2 - 4 days of the week
+,5818,2 - 4 days of the week
+,5819,5 - 6 days of the week
+,5820,5 - 6 days of the week
+,5821,"Once a day, every day"
+,5822,"Once a day, every day"
+,5823,"Every day, more than once"
+,5824,2 - 4 days of the week
+,5825,5 - 6 days of the week
+,5826,"Every day, more than once"
+,5827,2 - 4 days of the week
+,5828,2 - 4 days of the week
+,5829,"Every day, more than once"
+,5830,2 - 4 days of the week
+,5831,2 - 4 days of the week
+,5832,"Every day, more than once"
+,5833,"Every day, more than once"
+,5834,"Every day, more than once"
+,5835,"Every day, more than once"
+,5836,"Every day, more than once"
+,5837,"Every day, more than once"
+,5838,2 - 4 days of the week
+,5839,2 - 4 days of the week
+,5840,5 - 6 days of the week
+,5841,5 - 6 days of the week
+,5842,2 - 4 days of the week
+,5843,2 - 4 days of the week
+,5844,2 - 4 days of the week
+,5845,2 - 4 days of the week
+,5846,Once a week
+,5847,2 - 4 days of the week
+,5848,2 - 4 days of the week
+,5849,5 - 6 days of the week
+,5850,2 - 4 days of the week
+,5851,5 - 6 days of the week
+,5852,"Once a day, every day"
+,5853,"Once a day, every day"
+,5854,2 - 4 days of the week
+,5855,"Every day, more than once"
+,5856,2 - 4 days of the week
+,5857,2 - 4 days of the week
+,5858,5 - 6 days of the week
+,5859,"Once a day, every day"
+,5860,2 - 4 days of the week
+,5861,"Every day, more than once"
+,5862,"Every day, more than once"
+,5863,"Every day, more than once"
+,5864,"Once a day, every day"
+,5865,"Every day, more than once"
+,5866,"Every day, more than once"
+,5867,5 - 6 days of the week
+,5868,"Every day, more than once"
+,5869,"Once a day, every day"
+,5870,"Every day, more than once"
+,5871,2 - 4 days of the week
+,5872,"Every day, more than once"
+,5873,2 - 4 days of the week
+,5874,"Every day, more than once"
+,5875,"Every day, more than once"
+,5876,Less than Once a week
+,5877,5 - 6 days of the week
+,5878,2 - 4 days of the week
+,5879,2 - 4 days of the week
+,5880,"Every day, more than once"
+,5881,"Every day, more than once"
+,5882,"Every day, more than once"
+,5883,Never
+,5884,Once a week
+,5885,2 - 4 days of the week
+,5886,2 - 4 days of the week
+,5887,Never
+,5888,2 - 4 days of the week
+,5889,2 - 4 days of the week
+,5890,Less than Once a week
+,5891,Never
+,5892,2 - 4 days of the week
+,5893,Once a week
+,5894,5 - 6 days of the week
+,5895,2 - 4 days of the week
+,5896,5 - 6 days of the week
+,5897,2 - 4 days of the week
+,5898,2 - 4 days of the week
+,5899,Once a week
+,5900,2 - 4 days of the week
+,5901,2 - 4 days of the week
+,5902,2 - 4 days of the week
+,5903,2 - 4 days of the week
+,5904,Less than Once a week
+,5905,Once a week
+,5906,Never
+,5907,Once a week
+,5908,Never
+,5909,2 - 4 days of the week
+,5910,Never
+,5911,Never
+,5912,Never
+,5913,2 - 4 days of the week
+,5914,Once a week
+,5915,Once a week
+,5916,"Every day, more than once"
+,5917,"Once a day, every day"
+,5918,Once a week
+,5919,2 - 4 days of the week
+,5920,2 - 4 days of the week
+,5921,Never
+,5922,Once a week
+,5923,Once a week
+,5924,Never
+,5925,Never
+,5926,Never
+,5927,Once a week
+,5928,"Once a day, every day"
+,5929,Once a week
+,5930,Less than Once a week
+,5931,Never
+,5932,2 - 4 days of the week
+,5933,Once a week
+,5934,2 - 4 days of the week
+,5935,2 - 4 days of the week
+,5936,Once a week
+,5937,2 - 4 days of the week
+,5938,Once a week
+,5939,2 - 4 days of the week
+,5940,5 - 6 days of the week
+,5941,2 - 4 days of the week
+,5942,"Every day, more than once"
+,5943,5 - 6 days of the week
+,5944,2 - 4 days of the week
+,5945,2 - 4 days of the week
+,5946,2 - 4 days of the week
+,5947,2 - 4 days of the week
+,5948,Never
+,5949,Never
+,5950,Once a week
+,5951,Once a week
+,5952,Once a week
+,5953,Once a week
+,5954,Once a week
+,5955,Never
+,5956,Once a week
+,5957,Once a week
+,5958,Once a week
+,5959,Never
+,5960,Less than Once a week
+,5961,2 - 4 days of the week
+,5962,Never
+,5963,Once a week
+,5964,2 - 4 days of the week
+,5965,"Once a day, every day"
+,5966,Less than Once a week
+,5967,Never
+,5968,2 - 4 days of the week
+,5969,Never
+,5970,Never
+,5971,Never
+,5972,Once a week
+,5973,Never
+,5974,Never
+,5975,"Once a day, every day"
+,5976,Never
+,5977,Never
+,5978,Once a week
+,6281,Bicipital tendonitis and hip dislocation
+,6286,injury in knee
+,6301,sprain and contracture
+,6308,Physical
+,6309,Education
+,6310,Dance
+,6312,Football
+,6314,Football
+,6316,Football
+,6318,Gym
+,6320,Football
+,6322,Football
+,6324,Football
+,6326,American
+,6327,Football
+,6329,Football
+,6331,Football
+,6333,football
+,6335,American
+,6336,Football
+,6338,American
+,6339,Football
+,6341,Swimming
+,6343,PhyYescal
+,6344,Education
+,6346,Walking
+,6348,Rehabilitation
+,6351,Dancing
+,6353,Handball
+,6355,Kickboxing
+,6357,PhyYescal
+,6358,Education
+,6360,Football
+,6362,Cycling
+,6366,Cycling
+,6367,football
+,6369,Cycling
+,6372,Running
+,6374,Basquetball
+,6377,Boxing
+,6378,Volleyball
+,6382,Baseball
+,6384,Gymnastics
+,7317,129/99
+,7318,117/79
+,7319,142/92
+,7320,132/74
+,7321,133/95
+,7322,131/89
+,7323,108/78
+,7324,125/85
+,7325,123/84
+,7326,131/81
+,7327,178/74
+,7328,91/65
+,7329,139/91
+,7330,138/89
+,7331,144/84
+,7332,149/92
+,7333,135/87
+,7334,139/83
+,7335,122/83
+,7336,118/85
+,7337,129/108 
+,7338,104/71
+,7339,100/80
+,7340,106/59
+,7341,123/62
+,7342,107/80
+,7343,94/61 
+,7344,115/70 
+,7345,141/96
+,7346,130/81
+,7347,177/90
+,7348,110/75
+,7349,110/80 
+,7350,120/80
+,7351,130/75
+,7352,120/70
+,7353,98/56
+,7354,135/90
+,7355,105/80
+,7356,141/95
+,7357,100/70
+,7358,120/80
+,7359,100/70
+,7360,116/58
+,7361,110/70
+,7362,97
+,7363,95
+,7364,68
+,7365,81
+,7366,78
+,7367,79
+,7368,96
+,7369,76
+,7370,59
+,7371,90
+,7372,72
+,7373,85
+,7374,75
+,7375,57
+,7376,52
+,7377,65
+,7378,63
+,7379,63
+,7380,67
+,7381,62
+,7382,85
+,7383,96
+,7384,94
+,7385,68
+,7386,78
+,7387,98
+,7388,94
+,7389,96
+,7390,92
+,7391,86
+,7392,72
+,7393,74
+,7394,72
+,7395,80
+,7396,72
+,7397,120
+,7398,81
+,7399,72
+,7400,72
+,7401,108
+,7402,80
+,7403,53
+,7404,80
+,7405,78
+,7406,105
+,7407,3
+,7408,2:00 AM
+,7409,no
+,7410,1 anio
+,7411,no
+,7412,Right
+,7413,Right
+,7414,Right
+,7415,Right
+,7416,Left
+,7417,Right
+,7418,Right
+,7419,Right
+,7420,Right
+,7421,Right
+,7422,Right
+,7423,Right
+,7424,Right
+,7425,Right
+,7426,Right
+,7427,Right
+,7428,Left
+,7429,Right
+,7430,Right
+,7431,Right
+,7432,Left
+,7433,Right
+,7434,Right
+,7435,Right
+,7436,Right
+,7437,Right
+,7438,Right
+,7439,Right
+,7440,Right
+,7441,Right
+,7442,Right
+,7443,Right
+,7444,Right
+,7445,Right
+,7446,Right
+,7447,Right
+,7448,Right
+,7449,Right
+,7450,Right
+,7451,Right
+,7452,Right
+,7453,Right
+,7454,Right
+,7455,Right
+,7456,Right
+,7457,105/65
+,7458,105/75
+,7459,142/92
+,7460,132/74
+,7461,131/66
+,7462,131/89
+,7463,108/78
+,7464,125/85
+,7465,123/84
+,7466,120/80
+,7467,148/74
+,7468,130/75
+,7469,139/91
+,7470,138/89
+,7471,144/84
+,7472,149/92
+,7473,132/85
+,7474,139/83
+,7475,122/83
+,7476,118/85
+,7477,129/108 
+,7478,105/71
+,7479,100/80 
+,7480,106/59
+,7481,123/62
+,7482,107/80
+,7483,94/61
+,7484,115/70
+,7485,104/59
+,7486,98/60
+,7487,110/70
+,7488,131/70
+,7489,99/79
+,7490,136/70
+,7491,127/83
+,7492,115/70
+,7493,95/76
+,7494,105/70
+,7495,100/70
+,7496,144/87
+,7497,94/70
+,7498,120/80
+,7499,101/69
+,7500,116/58 
+,7501,110/60
+,7502,105/65
+,7503,105/75
+,7504,142/92
+,7505,132/74
+,7506,131/66
+,7507,131/89
+,7508,108/78
+,7509,125/85
+,7510,123/84
+,7511,120/80
+,7512,148/74
+,7513,130/75
+,7514,139/91
+,7515,138/89
+,7516,144/84
+,7517,149/92
+,7518,132/85
+,7519,139/83
+,7520,122/83
+,7521,118/85
+,7522,129/108 
+,7523,105/71
+,7524,100/80 
+,7525,106/59
+,7526,123/62
+,7527,107/80
+,7528,94/61
+,7529,115/70
+,7530,104/59
+,7531,98/60
+,7532,110/70
+,7533,131/70
+,7534,99/79
+,7535,136/70
+,7536,127/83
+,7537,115/70
+,7538,95/76
+,7539,105/70
+,7540,100/70
+,7541,144/87
+,7542,94/70
+,7543,120/80
+,7544,101/69
+,7545,116/58 
+,7546,110/60
+,7547,109
+,7548,112
+,7549,109
+,7550,135
+,7551,89
+,7552,94
+,7553,117
+,7554,127
+,7555,11
+,7556,113
+,7557,120
+,7558,103
+,7559,109
+,7560,101
+,7561,115
+,7562,100
+,7563,105
+,7564,124
+,7565,130
+,7566,79
+,7567,97
+,7568,110
+,7569,142
+,7570,79
+,7571,75
+,7572,120
+,7573,121
+,7574,105
+,7575,124
+,7576,127
+,7577,111
+,7578,113
+,7579,81
+,7580,119
+,7581,70 pm
+,7582,147
+,7583,94
+,7584,98
+,7585,100
+,7586,148
+,7587,103
+,7588,90
+,7589,94
+,7590,111
+,7591,130
+,7592,105/87
+,7593,124/87
+,7594,120/85
+,7595,140/90
+,7596,130/80
+,7597,131/86
+,7598,107/78
+,7599,120/80
+,7600,130/90
+,7601,144/79
+,7602,168/113
+,7603,143/82
+,7604,150/103
+,7605,125/90 
+,7606,120/90
+,7607,110/80
+,7608,135/75
+,7609,131/106
+,7610,102/70
+,7611,141/86
+,7612,112/82
+,7613,108/86
+,7614,129/94
+,7615,110/70
+,7616,115/70
+,7617,120/80
+,7618,128/84
+,7619,131/87
+,7620,120/80
+,7621,110/80 
+,7622,135/90
+,7623,124/88
+,7624,120/70
+,7625,140/70
+,7626,125/80
+,7627,120/80 
+,7628,110/60
+,7629,110/60
+,7630,115/70
+,7631,115/80
+,7632,110/80
+,7633,140/75
+,7634,110/80
+,7635,115/88
+,7636,130/60
+,7637,105/87
+,7638,124/87
+,7639,120/85
+,7640,140/90
+,7641,130/80
+,7642,131/86
+,7643,107/78
+,7644,120/80
+,7645,130/90
+,7646,144/79
+,7647,168/113
+,7648,143/82
+,7649,150/103
+,7650,125/90 
+,7651,120/90
+,7652,110/80
+,7653,135/75
+,7654,131/106
+,7655,102/70
+,7656,141/86
+,7657,112/82
+,7658,108/86
+,7659,129/94
+,7660,110/70
+,7661,115/70
+,7662,120/80
+,7663,128/84
+,7664,131/87
+,7665,120/80
+,7666,110/80 
+,7667,135/90
+,7668,124/88
+,7669,120/70
+,7670,140/70
+,7671,125/80
+,7672,120/80 
+,7673,110/60
+,7674,110/60
+,7675,115/70
+,7676,115/80
+,7677,110/80
+,7678,140/75
+,7679,110/80
+,7680,115/88
+,7681,130/60
+,7682,"Every day, more than once"
+,7683,"Every day, more than once"
+,7684,"Every day, more than once"
+,7685,"Every day, more than once"
+,7686,"Every day, more than once"
+,7687,"Once a day, every day"
+,7688,5 - 6 days of the week
+,7689,"Once a day, every day"
+,7690,"Once a day, every day"
+,7691,"Once a day, every day"
+,7692,2 - 4 days of the week
+,7693,2 - 4 days of the week
+,7694,Once a week
+,7695,"Every day, more than once"
+,7696,5 - 6 days of the week
+,7697,"Every day, more than once"
+,7698,5 - 6 days of the week
+,7699,2 - 4 days of the week
+,7700,2 - 4 days of the week
+,7701,5 - 6 days of the week
+,7702,"Every day, more than once"
+,7703,"Every day, more than once"
+,7704,"Every day, more than once"
+,7705,"Every day, more than once"
+,7706,2 - 4 days of the week
+,7707,"Every day, more than once"
+,7708,"Every day, more than once"
+,7709,"Every day, more than once"
+,7710,"Every day, more than once"
+,7711,5 - 6 days of the week
+,7712,2 - 4 days of the week
+,7713,2 - 4 days of the week
+,7714,2 - 4 days of the week
+,7715,2 - 4 days of the week
+,7716,"Every day, more than once"
+,7717,"Every day, more than once"
+,7718,"Every day, more than once"
+,7719,"Every day, more than once"
+,7720,2 - 4 days of the week
+,7721,2 - 4 days of the week
+,7722,"Every day, more than once"
+,7723,"Every day, more than once"
+,7724,"Every day, more than once"
+,7725,"Every day, more than once"
+,7726,2 - 4 days of the week
+,7727,"Every day, more than once"
+,7728,"Every day, more than once"
+,7729,"Every day, more than once"
+,7730,"Every day, more than once"
+,7731,2 - 4 days of the week
+,7732,2 - 4 days of the week
+,7733,"Every day, more than once"
+,7734,"Once a day, every day"
+,7735,"Every day, more than once"
+,7736,2 - 4 days of the week
+,7737,2 - 4 days of the week
+,7738,2 - 4 days of the week
+,7739,Once a week
+,7740,2 - 4 days of the week
+,7741,5 - 6 days of the week
+,7742,2 - 4 days of the week
+,7743,5 - 6 days of the week
+,7744,"Once a day, every day"
+,7745,2 - 4 days of the week
+,7746,2 - 4 days of the week
+,7747,"Every day, more than once"
+,7748,2 - 4 days of the week
+,7749,"Once a day, every day"
+,7750,"Every day, more than once"
+,7751,2 - 4 days of the week
+,7752,"Every day, more than once"
+,7753,"Every day, more than once"
+,7754,"Every day, more than once"
+,7755,"Every day, more than once"
+,7756,"Once a day, every day"
+,7757,Once a week
+,7758,"Every day, more than once"
+,7759,2 - 4 days of the week
+,7760,2 - 4 days of the week
+,7761,"Once a day, every day"
+,7762,"Every day, more than once"
+,7763,2 - 4 days of the week
+,7764,2 - 4 days of the week
+,7765,Once a week
+,7766,Never
+,7767,"Every day, more than once"
+,7768,"Every day, more than once"
+,7769,"Once a day, every day"
+,7770,2 - 4 days of the week
+,7771,2 - 4 days of the week
+,7772,Never
+,7773,Never
+,7774,2 - 4 days of the week
+,7775,2 - 4 days of the week
+,7776,2 - 4 days of the week
+,7777,Less than Once a week
+,7778,2 - 4 days of the week
+,7779,Less than Once a week
+,7780,Never
+,7781,Never
+,7782,2 - 4 days of the week
+,7783,Never
+,7784,2 - 4 days of the week
+,7785,2 - 4 days of the week
+,7786,2 - 4 days of the week
+,7787,Less than Once a week
+,7788,Less than Once a week
+,7789,Once a week
+,7790,2 - 4 days of the week
+,7791,2 - 4 days of the week
+,7792,2 - 4 days of the week
+,7793,Once a week
+,7794,Less than Once a week
+,7795,Less than Once a week
+,7796,Once a week
+,7797,Never
+,7798,Less than Once a week
+,7799,2 - 4 days of the week
+,7800,Once a week
+,7801,Never
+,7802,2 - 4 days of the week
+,7803,Never
+,7804,2 - 4 days of the week
+,7805,2 - 4 days of the week
+,7806,Once a week
+,7807,Never
+,7808,2 - 4 days of the week
+,7809,Once a week
+,7810,Never
+,7811,Once a week
+,7812,Once a week
+,7813,Once a week
+,7814,2 - 4 days of the week
+,7815,Once a week
+,7816,Once a week
+,7817,Never
+,7818,Never
+,7819,2 - 4 days of the week
+,7820,2 - 4 days of the week
+,7821,2 - 4 days of the week
+,7822,2 - 4 days of the week
+,7823,2 - 4 days of the week
+,7824,Less than Once a week
+,7825,2 - 4 days of the week
+,7826,2 - 4 days of the week
+,7827,2 - 4 days of the week
+,7828,2 - 4 days of the week
+,7829,"Every day, more than once"
+,7830,Never
+,7831,2 - 4 days of the week
+,7832,2 - 4 days of the week
+,7833,2 - 4 days of the week
+,7834,2 - 4 days of the week
+,7835,2 - 4 days of the week
+,7836,2 - 4 days of the week
+,7837,Once a week
+,7838,Never
+,7839,Never
+,7840,Less than Once a week
+,7841,2 - 4 days of the week
+,7842,Never
+,7843,Never
+,7844,Never
+,7845,Never
+,7846,Never
+,7847,2 - 4 days of the week
+,7848,Never
+,7849,Never
+,7850,Never
+,7851,Never
+,7852,Once a week
+,7853,2 - 4 days of the week
+,7854,Never
+,7855,Never
+,7856,"Once a day, every day"
+,7857,Never
+,7858,Never
+,7859,2 - 4 days of the week
+,7860,Never
+,7861,2 - 4 days of the week
+,8211,Fracture of the humerus
+,8214,knee pain
+,8219,luxation of the clavicle
+,8221,cruciate ligament
+,8239,No 
+,8246,Pain in the knee
+,8253,Pain in the knee
+,8257,ZUMBA
+,8259,Football
+,8261,Physical
+,8262,education
+,8263,dancing
+,8265,Football
+,8267,Football
+,8269,Football
+,8271,Gym
+,8273,Football
+,8274,AMERICANO
+,8276,Football
+,8278,Football
+,8280,Football
+,8282,Football
+,8284,Football
+,8286,Football
+,8288,Football
+,8290,Football
+,8292,Football
+,8294,Dancing
+,8296,Football
+,8298,Swimg
+,8302,Cycling
+,8303,handball
+,8305,Kickboxing
+,8307,Physical
+,8308,activity
+,8309,at
+,8310,home
+,8312,Football
+,8314,Cycling
+,8318,Football
+,8319,cycling
+,8322,Running
+,8325,Boxing
+,8326,volleyball
+,8329,Baseball
+,8331,Football
+,8333,ZUMBA
+,8335,Physical
+,8336,education
+,8341,Walking
+,9187,123/84
+,9188,114/85
+,9189,151/99
+,9190,129/87
+,9191,128/105
+,9192,135/85 
+,9193,135/95 
+,9194,168/100
+,9195,125/84
+,9196,144/94 
+,9197,146/96
+,9198,145/99
+,9199,113/79 
+,9200,126/109
+,9201,111/90 
+,9202,100/85
+,9203,115/70
+,9204,129/86
+,9205,99/84
+,9206,110/60 
+,9207,123/83
+,9208,144/69
+,9209,121/105
+,9210,115/60
+,9211,86/67 
+,9212,110/62
+,9213,123/86
+,9214,98/67
+,9215,125/60
+,9216,122/65
+,9217,118/65 
+,9218,124/68 
+,9219,160/50
+,9220,143/95
+,9221,120/70 
+,9222,120/60
+,9223,110/55
+,9224,120/65
+,9225,167/86
+,9226,130/70
+,9227,130/60
+,9228,122
+,9229,88
+,9230,80
+,9231,79
+,9232,53
+,9233,81
+,9234,61
+,9235,70
+,9236,77
+,9237,91
+,9238,86
+,9239,66
+,9240,81
+,9241,68
+,9242,71
+,9243,78
+,9244,60
+,9245,64
+,9246,84
+,9247,97
+,9248,110
+,9249,87
+,9250,92
+,9251,80
+,9252,69
+,9253,82
+,9254,92
+,9255,85
+,9256,87
+,9257,64
+,9258,80
+,9259,90
+,9260,72
+,9261,88
+,9262,90
+,9263,95
+,9264,84
+,9265,85
+,9266,95
+,9267,59
+,9268,80
+,9269,Derecha
+,9270,Derecha
+,9271,Derecha
+,9272,Izquierda
+,9273,Derecha
+,9274,Derecha
+,9275,Derecha
+,9276,Derecha
+,9277,Derecha
+,9278,Derecha
+,9279,Derecha
+,9280,Derecha
+,9281,Derecha
+,9282,Derecha
+,9283,Derecha
+,9284,Derecha
+,9285,Izquierda
+,9286,Derecha
+,9287,Derecha
+,9288,Derecha
+,9289,Izquierda
+,9290,Derecha
+,9291,Derecha
+,9292,Derecha
+,9293,Derecha
+,9294,Derecha
+,9295,Derecha
+,9296,Derecha
+,9297,Derecha
+,9298,Derecha
+,9299,Derecha
+,9300,Derecha
+,9301,Derecha
+,9302,Derecha
+,9303,Derecha
+,9304,Derecha
+,9305,Derecha
+,9306,Derecha
+,9307,Derecha
+,9308,Derecha
+,9309,Derecha
+,9310,123/84
+,9311,114/85
+,9312,151/99
+,9313,129/87
+,9314,128/105
+,9315,135/85
+,9316,135/95
+,9317,168/100
+,9318,125/84
+,9319,144/94
+,9320,146/96
+,9321,145/99
+,9322,113/79 
+,9323,126/109
+,9324,111/90 
+,9325,100/65
+,9326,115/70
+,9327, 129/86
+,9328,99/84
+,9329,110/60
+,9330,123/83
+,9331,144/69
+,9332,121/105 
+,9333,115/60
+,9334,86/67
+,9335,110/62
+,9336,123/86
+,9337,98/67
+,9338,125/60 
+,9339,122/65
+,9340,118/65
+,9341,124/68
+,9342,160/50
+,9343,143/95
+,9344,120/70
+,9345,120/60
+,9346,110/55
+,9347,120/65 
+,9348,167/86
+,9349,130/70 
+,9350,130/60
+,9351,123/84
+,9352,114/85
+,9353,151/99
+,9354,129/87
+,9355,128/105
+,9356,135/85
+,9357,135/95
+,9358,168/100
+,9359,125/84
+,9360,144/94
+,9361,146/96
+,9362,145/99
+,9363,113/79 
+,9364,126/109
+,9365,111/90 
+,9366,100/65
+,9367,115/70
+,9368, 129/86
+,9369,99/84
+,9370,110/60
+,9371,123/83
+,9372,144/69
+,9373,121/105 
+,9374,115/60
+,9375,86/67
+,9376,110/62
+,9377,123/86
+,9378,98/67
+,9379,125/60 
+,9380,122/65
+,9381,118/65
+,9382,124/68
+,9383,160/50
+,9384,143/95
+,9385,120/70
+,9386,120/60
+,9387,110/55
+,9388,120/65 
+,9389,167/86
+,9390,130/70 
+,9391,130/60
+,9392,126
+,9393,109
+,9394,110
+,9395,121
+,9396,141
+,9397,116
+,9398,114
+,9399,129
+,9400,92
+,9401,123
+,9402,68
+,9403,89
+,9404,125
+,9405,113
+,9406,118
+,9407,57
+,9408,96
+,9409,125
+,9410,116
+,9411,82
+,9412,138
+,9413,126
+,9414,96
+,9415,143
+,9416,109
+,9417,78
+,9418,100
+,9419,93
+,9420,101
+,9421,124
+,9422,97
+,9423,144
+,9424,83
+,9425,124
+,9426,99
+,9427,104
+,9428,105
+,9429,134
+,9430,113
+,9431,93
+,9432,155 pm
+,9433,125/88
+,9434,138/92 
+,9435,130/70
+,9436,120/70
+,9437,140/80
+,9438,151/110
+,9439,150/116
+,9440,187/108
+,9441,160/89
+,9442,160/100
+,9443,125/75
+,9444,142/110
+,9445,145/80
+,9446,110/80
+,9447,140/70 
+,9448,141/89
+,9449,145/90 
+,9450,120/80 
+,9451, 110/80
+,9452,125/80
+,9453,110/70
+,9454,94/69
+,9455,125/87 
+,9456,110/70 
+,9457,120/90 
+,9458,115/96
+,9459,120/70 
+,9460,150/92
+,9461,161/85
+,9462,154/96
+,9463,130/77
+,9464,155/99
+,9465,130/70
+,9466,132/81
+,9467,111/82
+,9468,111/83
+,9469,144/88
+,9470,137/85 
+,9471,150/92
+,9472,127/97
+,9473,125/88
+,9474,138/92 
+,9475,130/70
+,9476,120/70
+,9477,140/80
+,9478,151/110
+,9479,150/116
+,9480,187/108
+,9481,160/89
+,9482,160/100
+,9483,125/75
+,9484,142/110
+,9485,145/80
+,9486,110/80
+,9487,140/70 
+,9488,141/89
+,9489,145/90 
+,9490,120/80 
+,9491, 110/80
+,9492,125/80
+,9493,110/70
+,9494,94/69
+,9495,125/87 
+,9496,110/70 
+,9497,120/90 
+,9498,115/96
+,9499,120/70 
+,9500,150/92
+,9501,161/85
+,9502,154/96
+,9503,130/77
+,9504,155/99
+,9505,130/70
+,9506,132/81
+,9507,111/82
+,9508,111/83
+,9509,144/88
+,9510,137/85 
+,9511,150/92
+,9512,127/97
+,9513,"Every day, more than once"
+,9514,"Every day, more than once"
+,9515,"Once a day, every day"
+,9516,"Every day, more than once"
+,9517,"Every day, more than once"
+,9518,5 - 6 days of the week
+,9519,2 - 4 days of the week
+,9520,5 - 6 days of the week
+,9521,5 - 6 days of the week
+,9522,5 - 6 days of the week
+,9523,2 - 4 days of the week
+,9524,Once a week
+,9525,2 - 4 days of the week
+,9526,"Every day, more than once"
+,9527,2 - 4 days of the week
+,9528,5 - 6 days of the week
+,9529,"Once a day, every day"
+,9530,5 - 6 days of the week
+,9531,2 - 4 days of the week
+,9532,5 - 6 days of the week
+,9533,5 - 6 days of the week
+,9534,"Every day, more than once"
+,9535,Once a week
+,9536,2 - 4 days of the week
+,9537,"Every day, more than once"
+,9538,"Every day, more than once"
+,9539,"Every day, more than once"
+,9540,"Once a day, every day"
+,9541,"Every day, more than once"
+,9542,2 - 4 days of the week
+,9543,"Every day, more than once"
+,9544,2 - 4 days of the week
+,9545,"Every day, more than once"
+,9546,"Once a day, every day"
+,9547,2 - 4 days of the week
+,9548,2 - 4 days of the week
+,9549,"Every day, more than once"
+,9550,2 - 4 days of the week
+,9551,"Every day, more than once"
+,9552,"Every day, more than once"
+,9553,"Every day, more than once"
+,9554,"Every day, more than once"
+,9555,"Every day, more than once"
+,9556,"Every day, more than once"
+,9557,2 - 4 days of the week
+,9558,"Once a day, every day"
+,9559,"Every day, more than once"
+,9560,5 - 6 days of the week
+,9561,5 - 6 days of the week
+,9562,2 - 4 days of the week
+,9563,2 - 4 days of the week
+,9564,2 - 4 days of the week
+,9565,Never
+,9566,"Every day, more than once"
+,9567,2 - 4 days of the week
+,9568,2 - 4 days of the week
+,9569,2 - 4 days of the week
+,9570,2 - 4 days of the week
+,9571,"Once a day, every day"
+,9572,2 - 4 days of the week
+,9573,5 - 6 days of the week
+,9574,5 - 6 days of the week
+,9575,"Once a day, every day"
+,9576,2 - 4 days of the week
+,9577,2 - 4 days of the week
+,9578,"Every day, more than once"
+,9579,"Every day, more than once"
+,9580,"Every day, more than once"
+,9581,"Every day, more than once"
+,9582,"Every day, more than once"
+,9583,"Every day, more than once"
+,9584,Once a week
+,9585,2 - 4 days of the week
+,9586,"Every day, more than once"
+,9587,"Every day, more than once"
+,9588,2 - 4 days of the week
+,9589,Once a week
+,9590,Once a week
+,9591,2 - 4 days of the week
+,9592,"Once a day, every day"
+,9593,"Every day, more than once"
+,9594,"Once a day, every day"
+,9595,Never
+,9596,Never
+,9597,2 - 4 days of the week
+,9598,2 - 4 days of the week
+,9599,2 - 4 days of the week
+,9600,2 - 4 days of the week
+,9601,2 - 4 days of the week
+,9602,Never
+,9603,Never
+,9604,2 - 4 days of the week
+,9605,2 - 4 days of the week
+,9606,2 - 4 days of the week
+,9607,2 - 4 days of the week
+,9608,2 - 4 days of the week
+,9609,2 - 4 days of the week
+,9610,2 - 4 days of the week
+,9611,2 - 4 days of the week
+,9612,2 - 4 days of the week
+,9613,Once a week
+,9614,2 - 4 days of the week
+,9615,"Once a day, every day"
+,9616,"Once a day, every day"
+,9617,Once a week
+,9618,Never
+,9619,Never
+,9620,Once a week
+,9621,"Every day, more than once"
+,9622,2 - 4 days of the week
+,9623,Never
+,9624,Never
+,9625,Never
+,9626,Once a week
+,9627,2 - 4 days of the week
+,9628,Never
+,9629,Once a week
+,9630,Once a week
+,9631,Once a week
+,9632,Never
+,9633,Never
+,9634,Once a week
+,9635,Once a week
+,9636,Once a week
+,9637,Never
+,9638,Never
+,9639,2 - 4 days of the week
+,9640,5 - 6 days of the week
+,9641,2 - 4 days of the week
+,9642,Once a week
+,9643,2 - 4 days of the week
+,9644,2 - 4 days of the week
+,9645,2 - 4 days of the week
+,9646,2 - 4 days of the week
+,9647,"Every day, more than once"
+,9648,2 - 4 days of the week
+,9649,Never
+,9650,5 - 6 days of the week
+,9651,2 - 4 days of the week
+,9652,2 - 4 days of the week
+,9653,2 - 4 days of the week
+,9654,2 - 4 days of the week
+,9655,2 - 4 days of the week
+,9656,Once a week
+,9657,Never
+,9658,2 - 4 days of the week
+,9659,2 - 4 days of the week
+,9660,Once a week
+,9661,Once a week
+,9662,Once a week
+,9663,Once a week
+,9664,Never
+,9665,Never
+,9666,Once a week
+,9667,Once a week
+,9668,Once a week
+,9669,Never
+,9670,Never
+,9671,Never
+,9672,Once a week
+,9673,Once a week
+,9674,Once a week
+,9675,Never
+,9676,Never
+,10057,probable sprain
+,10063,No 
+,10068,No 
+,10070,No 
+,10072,No 
+,10077,No 
+,10079,No 
+,10081,No 
+,10083,No 
+,10085,No 
+,10087,No 
+,10089,No 
+,10091,No 
+,10093,No 
+,10096,Walking
+,10098,FOOTBALL
+,10101,Football
+,10103,Football
+,10105,GYM
+,10107,Football
+,10109,Football
+,10111,Football
+,10113,Football
+,10115,Football
+,10117,Football
+,10119,Football
+,10121,Football
+,10123,Football
+,10125,Football
+,10127,Football
+,10130,Football
+,10132,Yes.
+,10133,Physical
+,10134,"education,"
+,10135,swimming
+,10137,Yes.
+,10138,Walking
+,10140,Cycling
+,10142,Yes.
+,10143,Dancing
+,10145,Yes.
+,10146,Handball.
+,10148,Yes.
+,10149,Physical
+,10150,education
+,10152,Yes.
+,10153,Cycling
+,10155,Football
+,10157,Football
+,10159,Boxing
+,10161,Basketball
+,10163,Boxing
+,10165,Football
+,10168,Dancing
+,10170,Football
+,10172,zumba
+,10174,Swimming
+,10176,Gymnastics
+,11332,100/76
+,11333,92/70
+,11334,120/76
+,11335,115/83
+,11336,96/70
+,11337,130/90
+,11338,110/81
+,11339,130/90
+,11340,146/89
+,11341,136/85
+,11342,159/105
+,11343,100/70
+,11344,130/86
+,11345,129/78
+,11346,110/79
+,11347,140/72
+,11348,105/83
+,11349,140/90
+,11350,118/84
+,11351,122/80
+,11352,100/71
+,11353,108/78
+,11354,116/74
+,11355,98/72
+,11356,125/85
+,11357,11/83
+,11358,126/85
+,11359,125/79
+,11360,129/85
+,11361,109/74
+,11362,103/88
+,11363,150/88
+,11364,108/68
+,11365,118/83
+,11366,116/78
+,11367,114/70
+,11368,140/81
+,11369,86/76
+,11370,148/85
+,11371,103/79
+,11372,150/82
+,11373,109/69
+,11374,110/70
+,11375,111/94
+,11376,115/90
+,11377,110/90
+,11378,100/80
+,11379,100/86
+,11380,103
+,11381,96
+,11382,68
+,11383,82
+,11384,69
+,11385,78
+,11386,83
+,11387,66
+,11388,71
+,11389,61
+,11390,105
+,11391,68
+,11392,72
+,11393,96
+,11394,89
+,11395,85
+,11396,98
+,11397,82
+,11398,63
+,11399,76
+,11400,71
+,11401,83
+,11402,64
+,11403,76
+,11404,89
+,11405,72
+,11406,58
+,11407,59
+,11408,78
+,11409,89
+,11410,82
+,11411,98
+,11412,76
+,11413,77
+,11414,74
+,11415,77
+,11416,78
+,11417,71
+,11418,64
+,11419,89
+,11420,80
+,11421,114
+,11422,80
+,11423,98
+,11424,80
+,11425,51
+,11426,61
+,11427,92
+,11428,2 days
+,11429,8 Months
+,11430,Right
+,11431,Right
+,11432,Right
+,11433,Right
+,11434,Left
+,11435,Right
+,11436,Right
+,11437,Right
+,11438,Right
+,11439,Right
+,11440,Right
+,11441,Right
+,11442,Right
+,11443,Right
+,11444,Right
+,11445,Right
+,11446,Right
+,11447,Left
+,11448,Right
+,11449,Right
+,11450,Right
+,11451,Left
+,11452,Right
+,11453,Right
+,11454,Right
+,11455,Right
+,11456,Right
+,11457,Right
+,11458,Right
+,11459,Right
+,11460,Right
+,11461,Right
+,11462,Right
+,11463,Right
+,11464,Right
+,11465,Right
+,11466,Right
+,11467,Right
+,11468,Right
+,11469,Right
+,11470,Right
+,11471,Left
+,11472,Right
+,11473,Right
+,11474,Right
+,11475,Right
+,11476,Right
+,11477,Right
+,11478,100/76
+,11479,92/70
+,11480,120/76
+,11481,115/83
+,11482,96/70
+,11483,130/90
+,11484,110/81
+,11485,130/90
+,11486,146/89
+,11487,136/85
+,11488,159/105
+,11489,100/70
+,11490,130/86
+,11491,129/78
+,11492,110/79
+,11493,140/72
+,11494,105/83
+,11495,140/90
+,11496,118/84
+,11497,122/80
+,11498,110/71
+,11499,108/78
+,11500,116/74
+,11501,98/72
+,11502,125/85
+,11503,110/83
+,11504,126/85
+,11505,125/79
+,11506,129/85
+,11507,109/74
+,11508,113/88
+,11509,150/88
+,11510,108/68
+,11511,118/83
+,11512,116/78
+,11513,114/70
+,11514,140/81
+,11515,86/76
+,11516,148/85
+,11517,103/79
+,11518,150/82
+,11519,109/69 
+,11520,110/70
+,11521,111/94
+,11522,115/90
+,11523,110/90
+,11524,100/80
+,11525,100/76 
+,11526,100/76
+,11527,92/70
+,11528,120/76
+,11529,115/83
+,11530,96/70
+,11531,130/90
+,11532,110/81
+,11533,130/90
+,11534,146/89
+,11535,136/85
+,11536,159/105
+,11537,100/70
+,11538,130/86
+,11539,129/78
+,11540,110/79
+,11541,140/72
+,11542,105/83
+,11543,140/90
+,11544,118/84
+,11545,122/80
+,11546,110/71
+,11547,108/78
+,11548,116/74
+,11549,98/72
+,11550,125/85
+,11551,110/83
+,11552,126/85
+,11553,125/79
+,11554,129/85
+,11555,109/74
+,11556,113/88
+,11557,150/88
+,11558,108/68
+,11559,118/83
+,11560,116/78
+,11561,114/70
+,11562,140/81
+,11563,86/76
+,11564,148/85
+,11565,103/79
+,11566,150/82
+,11567,109/69 
+,11568,110/70
+,11569,111/94
+,11570,115/90
+,11571,110/90
+,11572,100/80
+,11573,100/76 
+,11574,105/86
+,11575,146/88
+,11576,150/95
+,11577,129/84
+,11578,124/88
+,11579,160/86
+,11580,143/89
+,11581,155/106
+,11582,148/95
+,11583,158/88
+,11584,176/113
+,11585,150/105
+,11586,166/109
+,11587,159/87
+,11588,156/95
+,11589,143/104
+,11590,136/97
+,11591,159/93
+,11592,158/102
+,11593,148/80
+,11594,145/96
+,11595,110/84
+,11596,130/87
+,11597,111/80
+,11598,112/93
+,11599,131/82
+,11600,115/85
+,11601,141/84
+,11602,141/83
+,11603,152/87
+,11604,137/93
+,11605,110/87
+,11606,154/95
+,11607,161/116
+,11608,165/100
+,11609,153/86
+,11610,129/92
+,11611,147/89
+,11612,155/105
+,11613,156/99
+,11614,148/90
+,11615,116/84
+,11616,128/86
+,11617,130/91
+,11618,146/88
+,11619,155/96
+,11620,150/95
+,11621,105/86
+,11622,146/88
+,11623,150/95
+,11624,129/84
+,11625,124/88
+,11626,160/86
+,11627,143/89
+,11628,155/106
+,11629,148/95
+,11630,158/88
+,11631,176/113
+,11632,150/105
+,11633,166/109
+,11634,159/87
+,11635,156/95
+,11636,143/104
+,11637,136/97
+,11638,159/93
+,11639,158/102
+,11640,148/80
+,11641,145/96
+,11642,110/84
+,11643,130/87
+,11644,111/80
+,11645,112/93
+,11646,131/82
+,11647,115/85
+,11648,141/84
+,11649,141/83
+,11650,152/87
+,11651,137/93
+,11652,110/87
+,11653,154/95
+,11654,161/116
+,11655,165/100
+,11656,153/86
+,11657,129/92
+,11658,147/89
+,11659,155/105
+,11660,156/99
+,11661,148/90
+,11662,116/84
+,11663,128/86
+,11664,130/91
+,11665,146/88
+,11666,155/96
+,11667,150/95
+,11668,"Every day, more than once"
+,11669,"Every day, more than once"
+,11670,"Once a day, every day"
+,11671,5 - 6 days of the week
+,11672,"Every day, more than once"
+,11673,"Once a day, every day"
+,11674,"Every day, more than once"
+,11675,5 - 6 days of the week
+,11676,"Once a day, every day"
+,11677,5 - 6 days of the week
+,11678,5 - 6 days of the week
+,11679,2 - 4 days of the week
+,11680,Never
+,11681,2 - 4 days of the week
+,11682,"Every day, more than once"
+,11683,2 - 4 days of the week
+,11684,5 - 6 days of the week
+,11685,"Once a day, every day"
+,11686,2 - 4 days of the week
+,11687,2 - 4 days of the week
+,11688,5 - 6 days of the week
+,11689,2 - 4 days of the week
+,11690,5 - 6 days of the week
+,11691,"Once a day, every day"
+,11692,"Every day, more than once"
+,11693,"Every day, more than once"
+,11694,"Every day, more than once"
+,11695,"Every day, more than once"
+,11696,"Every day, more than once"
+,11697,5 - 6 days of the week
+,11698,"Every day, more than once"
+,11699,5 - 6 days of the week
+,11700,5 - 6 days of the week
+,11701,2 - 4 days of the week
+,11702,2 - 4 days of the week
+,11703,"Every day, more than once"
+,11704,"Once a day, every day"
+,11705,5 - 6 days of the week
+,11706,"Every day, more than once"
+,11707,"Every day, more than once"
+,11708,"Every day, more than once"
+,11709,2 - 4 days of the week
+,11710,"Every day, more than once"
+,11711,"Every day, more than once"
+,11712,"Every day, more than once"
+,11713,"Every day, more than once"
+,11714,"Every day, more than once"
+,11715,"Every day, more than once"
+,11716,"Every day, more than once"
+,11717,"Every day, more than once"
+,11718,"Every day, more than once"
+,11719,"Every day, more than once"
+,11720,2 - 4 days of the week
+,11721,2 - 4 days of the week
+,11722,"Once a day, every day"
+,11723,5 - 6 days of the week
+,11724,"Every day, more than once"
+,11725,2 - 4 days of the week
+,11726,2 - 4 days of the week
+,11727,2 - 4 days of the week
+,11728,Never
+,11729,"Once a day, every day"
+,11730,2 - 4 days of the week
+,11731,2 - 4 days of the week
+,11732,2 - 4 days of the week
+,11733,2 - 4 days of the week
+,11734,"Once a day, every day"
+,11735,2 - 4 days of the week
+,11736,2 - 4 days of the week
+,11737,2 - 4 days of the week
+,11738,2 - 4 days of the week
+,11739,2 - 4 days of the week
+,11740,2 - 4 days of the week
+,11741,"Every day, more than once"
+,11742,"Every day, more than once"
+,11743,"Every day, more than once"
+,11744,"Every day, more than once"
+,11745,"Every day, more than once"
+,11746,"Every day, more than once"
+,11747,"Once a day, every day"
+,11748,"Once a day, every day"
+,11749,2 - 4 days of the week
+,11750,"Every day, more than once"
+,11751,"Every day, more than once"
+,11752,Never
+,11753,"Once a day, every day"
+,11754,5 - 6 days of the week
+,11755,"Every day, more than once"
+,11756,"Every day, more than once"
+,11757,2 - 4 days of the week
+,11758,"Every day, more than once"
+,11759,2 - 4 days of the week
+,11760,"Once a day, every day"
+,11761,"Every day, more than once"
+,11762,"Every day, more than once"
+,11763,"Once a day, every day"
+,11764,Never
+,11765,Never
+,11766,2 - 4 days of the week
+,11767,2 - 4 days of the week
+,11768,2 - 4 days of the week
+,11769,2 - 4 days of the week
+,11770,2 - 4 days of the week
+,11771,2 - 4 days of the week
+,11772,Never
+,11773,Once a week
+,11774,2 - 4 days of the week
+,11775,2 - 4 days of the week
+,11776,2 - 4 days of the week
+,11777,Never
+,11778,2 - 4 days of the week
+,11779,2 - 4 days of the week
+,11780,5 - 6 days of the week
+,11781,2 - 4 days of the week
+,11782,Never
+,11783,2 - 4 days of the week
+,11784,2 - 4 days of the week
+,11785,2 - 4 days of the week
+,11786,Once a week
+,11787,Never
+,11788,Once a week
+,11789,Never
+,11790,Once a week
+,11791,Once a week
+,11792,Never
+,11793,Never
+,11794,Never
+,11795,Once a week
+,11796,2 - 4 days of the week
+,11797,Never
+,11798,Never
+,11799,Never
+,11800,Never
+,11801,Never
+,11802,Never
+,11803,Never
+,11804,Never
+,11805,Never
+,11806,Once a week
+,11807,Never
+,11808,Never
+,11809,2 - 4 days of the week
+,11810,Never
+,11811,Once a week
+,11812,Never
+,11813,Never
+,11814,Never
+,11815,Once a week
+,11816,2 - 4 days of the week
+,11817,2 - 4 days of the week
+,11818,2 - 4 days of the week
+,11819,Once a week
+,11820,2 - 4 days of the week
+,11821,2 - 4 days of the week
+,11822,2 - 4 days of the week
+,11823,2 - 4 days of the week
+,11824,"Every day, more than once"
+,11825,2 - 4 days of the week
+,11826,Never
+,11827,5 - 6 days of the week
+,11828,2 - 4 days of the week
+,11829,5 - 6 days of the week
+,11830,2 - 4 days of the week
+,11831,2 - 4 days of the week
+,11832,2 - 4 days of the week
+,11833,2 - 4 days of the week
+,11834,Once a week
+,11835,Once a week
+,11836,Never
+,11837,Once a week
+,11838,Once a week
+,11839,Never
+,11840,Never
+,11841,Once a week
+,11842,Never
+,11843,Never
+,11844,Once a week
+,11845,Never
+,11846,Never
+,11847,Never
+,11848,Never
+,11849,Once a week
+,11850,Never
+,11851,Once a week
+,11852,Never
+,11853,Never
+,11854,Never
+,11855,Never
+,11856,Never
+,11857,Never
+,11858,Once a week
+,11859,Never
+,12510,sprain
+,12514,bicipital tendinitis
+,12539,spained ankle
+,12542,tear in left shoulder
+,12555,Dancing
+,12557,Walking
+,12558,zumba
+,12560,American
+,12561,Football
+,12563,Dancing
+,12564,Karate
+,12566,Football
+,12568,American
+,12569,Football
+,12571,Football
+,12572,Basketball
+,12574,Football
+,12575,Gym
+,12577,American
+,12578,Football
+,12580,American
+,12581,Football
+,12583,American
+,12584,Football
+,12586,American
+,12587,Football
+,12589,American
+,12590,Football
+,12592,Football
+,12594,Football
+,12595,Gym
+,12597,Football
+,12599,Football
+,12601,Football
+,12603,Football
+,12605,Dancing
+,12607,Football
+,12610,Football
+,12611,Basketball
+,12613,Skating
+,12615,Cycling
+,12617,"Swimming,"
+,12618,"dancing,"
+,12619,Exercise
+,12621,"Swimming,"
+,12622,"Handball,"
+,12623,"Zumba,"
+,12624,American
+,12625,Football
+,12627,Running
+,12628,Football
+,12630,Volleyball
+,12631,Dancing
+,12633,Karate
+,12634,Tae
+,12635,Kwon
+,12636,Do
+,12638,Cycling
+,12640,Gym
+,12642,Gym
+,12644,Cycling
+,12646,Cycling
+,12647,Football
+,12649,Dancing
+,12651,Boxing
+,12653,Walking
+,12655,Boxing
+,12657,Walking
+,12658,stairmaster
+,12660,Football
+,12662,Dancing
+,12664,Dancing
+,12665,Baseball
+,12667,Football
+,12669,Zumba
+,12671,Swimming
+,12673,Walking
+,13246,114/63
+,13247,104/70
+,13248,91/64
+,13249,107/62
+,13250,106/58
+,13251,103/50
+,13252,99/58
+,13253,104/76
+,13254,131/93
+,13255,121/81
+,13256,123/62
+,13257,104/68
+,13258,110/72
+,13259,112/69
+,13260,102/63
+,13261,128/77
+,13262,134/90
+,13263,98/65
+,13264,120/73
+,13265,116/71
+,13266,Left
+,13267,Right
+,13268,Right
+,13269,Right
+,13270,Right
+,13271,Right
+,13272,Right
+,13273,Right
+,13274,Right
+,13275,Right
+,13276,Right
+,13277,Right
+,13278,Right
+,13279,Right
+,13280,Right
+,13281,Left
+,13282,Right
+,13283,Right
+,13284,Right
+,13285,Right
+,13286,Right
+,13287,114/63
+,13288,140/70
+,13289,91/64
+,13290,107/62
+,13291,106/58
+,13292,103/50
+,13293,99/58
+,13294,104/76
+,13295,131/93
+,13296,120/80
+,13297,123/62
+,13298,104/68
+,13299,110/72
+,13300,112/69
+,13301,102/63
+,13302,128/77
+,13303,134/90
+,13304,98/65
+,13305,120/73
+,13306,116/71
+,13307,114/63
+,13308,140/70
+,13309,91/64
+,13310,107/62
+,13311,106/58
+,13312,103/50
+,13313,99/58
+,13314,104/76
+,13315,131/93
+,13316,120/80
+,13317,123/62
+,13318,104/68
+,13319,110/72
+,13320,112/69
+,13321,102/63
+,13322,128/77
+,13323,134/90
+,13324,98/65
+,13325,120/73
+,13326,116/71
+,13327,158/95
+,13328,122/80
+,13329,130/86
+,13330,124/82
+,13331,107/76
+,13332,152/85
+,13333,147/81
+,13334,125/91
+,13335,165/108
+,13336,157/105
+,13337,144/92
+,13338,130/90
+,13339,145/95
+,13340,137/80
+,13341,154/86
+,13342,128/77
+,13343,163/99
+,13344,150/101
+,13345,147/92
+,13346,160/100
+,13347,159/70
+,13348,158/95
+,13349,122/80
+,13350,130/86
+,13351,124/82
+,13352,107/76
+,13353,152/85
+,13354,147/81
+,13355,125/91
+,13356,165/108
+,13357,157/105
+,13358,144/92
+,13359,130/90
+,13360,145/95
+,13361,137/80
+,13362,154/86
+,13363,128/77
+,13364,163/99
+,13365,150/101
+,13366,147/92
+,13367,160/100
+,13368,159/70
+,13369,"Every day, more than once"
+,13370,"Once a day, every day"
+,13371,"Once a day, every day"
+,13372,"Every day, more than once"
+,13373,"Every day, more than once"
+,13374,"Once a day, every day"
+,13375,"Every day, more than once"
+,13376,"Once a day, every day"
+,13377,2 - 4 days of the week
+,13378,2 - 4 days of the week
+,13379,"Once a day, every day"
+,13380,2 - 4 days of the week
+,13381,"Every day, more than once"
+,13382,"Once a day, every day"
+,13383,"Once a day, every day"
+,13384,5 - 6 days of the week
+,13385,"Every day, more than once"
+,13386,2 - 4 days of the week
+,13387,"Every day, more than once"
+,13388,"Every day, more than once"
+,13389,"Every day, more than once"
+,13390,"Every day, more than once"
+,13391,2 - 4 days of the week
+,13392,5 - 6 days of the week
+,13393,2 - 4 days of the week
+,13394,"Every day, more than once"
+,13395,"Once a day, every day"
+,13396,"Every day, more than once"
+,13397,"Once a day, every day"
+,13398,"Once a day, every day"
+,13399,"Once a day, every day"
+,13400,Once per week
+,13401,2 - 4 days of the week
+,13402,2 - 4 days of the week
+,13403,"Once a day, every day"
+,13404,"Once a day, every day"
+,13405,2 - 4 days of the week
+,13406,5 - 6 days of the week
+,13407,2 - 4 days of the week
+,13408,"Every day, more than once"
+,13409,"Every day, more than once"
+,13410,"Every day, more than once"
+,13411,2 - 4 days of the week
+,13412,Once per week
+,13413,Less than once per week
+,13414,Once per week
+,13415,Once per week
+,13416,Once per week
+,13417,Never
+,13418,2 - 4 days of the week
+,13419,Less than once per week
+,13420,2 - 4 days of the week
+,13421,"Once a day, every day"
+,13422,"Once a day, every day"
+,13423,Once per week
+,13424,Once per week
+,13425,Once per week
+,13426,Once per week
+,13427,Once per week
+,13428,2 - 4 days of the week
+,13429,Never
+,13430,Once per week
+,13431,Never
+,13432,Once per week
+,13433,Never
+,13434,Never
+,13435,Never
+,13436,Once per week
+,13437,Once per week
+,13438,Never
+,13439,Once per week
+,13440,Once per week
+,13441,2 - 4 days of the week
+,13442,2 - 4 days of the week
+,13443,"Once a day, every day"
+,13444,2 - 4 days of the week
+,13445,Less than once per week
+,13446,Once per week
+,13447,Once per week
+,13448,Never
+,13449,2 - 4 days of the week
+,13450,Never
+,13451,Once per week
+,13452,Never
+,13840,Swimming
+,13842,Football
+,13844,"Swimming,"
+,13845,handball
+,13847,Physical
+,13848,Education
+,13850,"Basketball,"
+,13851,"swimming,"
+,13852,walking
+,13854,Cycling
+,13856,Cycling
+,13859,Basketball
+,13861,"Boxing,"
+,13862,Running
+,13864,Dancing
+,13866,Football
+,13868,Walking
+,13870,"Swimming,"
+,13871,Basketball
+,13873,Swimming
