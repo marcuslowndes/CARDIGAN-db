@@ -13,9 +13,15 @@
 					else
 						$is_weekly = '(Overall)';
 
+					if (isset($subtype['Walk_Type']))
+						$subtype_name = ' - ' . $subtype['Subtype'];
+					else
+						$subtype_name = $subtype['Subtype'];
+
             		echo '<a class="dropdown-item" href="database/' . $selected_type
-					 	. '/' . $subtype['idData_Type'] . '"> ' . $subtype['Subtype']
-						. ' ' . $subtype['Walk_Type'] . ' <small class="small-Precon'
+					 	. '/' . $subtype['idData_Type'] . '"> <div class="mr-auto"'
+						. 'style="margin-bottom: -0.3rem;">' . $subtype['Walk_Type']
+						. ' ' . $subtype_name . '</div><small class="small-Precon'
 						. 'sultation">' . $is_weekly . '</small>' . '</a>';
 				}
 			?>
