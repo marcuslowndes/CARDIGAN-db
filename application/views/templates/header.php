@@ -17,14 +17,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<!--Nav Bar-->
 	<nav class='navbar navbar-expand-lg navbar-dark bg-primary fixed-top' id="navbar">
-		<style media="screen">
-		</style>
-		<a class='navbar-brand'
-				style='font-family:"Lulo-Clean-W01-One-Bold";
-							letter-spacing: 0.2rem; margin-left:12px;'
-				href='index'>
+		<a class='navbar-brand' style='font-family:"Lulo-Clean-W01-One-Bold";
+				letter-spacing: 0.2rem; margin-left:12px;' href='index'>
 			CARDIGAN
 		</a>
+
+		<img src="assets/images/CARDIGAN_logo_icon.jpg" alt="CARDIGAN Logo"
+		 	style="height:3rem; border-radius:10rem; margin-right: 1rem">
 
 		<div class="navbar-collapse collapse show" id="navbar-main" style="">
 			<ul class='navbar-nav mr-auto' id='navbar-container'>

@@ -292,10 +292,6 @@ class Database extends CI_Controller {
 
 			foreach ($all_results as $results)
 				foreach($results as $result){
-					// foreach($result['Data_Type'] as $key => $val){
-					// 	echo $key . ' ' . $val .  '<br>';
-					// }
-					// die();
 					if (!isset($preformatted_results[$patient['Patient_ID']]
 							[$result['Data_Type']['idData_Type']]))
 						$preformatted_results[$patient['Patient_ID']]
@@ -317,14 +313,18 @@ class Database extends CI_Controller {
 
 		// formatted_results gives a new results array arranged as:
 			//  <idPatient> => array(
-			//		<idAttribute> => array(
-			//			'Attribute' => array(...)
-			//	 		'Values' => array(
-			//				<idVisitation> => array(...results)
-			//				... (for every visit 1 - 8)
-			//	 		)
-			//		) ... (for every selected attribute)
+			// 		<idData_Type> => array(
+			//			<idAttribute> => array(
+			//				'Attribute' => array(...)
+			//				'Data_Type' => array(...)
+			//		 		'Values' => array(
+			//					<idVisitation> => array(...results)
+			//					... (for every visit 1 - 8)
+			//		 		)
+			//			) ... (for every selected attribute)
+			//		)
 			// 	) ... (for every patient)
+		// this ensures only relevant data is passed to the view
 		$formatted_results = array();
 		foreach($preformatted_results as $patient => $attr_per_data_type)
 			foreach($attr_per_data_type as $data_type => $results_per_attr){
@@ -346,35 +346,6 @@ class Database extends CI_Controller {
 				}
 			}
 
-		// foreach($formatted_results as $patient => $attr_per_data_type){
-		// 	echo 'Patient ' . $patient . '<br>';
-		// 	foreach($attr_per_data_type as $data_type => $results_per_attr){
-		// 		echo 'DataType ' . $data_type . '<br>';
-		// 		foreach ($results_per_attr as $attribute => $results) {
-		// 			echo 'Attribute ' . $attribute  . '<br>';
-		// 			foreach ($results as $thing => $result) {
-		// 				echo $thing . '<br>';
-		// 				foreach ($result as $key => $value) {
-		// 					echo $key . '<br> Value: ' . $value . '<br>';
-		// 					if ($thing == 'Values')
-		// 						foreach($value as $visitation => $vals){
-		// 							echo 'Visit: ' . $visitation  . '<br>';
-		// 							foreach ($vals as $val) {
-		// 								echo 'Value: ' . $val . '<br>';
-		// 							}
-		// 						}
-		// 				}
-		// 				// echo 'Attr No: ' . $result_name . '<br>';
-		// 				// foreach ($result as $key => $value) {
-		// 				// 	echo 'Result No: ' . $key . '<br> Value: ' . $value . '<br>';
-		// 				// }
-		// 			}
-		// 			echo '<br>';
-		// 		}
-		// 	}
-		// 	echo '<br><br>';
-		// }
-		// die();
 
 		$data['all_results'] = $formatted_results;
 		$data['visits'] = $this->eav_model->get_visitation();
