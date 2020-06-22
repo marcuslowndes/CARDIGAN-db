@@ -123,49 +123,47 @@ dataRelationships_clinical = {
         [[107, "Freq. Consumption of Coke or Sugary Beverages", "VARCHAR", 65]]
 }
 
+
 def get_dataRelationships_gait(subtype):
     entity_ids = {  #
-        "UP":           [n for n in range(66, 82)],
-        "DOWN":         [n for n in range(82, 98)],
-        "_Beginning":   [n for n in range(98, 114)],
-        "_Middle":      [n for n in range(114, 130)],
-        "_End":         [130, 131, 132, 133, 134, 135, 136, 137,
-                         138, 139, 140, 144, 145, 146, 147, 148]
+        "UP":         [n for n in range(66, 82)],
+        "DOWN":       [n for n in range(82, 98)],
+        "_Beginning": [n for n in range(98, 114)],
+        "_Middle":    [n for n in range(114, 130)],
+        "_End":       [130, 131, 132, 133, 134, 135, 136, 137,
+                       138, 139, 140, 144, 145, 146, 147, 148]
     }
     return {
-        """Step time""":
-            [[111,  "Step time",        "DECIMAL", entity_ids[subtype][0]]],
+        """Step time [""":
+            [[111, "Step time", "DECIMAL", entity_ids[subtype][0]]],
         """Step time Left""":
-            [[113,	"Step time Left",   "DECIMAL", entity_ids[subtype][1]]],
+            [[113, "Step time Left", "DECIMAL", entity_ids[subtype][1]]],
         """Step time Right""":
-            [[115, 	"Step time Right", 	"DECIMAL", entity_ids[subtype][2]]],
+            [[115, "Step time Right", "DECIMAL", entity_ids[subtype][2]]],
         """Cadence""":
-            [[117,  "Cadence",  	    "DECIMAL", entity_ids[subtype][3]]],
+            [[117, "Cadence", "DECIMAL", entity_ids[subtype][3]]],
         """Step length Left""":
-            [[119, 	"Step length Left", "DECIMAL", entity_ids[subtype][4]]],
+            [[119, "Step length Left", "DECIMAL", entity_ids[subtype][4]]],
         """Step length Right""":
-            [[121, 	"Step length Right","DECIMAL", entity_ids[subtype][5]]],
+            [[121, "Step length Right", "DECIMAL", entity_ids[subtype][5]]],
         """Stride Length""":
-            [[123, 	"Stride Length", 	"DECIMAL", entity_ids[subtype][6]]],
+            [[123, "Stride Length", "DECIMAL", entity_ids[subtype][6]]],
         """Walking Speed""":
-            [[125, 	"Walking Speed", 	"DECIMAL", entity_ids[subtype][7]]],
+            [[125, "Walking Speed", "DECIMAL", entity_ids[subtype][7]]],
         """Froude""":
-            [[127, 	"Froude", 	        "DECIMAL", entity_ids[subtype][8]]],
+            [[127, "Froude", "DECIMAL", entity_ids[subtype][8]]],
         """Beta""":
-            [[129, 	"Beta", 	        "DECIMAL", entity_ids[subtype][9]]],
+            [[129, "Beta", "DECIMAL", entity_ids[subtype][9]]],
         """SDa""":
-            [[130, 	"SDa", 	            "DECIMAL", entity_ids[subtype][10]]],
+            [[130, "SDa", "DECIMAL", entity_ids[subtype][10]]],
         """SDb""":
-            [[131, 	"SDb", 	            "DECIMAL", entity_ids[subtype][11]]],
+            [[131, "SDb", "DECIMAL", entity_ids[subtype][11]]],
         """Ratio""":
-            [[132, 	"Ratio", 	        "DECIMAL", entity_ids[subtype][12]]],
+            [[132, "Ratio", "DECIMAL", entity_ids[subtype][12]]],
         """Walk Ratio""":
-            [[133, 	"Walk Ratio", 	    "DECIMAL", entity_ids[subtype][13]]],
+            [[133, "Walk Ratio", "DECIMAL", entity_ids[subtype][13]]],
         """DutyFactor_Double Stance""":
-            [[135, 	"DutyFactor - Double Stance",
-                                        "DECIMAL", entity_ids[subtype][14]]],
+            [[135, "DutyFactor - Double Stance", "DECIMAL", entity_ids[subtype][14]]],
         """DutyFactor_Single Stance""":
-            [[137, 	"DutyFactor - Single Stance",
-                                        "DECIMAL", entity_ids[subtype][15]]]
+            [[137, "DutyFactor - Single Stance", "DECIMAL", entity_ids[subtype][15]]]
     }
-

@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</nav>
 
-	<div class="bg-primary nav-bg"><br></div>
+	<div class="bg-primary nav-bg" id="top"><br></div>
 
 	<div class="">
 		<?php

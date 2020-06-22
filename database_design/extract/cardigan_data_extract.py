@@ -92,8 +92,7 @@ def formatInteger(dataStr, a):
 
 
 def reformatValueFromType(dataType, value, attr):
-    """A switch statement to reformat values into SQL-friendly data types.
-    """
+    """A switch statement to reformat values into SQL-friendly data types."""
     formatsPerType = {
         'DATE':         convertDateToSQL,
         'TIMESTAMP':    convertTsToSQL,

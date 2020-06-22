@@ -1,10 +1,11 @@
-<br>
+<!-- <br>
 <h2 class="text-center"> Results </h2>
-<br>
-<div  style="margin:10px;">
+<br> -->
+<div style="margin:10px; font-size:80%">
 <table class="table table-hover">
 	<thead>
 		<tr class="table-primary">
+			<th> Category <br> <br> </th>
             <th> Description/Question <br> <br> </th>
             <th> Patient ID <br> <br> </th>
             <?php foreach($visits as $visit) {
@@ -21,8 +22,9 @@
 	<tbody>
     <?php
         $i = 0;
-        foreach($all_results as $patient => $attributes) :
+        foreach($all_results as $patient => $attr_per_data_type) :
 		$i++;
+		foreach($attr_per_data_type as $data_type => $attributes) :
 		foreach ($attributes as $attribute => $results_per_attr) :
 		if (isset($results_per_attr['Attribute']['Name'])) :
 			if($i % 2 === 0)
@@ -32,12 +34,16 @@
 			?>
 
             <tr class="<?= $table_colour ?>"  id="<?= $attribute ?>">
+				<td scope="row"> <?= $results_per_attr['Data_Type']['Type'] ?> / <?=
+					$results_per_attr['Data_Type']['Walk_Type'] ?> <?=
+					$results_per_attr['Data_Type']['Subtype'] ?>  </td>
+
             	<td scope="row"> <?= $results_per_attr['Attribute']['Name']
 					?> <?= $results_per_attr['Attribute']['Units'] ?> </td>
 
                 <td scope="row"> <?= $patient ?> </td>
 
-                <?php
+                <?php  // TODO: FIX RESULTS VIEW FOR GAIT DATA TO SHOW Walk_Type
 				foreach($visits as $visit) {
 					echo '<td scope="row">';
 
@@ -60,7 +66,7 @@
 				?>
             </tr>
 
-    <?php endif; endforeach; endforeach; ?>
+    <?php endif; endforeach; endforeach; endforeach; ?>
 	</tbody>
 </table>
-</div><br>
+</div>

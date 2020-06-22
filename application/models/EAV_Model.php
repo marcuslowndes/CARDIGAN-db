@@ -47,18 +47,24 @@ class EAV_Model extends CI_Model{
 	}
 
 
-    //get single attribute / all attributes
+
+    //get data types from type name
 	public function get_data_types($type = FALSE){
-		//if no variable is passed in, return whole table
-		if($type === FALSE){
-			$query = $this->db->get('data_type');
-			return $query->result_array();
-		}
-		//else return row for specific email
 		$this->db->select('*');
 		$this->db->where(array('Type' => $type));
 		$query = $this->db->get('data_Type');
 		return $query->result_array();
+	}
+
+
+	public function get_data_type_from_entity($entityID){
+		$this->db->select('*');
+		$this->db->from('data_type');
+		$this->db->join('entity', 'entity.idDataType = data_type.idData_Type');
+		$this->db->join('value', 'entity.idEntity = value.idEntity');
+		$this->db->where(array('value.idEntity' => $entityID));
+		$query = $this->db->get();
+		return $query->unbuffered_row('array');
 	}
 
 
@@ -109,13 +115,18 @@ class EAV_Model extends CI_Model{
 		//		'Attribute'  => array(...)
 		// 		'Visitation' => array(...)
 		// 		'Value' 	 => array(...)
+		//		'Data_Type'  => array(...)
 		//  <idValue> => array(...)
 		//  ... (every returned value)
-	public function get_results($attribute_id){
+	public function get_results($attributeID, $subtypeID){
 		$this->db->select('*');
 		$this->db->from('value');
 		$this->db->join('attribute', 'attribute.idAttribute = value.idAttribute');
-		$this->db->where(array('attribute.idAttribute' => $attribute_id));
+		$this->db->join('entity', 'entity.idEntity = value.idEntity');
+		$this->db->where(array(
+			'attribute.idAttribute' => $attributeID,
+			'entity.idDataType'		=> $subtypeID
+		));
 		$query  = $this->db->get();
 		$values = $query->result_array();
 		$result = array();
@@ -124,6 +135,7 @@ class EAV_Model extends CI_Model{
 			$patient 	= $this->get_patient($val['idPatient']);
 			$visit		= $this->get_visitation($val['idVisitation']);
 			$attribute	= $this->get_attribute($val['idAttribute']);
+			$data_type	= $this->get_data_type_from_entity($val['idEntity']);
 
 			switch($attribute['Value_Type']){
 				case 'BOOL' :
@@ -153,7 +165,8 @@ class EAV_Model extends CI_Model{
 				'Patient'		=> $patient,
 				'Attribute' 	=> $attribute,
 				'Visitation' 	=> $visit,
-				'Value' 		=> $value
+				'Value' 		=> $value,
+				'Data_Type'		=> $data_type
 			);
 		}
 

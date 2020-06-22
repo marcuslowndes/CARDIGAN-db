@@ -1,5 +1,5 @@
 <div class="col">
-<div style="height: 530px; overflow: scroll; overflow-x: hidden;">
+<div style="height: 650px; overflow: scroll; overflow-x: hidden;">
 <style media="screen">
     .table td, .table th {
         padding: 0.5rem;
@@ -39,7 +39,8 @@
                 <td scope="row"> <?= $selected['attribute'] ?> </td>
 
                 <td scope="row"> <a class="btn btn-danger" href="database_remove/<?=
-                    $selected['attribute_ID'] ?>"> 🗑 </a> </td>
+                        $selected['attribute_ID'] ?>/<?= $selected['subtype_ID'] ?>">
+                    🗑 </a> </td>
 
             </tr>
 

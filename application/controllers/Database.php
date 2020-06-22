@@ -208,13 +208,14 @@ class Database extends CI_Controller {
 	}
 
 
-	public function remove_from_selected($id){
+	public function remove_from_selected($attributeID, $subtypeID){
 		if ($this->session->userdata('all_selected') === NULL)
 			$this->session->set_userdata(array('all_selected' => array()));
 
 		$all_selected = array();
 		foreach ($this->session->userdata('all_selected') as $selected) {
-			if ($selected['attribute_ID'] != $id)
+			if ($selected['attribute_ID'] != $attributeID
+					|| $selected['subtype_ID'] != $subtypeID)
 				array_push($all_selected, $selected);
 		}
 
@@ -272,15 +273,18 @@ class Database extends CI_Controller {
 		$patients = $this->eav_model->get_patient();
 		$all_results = array();
 		foreach ($this->session->userdata('all_selected') as $selected)
-			array_push($all_results, $this->eav_model->get_results($selected['attribute_ID']));
-
+			array_push($all_results, $this->eav_model->get_results(
+				$selected['attribute_ID'], $selected['subtype_ID']
+			));
 
 
 		// reformat results for the view
 		// preformatted_results gives a new results array arranged as:
 			//  <idPatient> => array(
-			//		<idAttribute> => <result array>
-			//		... (each attribute that the patient has a result for)
+			//		<idData_Type> => array(
+			//			<idAttribute> => <result array>
+			//			... (each attribute that the patient has a result for)
+			//		) ... (for each data type)
 			//  ) ... (for every patient)
         $preformatted_results = array();
 		foreach($patients as $patient){
@@ -288,13 +292,25 @@ class Database extends CI_Controller {
 
 			foreach ($all_results as $results)
 				foreach($results as $result){
+					// foreach($result['Data_Type'] as $key => $val){
+					// 	echo $key . ' ' . $val .  '<br>';
+					// }
+					// die();
 					if (!isset($preformatted_results[$patient['Patient_ID']]
+							[$result['Data_Type']['idData_Type']]))
+						$preformatted_results[$patient['Patient_ID']]
+							[$result['Data_Type']['idData_Type']] = array();
+
+					if (!isset($preformatted_results[$patient['Patient_ID']]
+							[$result['Data_Type']['idData_Type']]
 							[$result['Attribute']['idAttribute']]))
 						$preformatted_results[$patient['Patient_ID']]
+							[$result['Data_Type']['idData_Type']]
 							[$result['Attribute']['idAttribute']] = array();
 
 					if ($patient['idPatient'] == $result['Patient']['idPatient'])
 						array_push($preformatted_results[$patient['Patient_ID']]
+							[$result['Data_Type']['idData_Type']]
 							[$result['Attribute']['idAttribute']], $result);
 				}
 		}
@@ -310,20 +326,55 @@ class Database extends CI_Controller {
 			//		) ... (for every selected attribute)
 			// 	) ... (for every patient)
 		$formatted_results = array();
-		foreach($preformatted_results as $patient => $results_per_attr)
-			foreach ($results_per_attr as $attribute => $results) {
-				foreach ($results as $result) {
+		foreach($preformatted_results as $patient => $attr_per_data_type)
+			foreach($attr_per_data_type as $data_type => $results_per_attr){
+				foreach ($results_per_attr as $attribute => $results) {
+					foreach ($results as $result) {
+						$formatted_results[$patient][$data_type][$attribute]['Data_Type']
+							= $result['Data_Type'];
+						$formatted_results[$patient][$data_type][$attribute]['Attribute']
+							= $result['Attribute'];
 
-					$formatted_results[$patient][$attribute]['Attribute'] = $result['Attribute'];
-					if (!isset($formatted_results[$patient][$attribute]['Values']
-							[$result['Visitation']['idVisitation']]))
-						$formatted_results[$patient][$attribute]['Values']
-							[$result['Visitation']['idVisitation']] = array();
+						if (!isset($formatted_results[$patient][$data_type][$attribute]['Values']
+								[$result['Visitation']['idVisitation']]))
+							$formatted_results[$patient][$data_type][$attribute]['Values']
+								[$result['Visitation']['idVisitation']] = array();
 
-					array_push($formatted_results[$patient][$attribute]['Values']
-						[$result['Visitation']['idVisitation']], $result['Value']['Value']);
+						array_push($formatted_results[$patient][$data_type][$attribute]['Values']
+							[$result['Visitation']['idVisitation']], $result['Value']['Value']);
+					}
 				}
 			}
+
+		// foreach($formatted_results as $patient => $attr_per_data_type){
+		// 	echo 'Patient ' . $patient . '<br>';
+		// 	foreach($attr_per_data_type as $data_type => $results_per_attr){
+		// 		echo 'DataType ' . $data_type . '<br>';
+		// 		foreach ($results_per_attr as $attribute => $results) {
+		// 			echo 'Attribute ' . $attribute  . '<br>';
+		// 			foreach ($results as $thing => $result) {
+		// 				echo $thing . '<br>';
+		// 				foreach ($result as $key => $value) {
+		// 					echo $key . '<br> Value: ' . $value . '<br>';
+		// 					if ($thing == 'Values')
+		// 						foreach($value as $visitation => $vals){
+		// 							echo 'Visit: ' . $visitation  . '<br>';
+		// 							foreach ($vals as $val) {
+		// 								echo 'Value: ' . $val . '<br>';
+		// 							}
+		// 						}
+		// 				}
+		// 				// echo 'Attr No: ' . $result_name . '<br>';
+		// 				// foreach ($result as $key => $value) {
+		// 				// 	echo 'Result No: ' . $key . '<br> Value: ' . $value . '<br>';
+		// 				// }
+		// 			}
+		// 			echo '<br>';
+		// 		}
+		// 	}
+		// 	echo '<br><br>';
+		// }
+		// die();
 
 		$data['all_results'] = $formatted_results;
 		$data['visits'] = $this->eav_model->get_visitation();

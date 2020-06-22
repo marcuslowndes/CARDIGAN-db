@@ -10,8 +10,14 @@ import cardigan_db_relationships as d
 #     'HC04', 'HC05', 'HC06', 'HC07'
 # ]))
 
-# TEST 3
+# # TEST 3
+# print(e.extractData(
+#     'PAIDOS Visit 1.csv',
+#     d.dataRelationships_clinical
+# ))
+
 print(e.extractData(
-    'PAIDOS Visit 1.csv',
-    d.dataRelationships_clinical
+    'gait_6min/' + 'Visit' + str(1) + '_6Min'
+    + '_Beginning' + '.csv',
+    d.get_dataRelationships_gait('_Beginning'),
 ))

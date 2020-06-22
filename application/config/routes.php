@@ -61,7 +61,7 @@ $route['logout'] = 'users/logout';
 
 $route['database'] = 'database/index';
 $route['database/reset'] = 'database/reset_form';
-$route['database_remove/(:any)'] = 'database/remove_from_selected/$1';
+$route['database_remove/(:any)/(:any)'] = 'database/remove_from_selected/$1/$2';
 $route['database_result'] = 'database/result';
 $route['database/(:any)'] = 'database/index/$1';
 $route['database/(:any)/(:any)'] = 'database/index/$1/$2';
