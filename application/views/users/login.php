@@ -23,7 +23,7 @@
 						placeholder="Password" required autofocus>
 				</div>
 
-				<button class="btn btn-primary btn-lg btn-block" type="submit">
+				<button class="btn btn-primary btn-lg btn-block" type="submit" id="load-btn">
 					Log In
 				</button>
 

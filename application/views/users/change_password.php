@@ -22,7 +22,7 @@
 			<input type="password" class="form-control" name="password3" required autofocus>
 		</div>
 
-		<button class="btn btn-primary btn-lg btn-block" type="submit">Change Password</button>
+		<button class="btn btn-primary btn-lg btn-block" type="submit" id="load-btn">Change Password</button>
 
 		<?php echo form_close(); ?>
 

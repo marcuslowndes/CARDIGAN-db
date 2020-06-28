@@ -8,6 +8,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#load-btn").click(function() {
+				var attr = $(this).attr('href');
+				if (typeof attr !== typeof undefined && attr !== false){
+					// disable button
+					$(this).prop("disabled", true);
+					// add spinner to button
+					$(this).html('<span class="spinner-border" role="status"'
+						+ ' aria-hidden="true"></span>');
+				}
+			});
+		});
+	</script>
 	<title>CARDIGAN Project - <?= $title ?></title>
 </head>
 

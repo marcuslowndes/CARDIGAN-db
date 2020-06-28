@@ -37,8 +37,9 @@ class Users extends CI_Controller{
     			$this->session->set_flashdata('user_success', 'Success! You are'
                     . ' now registered as an <b>Unverified User</b> and can log'
                     . ' in, but you <b>must be verified</b> to gain acces to the'
-                    . ' database. <br> To do this, <b>email an admin or a member'
-                    . ' of the CARDIGAN Team.</b>');
+                    . ' database. <br> To do this, email an admin or a member'
+                    . ' of the CARDIGAN Team. You can do this using the <a href='
+                    . '"contact">Contact Us</a> page.');
 
     			redirect('login');
 

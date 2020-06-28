@@ -39,9 +39,9 @@
 		</div>
 
 		<br>
-		<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+		<button type="submit" class="btn btn-primary btn-lg" id="load-btn">Submit</button>
 
 		<?php echo form_close(); ?>
 	</div>
-	<br>
+	<br><br>
 </div>

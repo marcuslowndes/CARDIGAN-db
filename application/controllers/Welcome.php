@@ -36,12 +36,24 @@ class Welcome extends CI_Controller {
         if($this->form_validation->run() === FALSE)
 			$this->static_page('contact', $data);
 		else {
-			$data['email_data'] = array(
-				$this->input->post('name'),
-				$this->input->post('email'),
-				$this->input->post('subject'),
-				$this->input->post('message')
-			);
+			$post_data = $this->input->post();
+
+			$this->email->from($post_data['email'], $post_data['name']);
+			$this->email->to('17090299@brookes.ac.uk');
+			$this->email->subject($post_data['subject']);
+			$this->email->message($post_data['message']);
+
+            if($this->email->send() === TRUE) {
+                // Unset form data
+                $post_data = array();
+
+				$this->session->set_flashdata('user_success', 'Your message has'
+					. ' successfully been sent.');
+            } else
+				$this->session->set_flashdata('user_failed', 'Unfortunately, your'
+                    . ' message did not send successfully.');
+
+			redirect('contact');
 		}
 	}
 

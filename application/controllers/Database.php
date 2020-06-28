@@ -14,8 +14,8 @@ class Database extends CI_Controller {
             redirect('login');
         } else if($this->session->userdata('user_type') == 'Unverified'){
             $this->session->set_flashdata('user_warning', 'Only a verified'
-				. ' user may access the database. Please contact an admin to '
-				. 'request to be verified.');
+				. ' user may access the database. Please <a href="contact">'
+				. 'contact an admin</a> to request to be verified.');
             redirect('welcome');
         }
 
@@ -176,7 +176,7 @@ class Database extends CI_Controller {
 							'selected_attribute_ID'	=> '',
 							'selected_attribute'	=> '',
 							'search_btn_style'		=> '',
-							'search_btn_enable'		=> ''
+							'search_btn_enable'		=> 'disabled'
 						));
 					}
                 }
@@ -241,7 +241,7 @@ class Database extends CI_Controller {
 			'clinical_btn_style'	=> '',
 			'gait_btn_style'		=> '',
 			'search_btn_style'		=> '',
-			'search_btn_enable'		=> '',
+			'search_btn_enable'		=> 'disabled',
 			'all_selected'			=> array()
         ));
 
@@ -259,8 +259,8 @@ class Database extends CI_Controller {
             redirect('login');
         } else if($this->session->userdata('user_type') == 'Unverified'){
             $this->session->set_flashdata('user_warning', 'Only a verified user'
-				. ' may access the database. Please contact an admin to request'
-				. ' to be verified.');
+				. ' user may access the database. Please <a href="contact">'
+				. 'contact an admin</a> to request to be verified.');
             redirect('welcome');
         } else if (count($this->session->userdata('all_selected')) == 0
 				|| $this->session->userdata('all_selected') == NULL){
