@@ -22,7 +22,7 @@ class Database extends CI_Controller {
 
         // get current form data
         $data = array(
-            'title'					=> 'Choose Clinical or Gait Data',
+            'title'					=> 'DATABASE',
             'selected_type'			=> $this->session->userdata('selected_type'),
             'subtypes'				=> $this->session->userdata('subtypes'),
 			'selected_subtype'		=> $this->session->userdata('selected_subtype'),
@@ -105,13 +105,13 @@ class Database extends CI_Controller {
             ));
 			if ($type == 'Clinical')
 				$this->session->set_userdata(array(
-					'clinical_btn_style' => 'primary',
+					'clinical_btn_style' => 'danger',
 					'gait_btn_style'	 => 'secondary'
 				));
 			else
 				$this->session->set_userdata(array(
 					'clinical_btn_style' => 'secondary',
-					'gait_btn_style' 	 => 'primary'
+					'gait_btn_style' 	 => 'danger'
 				));
 
 
@@ -349,6 +349,7 @@ class Database extends CI_Controller {
 
 		$data['all_results'] = $formatted_results;
 		$data['visits'] = $this->eav_model->get_visitation();
+		$data['title'] = 'RESULTS';
 
 
 		//load views

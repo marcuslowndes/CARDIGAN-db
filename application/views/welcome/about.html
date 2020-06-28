@@ -1,19 +1,150 @@
-<script type="text/javascript">
-	function showVideo() {
-		var x = document.getElementById("myDIV");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-</script>
-
-<div class="container-fluid">
-	<div class="container">
-		<h2><?= $title ?></h2>
-		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="container-fluid bg-danger">
+	<div class="container text-center">
+		<h1 style=""><?= $title ?></h1>
 	</div>
 </div>
-<br><br>
+
+<div class="container-fluid bg-info" style="
+			background-image: /*rgba(78, 164, 212, 0.8), rgba(78, 164, 212, 0.8)*/
+				linear-gradient(rgba(43, 156, 219, 0.8), rgba(43, 156, 219, 0.8) ),
+				url('assets/images/FOTOS/ded7e895-3fba-48d5-b5c8-64fbc1a77bcc.jpg');
+			background-size:     cover;
+			background-repeat:   no-repeat;
+			background-position: center center;">
+	<div class="container">
+		<br><br>
+		<p>
+			The CARDIGAN project has drawn together computer scientists and life
+			scientists from Oxford Brookes University, and clinicians from a
+			Children's Hospital in Mexico to test whether Criticality Analysis
+			can be applied to gait data to give a fast, reliable and cost-effective
+			way to detect individuals at risk of developing type 2 diabetes.
+		</p>
+		<p>
+			Cardigan is coordinated by the School of Engineering, Computing and
+			Mathematics and supported by the British Council Institutional Links
+			Newton fund. Dr Tjeerd olde Scheper is the creator of the criticality
+			analysis model and is analysing and processing the data with the
+			support of researchers and Dr Clare Martin and Dr Arantza Aldea who
+			also manages the project.
+		</p>
+		<br><br>
+	</div>
+</div>
+
+<div class="container-fluid bg-success">
+	<div class="container" style="padding: 1rem !important">
+		<h2 class="text-center" style="margin-top: 3rem; margin-bottom: 3rem">
+			THE TEAM
+		</h2>
+		<br>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="img-thumbnail img-fluid img-profile"
+					src="assets/images/team/arantzaaldea.jpg"
+					alt="Dr Arantza Aldea" title="Dr Arantza Aldea">
+			</div>
+			<div class="col-md-4">
+				<p>
+					<b>Dr Arantza Aldea</b> is a Senior Lecturer in the School of Engineering,
+					Computing and Mathematics at Oxford Brookes University (UK).
+					Previously she was a Lecturer at Universitat Rovira I Virgili
+					in Spain and a post-doctoral researcher at Herriot Watt
+					University (UK). She has worked in several international
+					research projects and her research interests include knowledge
+					representation, decision support systems and semantic web.
+					She is currently interested in the use of smartphone technology
+					and big data to facilitate the self-management of chronic
+					health conditions.
+				</p> <br>
+			</div>
+			<div class="col-md-2">
+				<img class="img-thumbnail img-fluid img-profile"
+					src="assets/images/team/tjeerd-oldescheper.jpg"
+					alt="Dr Tjeerd Olde Scheper" title="Dr Tjeerd Olde Scheper">
+			</div>
+			<div class="col-md-4">
+				<p>
+					<b>Dr Tjeerd Olde Scheper</b> is a Senior Lecturer at the
+					School of Engineering, Computing, and Mathematics at Oxford
+					Brookes University (UK). His research is in Dynamic Systems.
+					He is particularly interested in the manner of which Biological
+					Systems resolve problems in dynamics, and in learning to apply
+					those concepts to Engineering, Medical and Biosystems problems.
+					He developed and patented control method called Rate Control
+					of Chaos, which limits the nonlinear dynamics of complex control
+					problems into stable control domains. It has applications in
+					the areas of lasers, combustion engines, HVAC, wind turbines,
+					and bioreactors.
+				</p> <br>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="img-thumbnail img-fluid img-profile"
+					src="assets/images/team/Clare Martin.png"
+					alt="Dr Clare Martin" title="Dr Clare Martin">
+			</div>
+			<div class="col-md-4">
+				<p>
+					<b>Dr Clare Martin</b> is a Principal Lecturer at the School
+					of Engineering, Computing, and Mathematics at Oxford Brookes
+					University (UK). Her research interests include the use of
+					mathematics to reason about the semantics and general algebraic
+					properties of programming and specification languages. The
+					areas of computer science that she is most concerned with are
+					functional programming, relational programming algebras, and
+					the theory and applications of predicate transformers and
+					multirelations. She am also interested in the development and
+					evaluation of intelligent mobile tools for the self-management
+					of chronic health conditions, especially in relation to human
+					computer interaction.
+				</p> <br>
+			</div>
+			<div class="col-md-2">
+				<img class="img-thumbnail img-fluid img-profile"
+					src="assets/images/team/Helen Dawes.jpg"
+					alt="Prof Helen Dawes" title="Prof Helen Dawes">
+			</div>
+			<div class="col-md-4">
+				<p>
+					<b>Prof Helen Dawes</b>, Elizabeth Casson Trust Chair, leads
+					the Movement Science Group based in the Faculty of Health
+					and Life Sciences at Oxford Brookes University. Her research
+					requires cross-disciplinary collaborations. Her activities
+					include research, teaching and the provision of a Clinical
+					Exercise and Rehabilitation in the community. Her research
+					spans from exploring underlying mechanisms affecting performance
+					through to service delivery of  subsequently  developed
+					interventions and tools.
+				</p> <br>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="img-thumbnail img-fluid img-profile"
+					src="assets/images/team/nestleAuncia2.jpg"
+					alt="Dr Salvador Villalpando Carrion" title="Dr Salvador Villalpando Carrion">
+			</div>
+			<div class="col-md-4">
+				<p>
+					<b>Dr Salvador Villalpando Carrion</b> is the chief of
+					gastroenterology at Hospital Infantil de Mexico Federico Gomez.
+					He has More than 20 years of experience in the field of
+					paediatric nutrition and gastroenterology in both clinical,
+					educational and research areas. With experience in the
+					dissemination and dissemination of science in mass media and
+					social networks. In the academic area, which is the center of
+					his activity, he is part of various groups of specialists and
+					academics such as the Mexican Academy of Pediatrics, the Mexican
+					Association of Pediatrics and the Faculty of Medicine of the UNAM.
+				</p> <br>
+			</div>
+			<div class="col-md-2"><br></div>
+			<div class="col-md-4"><br></div>
+		</div>
+		<br>
+	</div>
+</div>

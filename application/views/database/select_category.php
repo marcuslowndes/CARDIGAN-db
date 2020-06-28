@@ -1,8 +1,8 @@
 <div class="row">
 	<div class="col text-center">
         <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle"
-					data-toggle="dropdown" style="width:25rem">
+            <button type="button" class="btn btn-danger dropdown-toggle"
+					data-toggle="dropdown">
 				Select <?= $selected_type ?> data category
 			</button>
             <div class="dropdown-menu">

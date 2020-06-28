@@ -1,9 +1,7 @@
-<!--Login Form-->
-<br><br>
-<div class="container">
-	<div class="form-login jumbotron">
-
-		<h3 class="text-center" style="margin-bottom: 1rem"> <?= $title ?> </h3> 
+<div class="container-fluid bg-success">
+	<div class="container container-form" >
+		<br><br>
+		<h2> <?= $title ?> </h2>
 
 		<div color='red'><?php echo validation_errors(); ?></div>
 		<?php echo form_open('change_password'); ?> <br>
@@ -15,7 +13,8 @@
 
 		<div class="form-group">
 			<label for="password2">New Password</label>
-			<input type="password" class="form-control" name="password2" placeholder="Use both letters and numbers" required autofocus>
+			<input type="password" class="form-control" name="password2"
+				placeholder="Use both letters and numbers" required autofocus>
 		</div>
 
 		<div class="form-group">
@@ -29,7 +28,7 @@
 
 		<br><br>
 
-		<a class="red" href="delete_account/<?= $id ?>">[Delete Account]</a>
+		<a class="btn btn-danger" href="delete_account/<?= $id ?>">Delete Account</a>
 	</div>
+	<br><br><br><br>
 </div>
-<br><br><br><br>

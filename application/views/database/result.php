@@ -1,6 +1,4 @@
-<!-- <br>
-<h2 class="text-center"> Results </h2>
-<br> -->
+
 <div style="margin:10px; font-size:80%">
 <table class="table table-hover">
 	<thead>
@@ -30,7 +28,7 @@
 			if($i % 2 === 0)
 				$table_colour = 'table-light';
 			else
-				$table_colour = 'table-secondary';
+				$table_colour = 'table-info';
 			?>
 
             <tr class="<?= $table_colour ?>"  id="<?= $attribute ?>">

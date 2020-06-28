@@ -1,21 +1,95 @@
-<script type="text/javascript">
-	function showVideo() {
-		var x = document.getElementById("myDIV");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-</script>
-<br>
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top: 15rem; padding-bottom: 15rem;
+			background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),
+	 				url('assets/images/lauren-bova-DLazlyj8sYA-unsplash_2000x1300.jpg');
+			background-size:     cover;
+			background-repeat:   no-repeat;">
+		<h1 class="brand text-center" style="color: white;
+				-webkit-filter: drop-shadow(4px 4px rgba(0,0,0,0.5));
+				filter: drop-shadow(4px 4px rgba(0,0,0,0.5));">
+			CARDIGAN<br>Project
+		</h1>
+		<h5 class="text-center" style="font-size:130%; color: white;
+				-webkit-filter: drop-shadow(2px 2px rgba(0,0,0,0.5));
+				filter: drop-shadow(2px 2px rgba(0,0,0,0.5));
+				padding-top:10px">
+			Criticality Analysis of Diabetic Gait in Children
+		</h5>
+</div>
+
+
+<div class="container-fluid bg-danger">
 	<div class="container">
-		<h2><?= $title ?></h2>
+		<img src="assets/images/logos/CARDIGAN_logo_small.jpg"
+			class="img-fluid rounded-circle float-left hoverable welcome-logo"
+			title="CARDIGAN Logo" alt="CARDIGAN Logo">
+		<h2> OUR MISSION </h2>
+		<p>
+			CARDIGAN project aims to use criticality analysis of gait to identify
+			individuals at risk of developing diabetes among overweight teenagers
+			in Mexico. This project drew together computer scientists, life
+			scientists and clinicians from Mexico and UK and can significantly
+			change the way that diabetes is detected.
+		</p>
 		<br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Eh1CJMK5448" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button style="font-size:100%; margin-top:1rem" class="btn btn-info"
+				type="button" name="watchVideo" data-toggle="modal"
+				data-target="#AboutProjectVideo">Watch the video ></button>
 	</div>
 </div>
 
-<br><br>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="AboutProjectVideo"
+ 		aria-labelledby="AboutProjectVideoTitle" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content bg-dark" style="color:white">
+			<div class="modal-header">
+				<h5 class="modal-title" id="AboutProjectVideoTitle">
+					About the CARDIGAN Project
+				</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<iframe width="798" height="438.9" frameborder="0" allowfullscreen
+						src="https://www.youtube.com/embed/8FkFQz5BW4s"
+						allow="accelerometer; autoplay; encrypted-media;
+						gyroscope; picture-in-picture" ></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid bg-success">
+	<div class="row" style="">
+		<div class="col" style="
+				background-image:
+					linear-gradient(rgba(70, 179, 158, 0.4), rgba(70, 179, 158, 0.3) ),
+					url('assets/images/IMG_20190524_090027_cr.jpg');
+				background-size:     cover;
+				background-repeat:   no-repeat;
+				background-position: center center;  ">
+
+		</div>
+		<div class="col" style="padding: 3rem; color:white;">
+			<h2> LATEST NEWS </h2><br>
+			<p class="col-text">
+				CARDIGAN project will participate in ATTD 2020 in poster format.
+			</p>
+			<p class="col-text">
+				More news coming soon!
+			</p>
+			<br><br><br><br><br><br><br>
+			<h2> EVENTS </h2>
+			<br>
+			<p class="col-text">
+				New events are currently being planned.
+			</p>
+			<br><br><br><br><br><br>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>

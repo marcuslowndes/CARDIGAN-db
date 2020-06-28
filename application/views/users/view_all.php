@@ -1,7 +1,7 @@
-<br>
-<h2 class="text-center"> <?= $title ?> </h2>
-<br>
+<br><br>
 <div class="container">
+<h2 style="margin-bottom: 1rem; color:black !important"> <?= $title ?> </h2>
+<br>
 <table class="table table-hover">
     <thead>
         <tr class="table-primary" >
@@ -20,9 +20,9 @@
             foreach($users as $user) :
                 $i++;
                 if($i % 2 === 0){
-                    $table_colour = 'table-secondary';
+                    $table_colour = 'table-light';
                 } else {
-                    $table_colour= 'table-light';
+                    $table_colour= 'table-info';
                 }
         ?>
 

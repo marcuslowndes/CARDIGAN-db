@@ -1,15 +1,22 @@
-<br>
+<div class="container-fluid bg-danger">
+	<div class="container text-center">
+		<h1 style="margin:0 !important"> <?= $title ?> </h1>
+	</div>
+</div>
 
+<br>
 <div class="row" style="margin:0;">
 	<div class="col">
-	<h2 class="text-center"> <?= $title ?> </h2>
+	<h3 class="text-center"> Select any data from Clinical or Gait data sets </h3>
 	<br>
 	<div class="row">
 		<div class="col text-center">
-			<a class="btn btn-clinical-gait btn-<?= $clinical_btn_style ?>" href="database/Clinical">Clinical</a><br><br>
+			<a class="btn btn-clinical-gait btn-<?= $clinical_btn_style ?>"
+				href="database/Clinical"> Clinical </a><br><br>
 		</div>
 		<div class="col text-center">
-			<a class="btn btn-clinical-gait btn-<?= $gait_btn_style ?>" href="database/Gait">Gait</a><br><br>
+			<a class="btn btn-clinical-gait btn-<?= $gait_btn_style ?>"
+				href="database/Gait"> Gait </a><br><br>
 		</div>
 	</div>
 	<br>

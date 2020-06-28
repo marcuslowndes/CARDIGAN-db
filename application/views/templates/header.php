@@ -6,29 +6,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-		crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<title>CARDIGAN Project - <?= $title ?></title>
 </head>
 
 <body>
 	<!--Nav Bar-->
-	<nav class='navbar navbar-expand-lg navbar-dark bg-primary fixed-top' id="navbar">
-		<a class='navbar-brand' style='font-family:"Lulo-Clean-W01-One-Bold";
-				letter-spacing: 0.2rem; margin-left:12px;' href='index'>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+	 		id="navbar" style="border-bottom: solid 3px #D55342;
+				-webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+				filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));">
+		<a class="navbar-brand brand" style="margin-left:12px;
+				font-size:100% !important;" href="index">
 			CARDIGAN
 		</a>
 
-		<img src="assets/images/CARDIGAN_logo_icon.jpg" alt="CARDIGAN Logo"
-		 	style="height:3rem; border-radius:10rem; margin-right: 1rem">
+		<img src="assets/images/logos/CARDIGAN_logo_icon.jpg" alt="CARDIGAN Logo"
+		 	title="CARDIGAN Logo" style="height:3rem; margin-right: 1rem" class="rounded-circle">
 
 		<div class="navbar-collapse collapse show" id="navbar-main" style="">
 			<ul class='navbar-nav mr-auto' id='navbar-container'>
 				<li class="nav-item">
 					<a class="nav-link" id='about' href='about'> About </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id='gallery' href='gallery'> Gallery </a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" id='contact' href='contact'> Contact </a>
@@ -77,24 +80,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</nav>
 
-	<div class="bg-primary nav-bg" id="top"><br></div>
+	<div class="bg-primary nav-bg"><br></div>
 
-	<div class="">
+	<div class="main" id="top">
 		<?php
 			// Flash Messages:
             if($this->session->flashdata('user_success')){
-				echo '<p class="alert alert-success" style="border-radius: 0">'
+				echo '<p class="alert alert-success">'
 					. $this->session->flashdata('user_success') . '</p>';
             }
 
             if($this->session->flashdata('user_warning')){
-                echo '<p class="alert alert-warning" style="border-radius: 0">'
+                echo '<p class="alert alert-warning">'
 					. $this->session->flashdata('user_warning') . '</p>';
             }
 
             if($this->session->flashdata('user_failed')){
-                echo '<p class="alert alert-danger" style="border-radius: 0">'
+                echo '<p class="alert alert-danger">'
 					. $this->session->flashdata('user_failed') . '</p>';
             }
 		?>
-		<br>
