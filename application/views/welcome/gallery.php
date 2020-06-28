@@ -20,7 +20,7 @@ function create_gallery($dir_name, $dir_contents){
 					if ($i == 16)
 						echo '<a href="assets/images/FOTOS/'
 							. $photos_dir1[sizeof($photos_dir1) - 1]
-						 	. '"><img class="" src="assets/images/FOTOS/'
+						 	. '"><img loading="lazy" src="assets/images/FOTOS/'
 							. $photos_dir1[sizeof($photos_dir1) - 1]
 							. '" style="width:100%" id="'. $i
 							. '"></a></div> <div class="col-gallery">';
@@ -28,7 +28,7 @@ function create_gallery($dir_name, $dir_contents){
 						echo '';
 					else if ($i % $col_size != 0)
 						echo '<a href="assets/images/FOTOS/'. $photo
-						 	. '"><img class="" src="assets/images/FOTOS/' . $photo
+						 	. '"><img loading="lazy" src="assets/images/FOTOS/' . $photo
 						 	. '" style="width:100%" id="' . $i . '"></a>';
 					else
 						echo '</div> <div class="col-gallery">';
@@ -48,14 +48,14 @@ function create_gallery($dir_name, $dir_contents){
 					if ($i == 65)
 						echo '<a href="assets/images/Pictures + Video (Mireya)/'
 						 	. $photos_dir2[sizeof($photos_dir2) - 1]
-							. '"><img class="" src="assets/images/Pictures + Video (Mireya)/'
+							. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/'
 							. $photos_dir2[sizeof($photos_dir2) - 1]
 							. '" style="width:100%" id="'. $i
 							. '"></div> <div class="col-gallery"></a>';
 					else if ($i == 75)
 						echo '<a href="assets/images/Pictures + Video (Mireya)/'
 						 	. $photos_dir2[sizeof($photos_dir2) - 2]
-							. '"><img class="" src="assets/images/Pictures + Video (Mireya)/'
+							. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/'
 							. $photos_dir2[sizeof($photos_dir2) - 2]
 							. '" style="width:100%" id="'. $i
 							. '"></div> <div class="col-gallery"></a>';
@@ -64,7 +64,7 @@ function create_gallery($dir_name, $dir_contents){
 					else
 					if ($i % $col_size != 0)
 						echo '<a href="assets/images/Pictures + Video (Mireya)/'. $photo
-						 	. '"><img class="" src="assets/images/Pictures + Video (Mireya)/' . $photo
+						 	. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/' . $photo
 						 	. '" style="width:100%" id="' . $i . '"></a>';
 					else
 						echo '</div> <div class="col-gallery">';
