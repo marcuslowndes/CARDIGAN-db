@@ -6,6 +6,20 @@
 			<br><br>
 		</div>
 
+		<script type="text/javascript">
+			// add spinner to button
+			$(document).ready(function() {
+				$("#load-btn").click(function() {
+					var attr = $(this).attr('href');
+					if (typeof attr !== typeof undefined && attr !== false){
+						$(this).prop("disabled", true);
+						$(this).html('<span class="spinner-border" role="status"'
+							+ ' aria-hidden="true"></span>');
+					}
+				});
+			});
+		</script>
+
 		<div class="col text-center" style="color:white">
 			<a class="btn btn-clinical-gait btn-<?= $search_btn_style ?>"
 					<?= $search_btn_enable ?> id="load-btn">

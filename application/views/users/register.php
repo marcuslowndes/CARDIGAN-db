@@ -38,8 +38,16 @@
 				required autofocus>
 		</div>
 
-		<br>
-		<button type="submit" class="btn btn-primary btn-lg" id="load-btn">Submit</button>
+		<!-- <div class="form-group">
+		    <label for="user_captcha"><?php //echo $captcha['image']; ?></label>
+		    <br>
+		    <input type="text" autocomplete="off" name="user_captcha"
+				placeholder="Enter above text" class="form-control" style="width:300px"
+				value="<?php // if(!empty($user_captcha)) echo $user_captcha; ?>" />
+		</div> -->
+
+		<button type="submit" class="btn btn-primary btn-lg" id="load-btn"
+				style="width: 10rem"> Submit </button>
 
 		<?php echo form_close(); ?>
 	</div>

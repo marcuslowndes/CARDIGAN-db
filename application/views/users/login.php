@@ -23,9 +23,8 @@
 						placeholder="Password" required autofocus>
 				</div>
 
-				<button class="btn btn-primary btn-lg btn-block" type="submit" id="load-btn">
-					Log In
-				</button>
+				<button class="btn btn-primary btn-lg btn-block"
+				 		type="submit" id="load-btn"> Log In </button>
 
 				<?php echo form_close(); ?>
 			</div>

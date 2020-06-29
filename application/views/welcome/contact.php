@@ -39,7 +39,8 @@
 				required autofocus></textarea>
 		</div>
 
-		<button class="btn btn-primary btn-lg" type="submit" id="load-btn">Send</button>
+		<button class="btn btn-primary btn-lg" type="submit" id="load-btn"
+				style="width: 10rem"> Send </button>
 
 		<?php echo form_close(); ?>
 		<br><br>

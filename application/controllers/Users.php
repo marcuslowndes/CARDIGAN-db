@@ -18,9 +18,15 @@ class Users extends CI_Controller{
             'required|valid_email|callback_check_email_exists');
     	$this->form_validation->set_rules('password', 'Password', 'required');
     	$this->form_validation->set_rules('password2', 'Confirm Password',
-            'matches[password]');
+            'required|matches[password]');
+        // $this->form_validation->set_rules('user_captcha', 'Captcha',
+        //     'required|callback_check_captcha');
+        // $userCaptcha = $this->input->post('user_captcha');
 
     	if($this->form_validation->run() === FALSE){
+            // $data['captcha'] = $this->captcha();
+            // $this->session->set_userdata('captcha_word', $data['captcha']['word']);
+
     		$this->load->view('templates/header', $data);
             $this->load->view('users/register', $data);
             $this->load->view('templates/footer.html');
@@ -55,14 +61,13 @@ class Users extends CI_Controller{
     //check if email exists
     public function check_email_exists($email){
         $this->form_validation->set_message('check_email_exists',
-            '<p style="color: red;">The email entered already has an account'
+            '<p style="color: #254151;">The email entered already has an account'
             . ' associated with it.</p>');
 
-        if($this->user_model->check_email_not_exists($email)) {
+        if($this->user_model->check_email_not_exists($email))
             return true;
-        } else {
+        else
             return false;
-        }
     }
 
 
@@ -114,9 +119,10 @@ class Users extends CI_Controller{
 
                     redirect('database');
 
-                } else { $this->failed_login(); }
-
-            } else { $this->failed_login(); }
+                } else
+                    $this->failed_login();
+            } else
+                $this->failed_login();
         }
     }
 
@@ -160,7 +166,6 @@ class Users extends CI_Controller{
     public function logout(){
         $this->unset_user_session();
 
-        //message
         $this->session->set_flashdata('user_warning', 'You are now logged out.');
 
         redirect("login");
@@ -186,17 +191,15 @@ class Users extends CI_Controller{
         );
 
         // if a user and user type have been specified, set that user's type
-        if (isset($user_id) && isset($user_type)){
-            foreach ($data['users'] as $user) {
-                if($user_id == $user['ID']){
+        if (isset($user_id) && isset($user_type))
+            foreach ($data['users'] as $user)
+                if($user_id == $user['ID']) {
                     $this->user_model->set_user_type($user_id, $user_type);
                     $this->session->set_flashdata('user_success', $user['Forename']
                         . ' ' . $user['Surname'] . ' has been set as '
                         . $user_type . '.');
                     redirect('view_all_users', 'refresh');
                 }
-            }
-        }
 
         $this->load->view('templates/header', $data);
         $this->load->view('users/view_all', $data);
@@ -279,4 +282,24 @@ class Users extends CI_Controller{
 
         redirect("login");
     }
+    //
+    // public function captcha(){
+    //     $this->load->helper('string');
+    //     $this->load->helper('my_captcha');
+    //
+    //     $vals = array( 'word' => random_string('alnum', 8) );
+    //
+    //     return create_captcha($vals);
+    // }
+    //
+    // public function check_captcha($str){
+    //     $word = $this->session->userdata('captchaWord');
+    //     if(strcmp(strtoupper($str),strtoupper($word)) == 0)
+    //         return true;
+    //     else {
+    //         $this->form_validation->set_message('check_captcha',
+    //             '<p style="color: #254151;">Incorrect CAPTCHA.</p>');
+    //         return false;
+    //     }
+    // }
 }
