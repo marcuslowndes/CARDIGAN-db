@@ -50,7 +50,8 @@
                         href="database_remove/<?= $selected['attribute_ID'] ?>/<?=
                         $selected['subtype_ID'] ?>">
                     <img src="assets/images/iconfinder_delete_678153.svg"
-                        style="width:22px;" alt="Remove" title="Remove">
+                        style="width:22px;" alt="Remove from selected"
+                        title="Remove from selected">
                 </a> </td>
 
             </tr>
