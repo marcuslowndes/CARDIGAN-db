@@ -222,7 +222,7 @@ class Users extends CI_Controller{
         $this->form_validation->set_rules('password', 'Current Password', 'required');
         $this->form_validation->set_rules('password2', 'New Password', 'required');
         $this->form_validation->set_rules('password3', 'Confirm New Password',
-            'matches[password2]');
+            'required|matches[password]');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header', $data);

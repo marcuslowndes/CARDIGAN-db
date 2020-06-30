@@ -8,7 +8,8 @@
 
 		<div class="form-group">
 			<label for="password">Confirm Current Password</label>
-			<input type="password" class="form-control" name="password" required autofocus>
+			<input type="password" class="form-control" name="password"
+				required autofocus>
 		</div>
 
 		<div class="form-group">
@@ -19,16 +20,19 @@
 
 		<div class="form-group">
 			<label for="password3">Confirm New Password</label>
-			<input type="password" class="form-control" name="password3" required autofocus>
+			<input type="password" class="form-control" name="password3"
+				required autofocus>
 		</div>
 
-		<button class="btn btn-primary btn-lg btn-block" type="submit" id="load-btn">Change Password</button>
+		<button class="btn btn-primary btn-lg btn-block" type="submit"
+			id="load-btn">Change Password</button>
 
 		<?php echo form_close(); ?>
 
 		<br><br>
 
-		<a class="btn btn-danger" href="delete_account/<?= $id ?>">Delete Account</a>
+		<a class="btn btn-danger" href="delete_account/<?= $id ?>">
+			Delete Account</a>
 	</div>
 	<br><br><br><br>
 </div>
