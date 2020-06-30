@@ -19,13 +19,18 @@ class Users extends CI_Controller{
     	$this->form_validation->set_rules('password', 'Password', 'required');
     	$this->form_validation->set_rules('password2', 'Confirm Password',
             'required|matches[password]');
-        // $this->form_validation->set_rules('user_captcha', 'Captcha',
-        //     'required|callback_check_captcha');
-        // $userCaptcha = $this->input->post('user_captcha');
+        $this->form_validation->set_rules('user_captcha', 'Captcha',
+            'required|callback_check_captcha');
+        $data['user_captcha'] = $this->input->post('user_captcha');
 
     	if($this->form_validation->run() === FALSE){
-            // $data['captcha'] = create_captcha(array('word' => random_string('alnum', 8)));
-            // $this->session->set_userdata('captcha_word', $data['captcha']['word']);
+            $data['captcha'] = create_captcha(array(
+                'word'          => random_string('alnum', 8),
+    			'img_path'      => './captcha/',
+    			'img_url'       => 'captcha/',
+	            'font_path'     => './captcha/font/Roboto-Regular.tff'
+            ));
+            $this->session->set_userdata('captcha_word', $data['captcha']['word']);
 
     		$this->load->view('templates/header', $data);
             $this->load->view('users/register', $data);
@@ -209,22 +214,38 @@ class Users extends CI_Controller{
         // ensure user is logged in and is an admin
         if(!$this->session->userdata('logged_in')){
             $this->session->set_flashdata('user_failed', 'You must be logged in '
-                . 'as an admin to access this page.');
+                . 'to access this page.');
             redirect('login');
         }
 
         $data = array(
             'title'                 => 'MANAGE YOUR ACCOUNT',
             'is_current_pw_valid'   => FALSE,
-            'id'                    => $this->session->userdata('user_id')
+            'id'                    => $this->session->userdata('user_id'),
+            'forename'              => $this->session->userdata('forename'),
+            'surname'               => $this->session->userdata('surname'),
+            'email'                 => $this->session->userdata('user_email'),
         );
+
 
         $this->form_validation->set_rules('password', 'Current Password', 'required');
         $this->form_validation->set_rules('password2', 'New Password', 'required');
         $this->form_validation->set_rules('password3', 'Confirm New Password',
-            'required|matches[password]');
+            'required|matches[password2]');
+        $this->form_validation->set_rules('user_captcha', 'Captcha',
+            'required|callback_check_captcha');
+        $data['user_captcha'] = $this->input->post('user_captcha');
+
 
         if($this->form_validation->run() === FALSE){
+            $data['captcha'] = create_captcha(array(
+                'word'          => random_string('alnum', 8),
+                'img_path'      => './captcha/',
+                'img_url'       => 'captcha/',
+                'font_path'     => './captcha/font/Roboto-Regular.tff'
+            ));
+            $this->session->set_userdata('captcha_word', $data['captcha']['word']);
+
             $this->load->view('templates/header', $data);
             $this->load->view('users/change_password', $data);
             $this->load->view('templates/footer.html');
@@ -239,17 +260,14 @@ class Users extends CI_Controller{
 
             if($enc_current_password == $user['Password'] && $currentPW != $newPW){
                 $new_salt = base64_encode(random_bytes(16));
-
                 $enc_new_password = hash('sha512', $new_salt . $newPW);
 
-                $this->user_model->set_user_password($user['ID'],
-                    $enc_new_password, $new_salt);
+                $this->user_model->set_user_password($user['ID'], $enc_new_password, $new_salt);
 
                 $this->session->set_flashdata('user_success', 'Success! You have'
                     . ' changed your password.');
 
                 redirect('change_password');
-
             } else {
                 $this->session->set_flashdata('user_failed', 'Please submit your'
                     . ' correct current password, and ensure that your new password'
@@ -271,24 +289,21 @@ class Users extends CI_Controller{
         }
 
         $this->unset_user_session();
-
         $this->user_model->delete_user($id);
-
-        //message
         $this->session->set_flashdata('user_warning', 'Account successfully deleted.');
 
         redirect("login");
     }
-    //
-    //
-    // public function check_captcha($str){
-    //     $word = $this->session->userdata('captchaWord');
-    //     if(strcmp(strtoupper($str),strtoupper($word)) == 0)
-    //         return true;
-    //     else {
-    //         $this->form_validation->set_message('check_captcha',
-    //             '<p style="color: #254151;">Incorrect CAPTCHA.</p>');
-    //         return false;
-    //     }
-    // }
+
+
+    public function check_captcha($str){
+        $word = $this->session->userdata('captcha_word');
+        if(strcmp(strtoupper($str),strtoupper($word)) == 0)
+            return true;
+        else {
+            $this->form_validation->set_message('check_captcha',
+                '<p style="color: #254151;">Incorrect CAPTCHA.</p>');
+            return false;
+        }
+    }
 }

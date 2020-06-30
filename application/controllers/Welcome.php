@@ -32,10 +32,20 @@ class Welcome extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('subject', 'Subject', 'required');
         $this->form_validation->set_rules('message', 'Message', 'required');
+		$this->form_validation->set_rules('user_captcha', 'Captcha',
+			'required|callback_check_captcha');
+		$data['user_captcha'] = $this->input->post('user_captcha');
 
-        if($this->form_validation->run() === FALSE)
+		if($this->form_validation->run() === FALSE) {
+			$data['captcha'] = create_captcha(array(
+				'word'          => random_string('alnum', 8),
+				'img_path'      => './captcha/',
+				'img_url'       => 'captcha/',
+				'font_path'     => './captcha/font/Roboto-Regular.tff'
+			));
+			$this->session->set_userdata('captcha_word', $data['captcha']['word']);
 			$this->static_page('contact', $data);
-		else {
+		} else {
 			$post_data = $this->input->post();
 
 			$this->email->from($post_data['email'], $post_data['name']);
@@ -57,6 +67,16 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	public function check_captcha($str){
+        $word = $this->session->userdata('captcha_word');
+        if(strcmp(strtoupper($str),strtoupper($word)) == 0)
+            return true;
+        else {
+            $this->form_validation->set_message('check_captcha',
+                '<p style="color: #254151;">Incorrect CAPTCHA.</p>');
+            return false;
+        }
+    }
 
 	public function gallery() {
 		$data['title'] = 'PHOTO GALLERY';

@@ -189,6 +189,19 @@ body {
     border-radius: 5px !important;
 }
 
+.captcha img {
+    width: 380px !important;
+    height: auto !important;
+    border-radius: 5px !important;
+    border: solid 2px #D55342 !important;
+    margin: 4px 0px 2px 0px;
+}
+
+.captcha input {
+    width:380px !important;
+    margin-bottom: 4px;
+}
+
 /* @media only screen and (max-width: 1415px) {
 	.dropdown-toggle{
 		width:20rem;
