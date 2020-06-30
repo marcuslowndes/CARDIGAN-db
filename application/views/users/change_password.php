@@ -57,7 +57,7 @@
 
 <div class="modal fade" tabindex="-1" role="dialog" id="confirm-delete"
  		aria-labelledby="confirm-delete-title" aria-hidden="true">
-	<div class="modal-dialog modal-lg modal-dialog-centered">
+	<div class="modal-dialog modal modal-dialog-centered">
 		<div class="modal-content bg-dark" style="color:white">
 			<div class="modal-header">
 				<h5 class="modal-title" id="confirm-delete-title">
