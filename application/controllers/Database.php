@@ -8,16 +8,7 @@ class Database extends CI_Controller {
 	 					  $entityID = NULL, $attributeID = NULL) {
 
         // ensure user is logged in and is verified
-        if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('user_failed', 'Only a verified'
-				. ' user may access the database.');
-            redirect('login');
-        } else if($this->session->userdata('user_type') == 'Unverified'){
-            $this->session->set_flashdata('user_warning', 'Only a verified'
-				. ' user may access the database. Please <a href="contact">'
-				. 'contact an admin</a> to request to be verified.');
-            redirect('welcome');
-        }
+        $this->check_verified_user();
 
 
         // get current form data
@@ -75,6 +66,20 @@ class Database extends CI_Controller {
         $this->load->view('database/close.html');
 		$this->load->view('database/all_selected', $data);
         $this->load->view('templates/footer.html');
+	}
+
+
+	public function check_verified_user(){
+		if(!$this->session->userdata('logged_in')){
+            $this->session->set_flashdata('user_failed', 'Only a verified'
+				. ' user may access the database.');
+            redirect('login');
+        } else if($this->session->userdata('user_type') == 'Unverified'){
+            $this->session->set_flashdata('user_warning', 'Only a verified'
+				. ' user may access the database. Please <a href="contact">'
+				. 'contact an admin</a> to request to be verified.');
+            redirect('welcome');
+        }
 	}
 
 
@@ -209,15 +214,17 @@ class Database extends CI_Controller {
 
 
 	public function remove_from_selected($attributeID, $subtypeID){
+        $this->check_verified_user();
+
 		if ($this->session->userdata('all_selected') === NULL)
 			$this->session->set_userdata(array('all_selected' => array()));
 
 		$all_selected = array();
-		foreach ($this->session->userdata('all_selected') as $selected) {
+		foreach ($this->session->userdata('all_selected') as $selected)
 			if ($selected['attribute_ID'] != $attributeID
 					|| $selected['subtype_ID'] != $subtypeID)
 				array_push($all_selected, $selected);
-		}
+
 
 		$this->session->set_userdata(array('all_selected' => $all_selected));
 
@@ -227,6 +234,8 @@ class Database extends CI_Controller {
 
 	/* Unsets form-related session data */
 	public function reset_form(){
+        $this->check_verified_user();
+
         $this->session->set_userdata(array(
             'selected_type'			=> '',
             'subtypes'              => '',
@@ -249,49 +258,58 @@ class Database extends CI_Controller {
     }
 
 
-	/* Gives the search results in a table */
+	/* Gives all the search results in a table */
     public function result(){
 
         // ensure user is logged in and is verified, and a valid result has been selected
-        if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('user_failed', 'Only a verified user'
-				. ' may access the database.');
-            redirect('login');
-        } else if($this->session->userdata('user_type') == 'Unverified'){
-            $this->session->set_flashdata('user_warning', 'Only a verified user'
-				. ' user may access the database. Please <a href="contact">'
-				. 'contact an admin</a> to request to be verified.');
-            redirect('welcome');
-        } else if (count($this->session->userdata('all_selected')) == 0
+		$this->check_verified_user();
+		if (count($this->session->userdata('all_selected')) == 0
 				|| $this->session->userdata('all_selected') == NULL){
             $this->session->set_flashdata('user_warning', 'A valid data item must'
 				. ' be selected to return a result.');
             redirect('database');
 		}
 
+		$data['all_results'] = $this->get_results($this->session->userdata('all_selected'));
+		$data['visits'] = $this->eav_model->get_visitation();
+		$data['title'] = 'RESULTS';
 
-		$patients = $this->eav_model->get_patient();
+		//load views
+        $this->load->view('templates/header', $data);
+        $this->load->view('database/result', $data);
+        $this->load->view('templates/footer.html');
+    }
+
+
+	public function get_results($db_results){
 		$all_results = array();
-		foreach ($this->session->userdata('all_selected') as $selected)
+		foreach ($db_results as $selected)
 			array_push($all_results, $this->eav_model->get_results(
 				$selected['attribute_ID'], $selected['subtype_ID']
 			));
+		$patients = $this->eav_model->get_patient();
 
 
 		// reformat results for the view
 		// preformatted_results gives a new results array arranged as:
 			//  <idPatient> => array(
 			//		<idData_Type> => array(
-			//			<idAttribute> => <result array>
+			//			<idAttribute> => array(
+			// 					'Patient'		=> array(...<database row>),
+			// 					'Attribute' 	=> array(...<database row>),
+			// 					'Visitation' 	=> array(...<database row>),
+			// 					'Value' 		=> array(...<database row>),
+			// 					'Data_Type'		=> array(...<database row>)
+			// 				)
 			//			... (each attribute that the patient has a result for)
 			//		) ... (for each data type)
 			//  ) ... (for every patient)
-        $preformatted_results = array();
-		foreach($patients as $patient){
+		$preformatted_results = array();
+		foreach($patients as $patient) {
 			$preformatted_results[$patient['Patient_ID']] = array();
 
 			foreach ($all_results as $results)
-				foreach($results as $result){
+				foreach($results as $result) {
 					if (!isset($preformatted_results[$patient['Patient_ID']]
 							[$result['Data_Type']['idData_Type']]))
 						$preformatted_results[$patient['Patient_ID']]
@@ -315,23 +333,28 @@ class Database extends CI_Controller {
 			//  <idPatient> => array(
 			// 		<idData_Type> => array(
 			//			<idAttribute> => array(
-			//				'Attribute' => array(...)
-			//				'Data_Type' => array(...)
+			//				'Attribute' => array(...<database row>)
+			//				'Data_Type' => array(...<database row>)
 			//		 		'Values' => array(
-			//					<idVisitation> => array(...results)
+			//					<idVisitation> => array(...<all values>)
 			//					... (for every visit 1 - 8)
 			//		 		)
 			//			) ... (for every selected attribute)
 			//		)
 			// 	) ... (for every patient)
-		// this ensures only relevant data is passed to the view
+		// this ensures only relevant data is passed to the view, in the required order
 		$formatted_results = array();
 		foreach($preformatted_results as $patient => $attr_per_data_type)
-			foreach($attr_per_data_type as $data_type => $results_per_attr){
+			foreach($attr_per_data_type as $data_type => $results_per_attr) {
 				foreach ($results_per_attr as $attribute => $results) {
 					foreach ($results as $result) {
-						$formatted_results[$patient][$data_type][$attribute]['Data_Type']
-							= $result['Data_Type'];
+						$formatted_results[$patient][$data_type][$attribute]
+							['Data_Type']['Type'] = $result['Data_Type']['Type'];
+						$formatted_results[$patient][$data_type][$attribute]['Data_Type']['Walk_Type']
+							= $result['Data_Type']['Walk_Type'];
+						$formatted_results[$patient][$data_type][$attribute]['Data_Type']['Subtype']
+							= $result['Data_Type']['Subtype'];
+
 						$formatted_results[$patient][$data_type][$attribute]['Attribute']
 							= $result['Attribute'];
 
@@ -346,16 +369,66 @@ class Database extends CI_Controller {
 				}
 			}
 
-
-		$data['all_results'] = $formatted_results;
-		$data['visits'] = $this->eav_model->get_visitation();
-		$data['title'] = 'RESULTS';
+		return $formatted_results;
+	}
 
 
-		//load views
-        $this->load->view('templates/header', $data);
-        $this->load->view('database/result', $data);
-        $this->load->view('templates/footer.html');
-    }
+	public function export_from_selected($attributeID, $subtypeID){
+        $this->check_verified_user();
+
+		if ($this->session->userdata('all_selected') === NULL)
+			$this->session->set_userdata(array('all_selected' => array()));
+		if (empty($this->session->userdata('all_selected')))
+			redirect('database');
+
+		foreach ($this->session->userdata('all_selected') as $selected)
+			if ($selected['attribute_ID'] == $attributeID
+					&& $selected['subtype_ID'] == $subtypeID) {
+				$attr_name = str_replace(
+					array(' ', '(', ')', '\\', '/'),
+					array('_', '',  '',  '_',  '_'),
+					$selected['attribute']
+				);
+				$results = $this->get_results(array($selected));
+			}
+
+		// set file name and type
+		$filename = 'results_' . $attr_name . '_' . date('dmY') . '.csv';
+		header('Content-Description: File Transfer');
+		header('Content-Disposition: attachment; filename=' . $filename);
+		header('Content-Type: application/csv; ');
+
+		// file creation
+		$file = fopen('php://output','w');
+
+		// write header to file
+		$header = array('Patient ID');
+		$visits = $this->eav_model->get_visitation();
+		foreach ($visits as $value)
+			array_push($header, "Visit " . $value['idVisitation']);
+		fputcsv($file, $header);
+
+		// write data values to file
+		foreach ($results as $patient => $attr_per_data_type) {
+			$line = array($patient);
+
+			foreach ($attr_per_data_type as $attributes)
+			foreach ($attributes as $results_per_attr)
+			if (isset($results_per_attr['Attribute']['Name']))
+			foreach($visits as $visitID => $visit) {
+				$line[$visitID + 1] = '';
+				foreach($results_per_attr['Values'] as $visit_id => $results)
+				foreach ($results as $value) {
+					if ($visit['idVisitation'] == $visit_id)
+						$line[$visitID + 1] = $line[$visitID + 1] . ' ' . $value;
+				}
+			}
+
+			fputcsv($file, $line);
+		}
+
+		// close file and send
+		fclose($file);
+	}
 
 }

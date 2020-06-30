@@ -24,7 +24,7 @@ class Users extends CI_Controller{
         // $userCaptcha = $this->input->post('user_captcha');
 
     	if($this->form_validation->run() === FALSE){
-            // $data['captcha'] = $this->captcha();
+            // $data['captcha'] = create_captcha(array('word' => random_string('alnum', 8)));
             // $this->session->set_userdata('captcha_word', $data['captcha']['word']);
 
     		$this->load->view('templates/header', $data);
@@ -33,7 +33,8 @@ class Users extends CI_Controller{
     	} else {
             // Salt and hash the password before adding to database
             try {
-                $salt = base64_encode(random_bytes(16));
+                // $salt = random_string('alnum', 16);
+                $salt = base64_encode(random_bytes(16)); // more secure
 
                 $enc_password = hash('sha512', $salt
                     . $this->input->post('password'));
@@ -73,9 +74,8 @@ class Users extends CI_Controller{
 
     public function login(){
         // check user is logged in
-        if($this->session->userdata('logged_in')){// === TRUE){
-            $this->session->set_flashdata('user_warning',
-                'User already logged in.');
+        if($this->session->userdata('logged_in')) {
+            $this->session->set_flashdata('user_warning', 'User already logged in.');
             redirect('welcome');
         }
 
@@ -180,8 +180,7 @@ class Users extends CI_Controller{
                 . ' as an admin to access this page.');
             redirect('login');
         } else if($this->session->userdata('user_type') != 'Admin'){
-            $this->session->set_flashdata('user_failed', 'Only an admin may access'
-                . ' this page.');
+            $this->session->set_flashdata('user_failed', 'Only an admin may access this page.');
             redirect('welcome');
         }
 
@@ -196,8 +195,7 @@ class Users extends CI_Controller{
                 if($user_id == $user['ID']) {
                     $this->user_model->set_user_type($user_id, $user_type);
                     $this->session->set_flashdata('user_success', $user['Forename']
-                        . ' ' . $user['Surname'] . ' has been set as '
-                        . $user_type . '.');
+                        . ' ' . $user['Surname'] . ' has been set as ' . $user_type . '.');
                     redirect('view_all_users', 'refresh');
                 }
 
@@ -237,8 +235,7 @@ class Users extends CI_Controller{
 
             $currentPW = $this->input->post('password');
             $newPW = $this->input->post('password2');
-            $enc_current_password = substr(hash('sha512', $user['Salt']
-                . $currentPW), 0, 45);
+            $enc_current_password = substr(hash('sha512', $user['Salt'] . $currentPW), 0, 45);
 
             if($enc_current_password == $user['Password'] && $currentPW != $newPW){
                 $new_salt = base64_encode(random_bytes(16));
@@ -283,14 +280,6 @@ class Users extends CI_Controller{
         redirect("login");
     }
     //
-    // public function captcha(){
-    //     $this->load->helper('string');
-    //     $this->load->helper('my_captcha');
-    //
-    //     $vals = array( 'word' => random_string('alnum', 8) );
-    //
-    //     return create_captcha($vals);
-    // }
     //
     // public function check_captcha($str){
     //     $word = $this->session->userdata('captchaWord');

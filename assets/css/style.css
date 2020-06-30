@@ -148,7 +148,7 @@ body {
 }
 
 .dropdown-toggle{
-	width:23rem;
+	width:26rem;
 }
 
 .dropdown-menu.show {
@@ -185,13 +185,15 @@ body {
 	vertical-align: middle !important;
 	margin-top: 8px !important;
 	width: 100% !important;
+    background-color: #2E7769 !important;
+    border-radius: 5px !important;
 }
 
-@media only screen and (max-width: 1415px) {
+/* @media only screen and (max-width: 1415px) {
 	.dropdown-toggle{
 		width:20rem;
 	}
-}
+} */
 
 @media only screen and (max-width: 992px) {
 	.container-results {
@@ -236,7 +238,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-	.h2, h2{
+    .h1, h1{
+        font-size: 2.5rem !important;
+    }
+
+    .h2, h2{
 		font-size:1.5rem;
 	}
 
@@ -255,5 +261,9 @@ body {
 
 	.brand{
 		font-size:200% !important;
+	}
+
+	.dropdown-toggle{
+		width:100%;
 	}
 }

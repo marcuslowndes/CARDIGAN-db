@@ -1,9 +1,3 @@
-<?php
-function create_gallery($dir_name, $dir_contents){
-
-}
-?>
-
 <div class="container-fluid bg-success">
 	<div class="container">
 		<br>
@@ -22,14 +16,13 @@ function create_gallery($dir_name, $dir_contents){
 							. $photos_dir1[sizeof($photos_dir1) - 1]
 						 	. '"><img loading="lazy" src="assets/images/FOTOS/'
 							. $photos_dir1[sizeof($photos_dir1) - 1]
-							. '" style="width:100%" id="'. $i
-							. '"></a></div> <div class="col-gallery">';
+							. '" id="'. $i . '"></a></div> <div class="col-gallery">';
 					else if ($i == 63)
 						echo '';
 					else if ($i % $col_size != 0)
 						echo '<a href="assets/images/FOTOS/'. $photo
 						 	. '"><img loading="lazy" src="assets/images/FOTOS/' . $photo
-						 	. '" style="width:100%" id="' . $i . '"></a>';
+						 	. '"  id="' . $i . '"></a>';
 					else
 						echo '</div> <div class="col-gallery">';
 					$i++;
@@ -50,22 +43,20 @@ function create_gallery($dir_name, $dir_contents){
 						 	. $photos_dir2[sizeof($photos_dir2) - 1]
 							. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/'
 							. $photos_dir2[sizeof($photos_dir2) - 1]
-							. '" style="width:100%" id="'. $i
-							. '"></div> <div class="col-gallery"></a>';
+							. '" id="'. $i . '"></div> <div class="col-gallery"></a>';
 					else if ($i == 75)
 						echo '<a href="assets/images/Pictures + Video (Mireya)/'
 						 	. $photos_dir2[sizeof($photos_dir2) - 2]
 							. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/'
 							. $photos_dir2[sizeof($photos_dir2) - 2]
-							. '" style="width:100%" id="'. $i
-							. '"></div> <div class="col-gallery"></a>';
+							. '" id="'. $i . '"></div> <div class="col-gallery"></a>';
 					else if ($i > 78)
 						echo '';
 					else
 					if ($i % $col_size != 0)
 						echo '<a href="assets/images/Pictures + Video (Mireya)/'. $photo
 						 	. '"><img loading="lazy" src="assets/images/Pictures + Video (Mireya)/' . $photo
-						 	. '" style="width:100%" id="' . $i . '"></a>';
+						 	. '" id="' . $i . '"></a>';
 					else
 						echo '</div> <div class="col-gallery">';
 					$i++;
