@@ -37,7 +37,9 @@ class Database extends CI_Controller {
 
 
         // update form data
-    	$this->update_form($data, $type, $subtypeID, $entityID, $attributeID);
+		// if a data type is selected, enable selection of subtype/"category"
+		if(isset($type) && $type != NULL)
+    		$this->update_form($data, $type, $subtypeID, $entityID, $attributeID);
 
 
 		//load views, depending on how the form is filled:
@@ -69,118 +71,114 @@ class Database extends CI_Controller {
 	}
 
 
-	public function check_verified_user(){
-		if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('user_failed', 'Only a verified'
-				. ' user may access the database.');
-            redirect('login');
-        } else if($this->session->userdata('user_type') == 'Unverified'){
-            $this->session->set_flashdata('user_warning', 'Only a verified'
-				. ' user may access the database. Please <a href="contact">'
-				. 'contact an admin</a> to request to be verified.');
-            redirect('welcome');
-        }
-	}
-
-
 	/* Updates and refreshes the form */
 	public function update_form($data, $type = NULL, $subtypeID = NULL,
 								$entityID = NULL, $attributeID = NULL) {
+        $this->session->set_userdata(array(
+            'selected_type'			=> $type,
+            'subtypes'				=> $this->eav_model->get_data_types($type),
+			'selected_subtype_ID'	=> '',
+            'selected_subtype'		=> '',
+            'entities'				=> '',
+            'selected_entity_ID'	=> '',
+            'selected_entity'		=> '',
+			'attributes'			=> '',
+            'selected_attribute_ID'	=> '',
+            'selected_attribute'	=> ''
+        ));
+		if ($type == 'Clinical')
+			$this->session->set_userdata(array(
+				'clinical_btn_style' => 'danger',
+				'gait_btn_style'	 => 'secondary'
+			));
+		else
+			$this->session->set_userdata(array(
+				'clinical_btn_style' => 'secondary',
+				'gait_btn_style' 	 => 'danger'
+			));
 
-		// if a data type is selected, enable selection of subtype/"category"
-		if(isset($type) && $type != NULL){
+
+		// if subtype/"category" is selected,
+		// enable selection of entity/"subcategory"
+        if(isset($subtypeID) && $subtypeID != NULL){
+            foreach ($data['subtypes'] as $subtype)
+                if ($subtype['idData_Type'] == $subtypeID)
+                    $subtype_name = $subtype['Subtype'];
             $this->session->set_userdata(array(
-                'selected_type'			=> $type,
-                'subtypes'				=> $this->eav_model->get_data_types($type),
-				'selected_subtype_ID'	=> '',
-	            'selected_subtype'		=> '',
-	            'entities'				=> '',
+                'selected_subtype_ID'	=> $subtypeID,
+                'selected_subtype'		=> $subtype_name,
+                'entities'				=> $this->eav_model->get_entity($subtypeID),
 	            'selected_entity_ID'	=> '',
 	            'selected_entity'		=> '',
 				'attributes'			=> '',
 	            'selected_attribute_ID'	=> '',
 	            'selected_attribute'	=> ''
             ));
-			if ($type == 'Clinical')
-				$this->session->set_userdata(array(
-					'clinical_btn_style' => 'danger',
-					'gait_btn_style'	 => 'secondary'
-				));
-			else
-				$this->session->set_userdata(array(
-					'clinical_btn_style' => 'secondary',
-					'gait_btn_style' 	 => 'danger'
-				));
 
 
-			// if subtype/"category" is selected,
-			// enable selection of entity/"subcategory"
-            if(isset($subtypeID) && $subtypeID != NULL){
-                foreach ($data['subtypes'] as $subtype)
-                    if ($subtype['idData_Type'] == $subtypeID)
-                        $subtype_name = $subtype['Subtype'];
+			// if entity/"subcategory" is selected, if number of attributes
+			// 		is more than 1: enable selection of attribute/"data item",
+			// 		else: skip selection of attributes and enable search
+            if(isset($entityID) && $entityID != NULL){
+                foreach ($data['entities'] as $entity)
+                    if ($entity['idEntity'] == $entityID)
+                        $entity_name = $entity['Name'];
                 $this->session->set_userdata(array(
-                    'selected_subtype_ID'	=> $subtypeID,
-                    'selected_subtype'		=> $subtype_name,
-                    'entities'				=> $this->eav_model->get_entity($subtypeID),
-		            'selected_entity_ID'	=> '',
-		            'selected_entity'		=> '',
-					'attributes'			=> '',
+                    'selected_entity_ID' 	=> $entityID,
+                    'selected_entity'	 	=> $entity_name,
+                    'attributes'		 	=> $this->eav_model
+											->get_attributes_from_entity($entityID),
 		            'selected_attribute_ID'	=> '',
 		            'selected_attribute'	=> ''
                 ));
 
-
-				// if entity/"subcategory" is selected, if number of attributes
-				// 		is more than 1: enable selection of attribute/"data item",
-				// 		else: skip selection of attributes and enable search
-                if(isset($entityID) && $entityID != NULL){
-                    foreach ($data['entities'] as $entity)
-                        if ($entity['idEntity'] == $entityID)
-                            $entity_name = $entity['Name'];
-                    $this->session->set_userdata(array(
-                        'selected_entity_ID' 	=> $entityID,
-                        'selected_entity'	 	=> $entity_name,
-	                    'attributes'		 	=> $this->eav_model
-												->get_attributes_from_entity($entityID),
-			            'selected_attribute_ID'	=> '',
-			            'selected_attribute'	=> ''
-                    ));
-
-					if (count($this->session->userdata('attributes')) > 1){
-						if(isset($attributeID) && $attributeID != NULL){
-		                    foreach ($this->session->userdata('attributes') as $attribute)
-		                        if ($attribute['idAttribute'] == $attributeID)
-		                            $attr_name = $attribute['Name'];
-		                    $this->session->set_userdata(array(
-		                        'selected_attribute_ID'	=> $attributeID,
-		                        'selected_attribute'	=> $attr_name,
-								'search_btn_style'		=> 'success',
-								'search_btn_enable'		=> 'href="database_result"'
-		                    ));
-							$this->add_to_selected();
-		                }
-					} elseif (count($this->session->userdata('attributes')) == 1) {
-						$attr = current($this->session->userdata('attributes'));
-						$this->session->set_userdata(array(
-							'selected_attribute_ID'	=> $attr['idAttribute'],
-							'selected_attribute'	=> $attr['Name'],
+				if (count($this->session->userdata('attributes')) > 1){
+					if(isset($attributeID) && $attributeID != NULL){
+	                    foreach ($this->session->userdata('attributes') as $attribute)
+	                        if ($attribute['idAttribute'] == $attributeID)
+	                            $attr_name = $attribute['Name'];
+	                    $this->session->set_userdata(array(
+	                        'selected_attribute_ID'	=> $attributeID,
+	                        'selected_attribute'	=> $attr_name,
 							'search_btn_style'		=> 'success',
 							'search_btn_enable'		=> 'href="database_result"'
-						));
+	                    ));
 						$this->add_to_selected();
-					} else {
-						$this->session->set_userdata(array(
-							'selected_attribute_ID'	=> '',
-							'selected_attribute'	=> '',
-							'search_btn_style'		=> '',
-							'search_btn_enable'		=> 'disabled'
-						));
-					}
-                }
+	                }
+				} elseif (count($this->session->userdata('attributes')) == 1) {
+					$attr = current($this->session->userdata('attributes'));
+					$this->session->set_userdata(array(
+						'selected_attribute_ID'	=> $attr['idAttribute'],
+						'selected_attribute'	=> $attr['Name'],
+						'search_btn_style'		=> 'success',
+						'search_btn_enable'		=> 'href="database_result"'
+					));
+					$this->add_to_selected();
+				} else {
+					$this->session->set_userdata(array(
+						'selected_attribute_ID'	=> '',
+						'selected_attribute'	=> '',
+						'search_btn_style'		=> '',
+						'search_btn_enable'		=> 'disabled'
+					));
+				}
             }
-            redirect('database');
         }
+        redirect('database');
+	}
+
+
+	public function check_verified_user(){
+		if(!$this->session->userdata('logged_in')){
+			$this->session->set_flashdata('user_failed', 'Only a verified'
+			. ' user may access the database.');
+			redirect('login');
+		} else if($this->session->userdata('user_type') == 'Unverified'){
+			$this->session->set_flashdata('user_warning', 'Only a verified'
+			. ' user may access the database. Please <a href="contact">'
+			. 'contact an admin</a> to request to be verified.');
+			redirect('welcome');
+		}
 	}
 
 
