@@ -67,6 +67,7 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+
 	public function check_captcha($str){
         $word = $this->session->userdata('captcha_word');
         if(strcmp(strtoupper($str),strtoupper($word)) == 0)
@@ -77,6 +78,7 @@ class Welcome extends CI_Controller {
             return false;
         }
     }
+
 
 	public function gallery() {
 		$data['title'] = 'PHOTO GALLERY';

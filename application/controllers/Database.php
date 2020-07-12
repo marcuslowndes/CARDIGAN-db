@@ -31,9 +31,9 @@ class Database extends CI_Controller {
 			'search_btn_style'		=> $this->session->userdata('search_btn_style'),
 			'search_btn_enable'		=> $this->session->userdata('search_btn_enable')
         );
-		$data = $this->disable_btn_style($data, 'clinical');
-		$data = $this->disable_btn_style($data, 'gait');
-		$data = $this->disable_btn_style($data, 'search');
+		foreach (array('clinical', 'gait', 'search') as $btn)
+			if ($data[$btn . '_btn_style'] == '')
+				$data[$btn . '_btn_style'] = 'secondary';
 
 
         // update form data
@@ -80,13 +80,6 @@ class Database extends CI_Controller {
 				. 'contact an admin</a> to request to be verified.');
             redirect('welcome');
         }
-	}
-
-
-	public function disable_btn_style($data, $btn){
-		if ($data[$btn . '_btn_style'] == '')
-			$data[$btn . '_btn_style'] = 'secondary';
-		return $data;
 	}
 
 

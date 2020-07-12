@@ -11,6 +11,7 @@ class Users extends CI_Controller{
         }
 
         $data['title'] = 'REGISTER A NEW ACCOUNT';
+        $data['user_captcha'] = $this->input->post('user_captcha');
 
         $this->form_validation->set_rules('forename', 'Forename', 'required');
         $this->form_validation->set_rules('surname', 'Surname', 'required');
@@ -21,7 +22,6 @@ class Users extends CI_Controller{
             'required|matches[password]');
         $this->form_validation->set_rules('user_captcha', 'Captcha',
             'required|callback_check_captcha');
-        $data['user_captcha'] = $this->input->post('user_captcha');
 
     	if($this->form_validation->run() === FALSE){
             $data['captcha'] = create_captcha(array(
@@ -306,4 +306,5 @@ class Users extends CI_Controller{
             return false;
         }
     }
+
 }
