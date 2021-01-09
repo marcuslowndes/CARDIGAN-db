@@ -104,6 +104,7 @@ class Database extends CI_Controller {
             foreach ($data['subtypes'] as $subtype)
                 if ($subtype['idData_Type'] == $subtypeID)
                     $subtype_name = $subtype['Subtype'];
+
             $this->session->set_userdata(array(
                 'selected_subtype_ID'	=> $subtypeID,
                 'selected_subtype'		=> $subtype_name,
@@ -123,6 +124,7 @@ class Database extends CI_Controller {
                 foreach ($data['entities'] as $entity)
                     if ($entity['idEntity'] == $entityID)
                         $entity_name = $entity['Name'];
+
                 $this->session->set_userdata(array(
                     'selected_entity_ID' 	=> $entityID,
                     'selected_entity'	 	=> $entity_name,
@@ -137,6 +139,7 @@ class Database extends CI_Controller {
 	                    foreach ($this->session->userdata('attributes') as $attribute)
 	                        if ($attribute['idAttribute'] == $attributeID)
 	                            $attr_name = $attribute['Name'];
+
 	                    $this->session->set_userdata(array(
 	                        'selected_attribute_ID'	=> $attributeID,
 	                        'selected_attribute'	=> $attr_name,
@@ -272,9 +275,9 @@ class Database extends CI_Controller {
     }
 
 
-	public function get_results($db_results){
+	public function get_results($selected_items){
 		$all_results = array();
-		foreach ($db_results as $selected)
+		foreach ($selected_items as $selected)
 			array_push($all_results, $this->eav_model->get_results(
 				$selected['attribute_ID'], $selected['subtype_ID']
 			));

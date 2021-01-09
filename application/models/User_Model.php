@@ -4,12 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Accesses user table and bookings table
 class User_Model extends CI_Model{
 
-	public function __construct(){
-		parent::__construct();
-		$this->load->database();
-	}
-
-
 	public function register($enc_password, $salt){
 		// codeigniter automatically escapes any values passed in using the form methods and the $this->input->post() method
 		$data = array(
