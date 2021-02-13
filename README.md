@@ -159,7 +159,7 @@ Number | Non-Functional Requirements
 
 The use cases of the system are given below:
 
-![Use Cases](diagrams/3-use_cases.svg)
+[Use Cases](diagrams/3-use_cases.svg)
 
 ***Figure 3:*** *The use cases given are for the different types of user that will interact with the system.*
 
@@ -183,7 +183,7 @@ The data sets produced by the CARDIGAN project's clinical study are diverse in t
 
 As shown by the data sets described in *Section 2.3.*, the Gait data sets have subsets to represent categorisation of the data, which needs to be represented in the model, by table structure or metadata. The Clinical data was also split into non-functional subsets for the sake of categorisation. The subsets to both the Clinical and Gait data sets are shown in Figure 4, below.
 
-![Data Sets and Subsets](diagrams/5-1-data-catergories.svg)
+[Data Sets and Subsets](diagrams/5-1-data-catergories.svg)
 
 ***Figure 4:*** *The data sets, subsets and categories of all the CARDIGAN project data.*
 
@@ -191,11 +191,11 @@ Due to the heterogeneity of the individual data items, and the categorisation an
 
 This can be seen in Figure 5, showing a possible interpretation of the model. Figure 5, all the data items are arranged as attributes in a couple of a couple of very large tables, with the Patient ID and week number as additional metadata attributes. However, Figure 6 suggests an interpretation where the data items are arranged as columns in smaller tables, functioning purely as categories.
 
-![Interpretation A](diagrams/5-1-interpretation-1.png)
+[Interpretation A](diagrams/5-1-interpretation-1.png)
 
 ***Figure 5:*** *An interpretation of the theoretical relational model, where the data is represented in these very large, complicated tables. The data would be very sparse in these tables.*
 
-![Interpretation B](diagrams/5-1-interpretation-2.png)
+[Interpretation B](5-1-interpretation-2.png)
 
 ***Figure 6:*** *An attempt to derive some smaller tables from these data attributes. There are no relationships between any of these tables and the different tables only function to categorise the attributes, and not represent any relationships.*
 
@@ -203,13 +203,13 @@ Both of these interpreted models are unnecessarily big and cumbersome, due to th
 
 Figure 7 shows an earnest attempt at normalisation. It can be observed that some of these data items occur only once per patient, but some values occur additionally for every visitation that the patient attended. In this model, data from the pre-consultation that is not recurring has it's own table, whereas every single attribute that occurs on multiple visitations would need a separate entity with two primary keys, to allow a joining any number of results for that patient for each week that the result occurred.
 
-![Interpretation C](diagrams/5-1-interpretation-3.png)
+[Interpretation C](5-1-interpretation-3.png)
 
 ***Figure 7:*** *An earnest attempt to start normalising the data. Since the data is so heterogenous and there very few relationships to represent, it was considered unnecessary to continue.*
 
 None of these attempts to normalise the data produced anything resembling a suitable and practical model for the database. Therefore, the research process described in Section 2.2. was employed, and as a result the Entity-Attribute-Value model was explored as a solution. The resulting model is shown in Figure 8, below.
 
-![Entity Relationship Model](diagrams/5-1-cardigan-model-final.svg)
+[Entity Relationship Model](5-1-cardigan-model-final.svg)
 
 ***Figure 8:*** *After considering the research on the EAV-based schema, this model was developed to represent the relationships between the clinical study data, it's metadata, and conventional data.*
 
@@ -241,7 +241,7 @@ The View can only read from the Model but cannot change or manipulate it, so any
 
 The View can also communicate with the Controller to request reformatted data from the Model that can be understood by the View and/or the user. This process is represented in *figure* below.
 
-![Model-View-Controller](diagrams/5-2-mvc.png)
+![Model-View-Controller](5-2-mvc.png)
 
 ***Figure 9:*** *A diagram describing the MVC process.*
 
@@ -307,34 +307,34 @@ Some parts of the website can be constructed by using smaller template component
 The layout of the user interface of the application is represented with the following diagrams:
 
 #### Welcome Page
-![Welcome Page](diagrams/5-3-site-map/layouts-Welcome.svg)
+![Welcome Page](5-3-site-map/layouts-Welcome.svg)
 
 #### About Page
-![About Page](diagrams/5-3-site-map/layouts-About.svg)
+![About Page](5-3-site-map/layouts-About.svg)
 
 #### Gallery Page
-![Gallery Page](diagrams/5-3-site-map/layouts-Gallery.svg)
+![Gallery Page](5-3-site-map/layouts-Gallery.svg)
 
 #### Contact Us Page
-![Contact Us Page](diagrams/5-3-site-map/layouts-Contact-Us.svg)
+![Contact Us Page](5-3-site-map/layouts-Contact-Us.svg)
 
 #### Log In Page
-![Log In Page](diagrams/5-3-site-map/layouts-Log-In.svg)
+[Log In Page](5-3-site-map/layouts-Log-In.svg)
 
 #### Register Page
-![Register Page](diagrams/5-3-site-map/layouts-Register.svg)
+![Register Page](5-3-site-map/layouts-Register.svg)
 
 #### Manage Account Page
-![Manage Account Page](diagrams/5-3-site-map/layouts-Manage-Account.svg)
+![Manage Account Page](5-3-site-map/layouts-Manage-Account.svg)
 
 #### All Users Page
-![All Users Page](diagrams/5-3-site-map/layouts-All-Users.svg)
+![All Users Page](5-3-site-map/layouts-All-Users.svg)
 
 #### Database Search Page
-![Database Search Page](diagrams/5-3-site-map/layouts-Database-Search.svg)
+![Database Search Page](5-3-site-map/layouts-Database-Search.svg)
 
 #### Database Result Page
-![Database Result Page](diagrams/5-3-site-map/layouts-Database-Result.svg)
+[Database Result Page](5-3-site-map/layouts-Database-Result.svg)
 
 ---
 
@@ -348,13 +348,13 @@ The project was initially planned using the Gantt chart editor ProjectLibre, by 
 
 Throughout mostly the implementation phase of the project, most short-term tasks were planned and tracked using the simple list app Microsoft To Do. Any changed made to file structure and code within the projects development environment were tracked and recorded using Git.
 
-![Gantt Chart 1](diagrams/6-1-gantt-1.png)
+![Gantt Chart 1](6-1-gantt-1.png)
 
-![Gantt Chart 2](diagrams/6-1-gantt-2.png)
+![Gantt Chart 2](6-1-gantt-2.png)
 
-![Gantt Chart 3](diagrams/6-1-gantt-3.png)
+![Gantt Chart 3](6-1-gantt-3.png)
 
-![Gantt Chart 4](diagrams/6-1-gantt-4.png)
+![Gantt Chart 4](6-1-gantt-4.png)
 
 ***Figure 10:*** *The original project plan that the developer intended to follow. The table below provides a key.*
 
@@ -584,7 +584,7 @@ This class uses the GD image library (CodeIgniter.com, 2019) to automatically ge
 
 In this implementation, every time the `register` page is loaded and the form is not validated, a new CAPTCHA is prepared with a randomly generated 8-character alphanumerical string using the CI `string` helper class. The CAPTCHA is then generated with this string, saved to a location in the `captcha` directory, and loaded into the view with the form. The `user_captcha` input bar is also given a callback rule to the `check_captcha` function, which requires the user to input the exact same string as the one generated when the CAPTCHA was produced.
 
-![Captcha](diagrams/6-5-captcha-eg.jpg)
+![Captcha](6-5-captcha-eg.jpg)
 ***Figure 11:*** *Example of a CAPTCHA image produced by the CI `captcha` helper class.*
 
 If the user passes all these aforementioned checks and the form inputs are validated, the new user's information is stored in the database. This is done using the salt-hash method. First, a salt is generated using the PHP `random_bytes` function, with a string length of 16. Then, the salt is encoded into base64 to keep the information, but ensure that it is mostly alphanumerical -- bar the `==` at the end of the encoded string -- to prevent errors when storing into the database (The PHP Group, 2020).
