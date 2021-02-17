@@ -159,7 +159,7 @@ Number | Non-Functional Requirements
 
 The use cases of the system are given below:
 
-[Use Cases](https://raw.githubusercontent.com/marcuslowndes/cardigan-db/9cd3721dfd2b995f96d06ab0f8b9bc6c012244ed/diagrams/3-use-cases.svg)
+![Use Cases](diagrams/3-use-cases.svg)
 
 ***Figure 3:*** *The use cases given are for the different types of user that will interact with the system.*
 
@@ -183,7 +183,7 @@ The data sets produced by the CARDIGAN project's clinical study are diverse in t
 
 As shown by the data sets described in *Section 2.3.*, the Gait data sets have subsets to represent categorisation of the data, which needs to be represented in the model, by table structure or metadata. The Clinical data was also split into non-functional subsets for the sake of categorisation. The subsets to both the Clinical and Gait data sets are shown in Figure 4, below.
 
-[Data Sets and Subsets](https://raw.githubusercontent.com/marcuslowndes/cardigan-db/9cd3721dfd2b995f96d06ab0f8b9bc6c012244ed/diagrams/5-1-data-categories.svg)
+![Data Sets and Subsets](diagrams/5-1-data-categories.svg)
 
 ***Figure 4:*** *The data sets, subsets and categories of all the CARDIGAN project data.*
 
@@ -209,7 +209,7 @@ Figure 7 shows an earnest attempt at normalisation. It can be observed that some
 
 None of these attempts to normalise the data produced anything resembling a suitable and practical model for the database. Therefore, the research process described in Section 2.2. was employed, and as a result the Entity-Attribute-Value model was explored as a solution. The resulting model is shown in Figure 8, below.
 
-[Entity Relationship Model](https://raw.githubusercontent.com/marcuslowndes/cardigan-db/9cd3721dfd2b995f96d06ab0f8b9bc6c012244ed/diagrams/5-1-cardigandb-model-final.svg)
+![Entity Relationship Model](diagrams/5-1-cardigandb-model-final.svg)
 
 ***Figure 8:*** *After considering the research on the EAV-based schema, this model was developed to represent the relationships between the clinical study data, it's metadata, and conventional data.*
 
@@ -241,7 +241,7 @@ The View can only read from the Model but cannot change or manipulate it, so any
 
 The View can also communicate with the Controller to request reformatted data from the Model that can be understood by the View and/or the user. This process is represented in *figure* below.
 
-![Model-View-Controller](https://raw.githubusercontent.com/marcuslowndes/cardigan-db/main/diagrams/5-2-mvc.png)
+![Model-View-Controller](diagrams/5-2-mvc.png)
 
 ***Figure 9:*** *A diagram describing the MVC process.*
 
@@ -319,7 +319,7 @@ The layout of the user interface of the application is represented with the foll
 ![Contact Us Page](diagrams/5-3-site-map/layouts-Contact-Us.svg)
 
 #### Log In Page
-![Log In Page](diagrams/5-3-site-map/layouts-Log-In.svg)
+![Log In Page](https://raw.githubusercontent.com/marcuslowndes/cardigan-db/e8d53b964d790728b459f633c617b5536047b224/diagrams/5-3-site-map/layouts-Log%20In.svg)
 
 #### Register Page
 ![Register Page](diagrams/5-3-site-map/layouts-Register.svg)
@@ -331,10 +331,10 @@ The layout of the user interface of the application is represented with the foll
 ![All Users Page](diagrams/5-3-site-map/layouts-All-Users.svg)
 
 #### Database Search Page
-![Database Search Page](5-3-site-map/layouts-Database-Search.svg)
+![Database Search Page](diagrams/5-3-site-map/layouts-Database-Search.svg)
 
 #### Database Result Page
-[Database Result Page](5-3-site-map/layouts-Database-Result.svg)
+[Database Result Page](diagrams/5-3-site-map/layouts-Database-Result.svg)
 
 ---
 
