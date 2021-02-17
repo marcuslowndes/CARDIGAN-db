@@ -334,7 +334,7 @@ The layout of the user interface of the application is represented with the foll
 ![Database Search Page](diagrams/5-3-site-map/layouts-Database-Search.svg)
 
 #### Database Result Page
-[Database Result Page](diagrams/5-3-site-map/layouts-Database-Result.svg)
+![Database Result Page](diagrams/5-3-site-map/layouts-Database-Result.svg)
 
 ---
 
